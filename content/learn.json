@@ -1,0 +1,3946 @@
+{
+ "version": 1,
+ "checked": "2026-11-14",
+ "spells": {
+  "Lightning Bolt": {
+   "what": "Your main Nature damage spell, cast from range. The Nov 2 launch notes raised its damage at every rank.",
+   "when": "Pull with it from range. Elemental's filler. Enhancement casts it only at 5 Maelstrom Weapon stacks, when it is instant.",
+   "rank_tip": "Ranks at 1, 8, 14, 20, 26, 32, 38, 44, 50, 56. Train each new rank. Icy Veins pulls with rank 1 while leveling Enhancement (cheap, out-of-range pull).",
+   "per_spec": {
+    "Elemental": "Filler between Flame Shock refreshes; 0.5 s faster during Lightning Mastery.",
+    "Enhancement": "Rank 1 to pull before Stormstrike; later only at 5 Maelstrom Weapon stacks (never below 5).",
+    "Restoration": "Damage only when nobody needs healing and mana is high."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Healing Wave": {
+   "what": "Your efficient main heal.",
+   "when": "Heal yourself up after a pull with spare mana; Restoration's main single-target heal.",
+   "rank_tip": "Ranks at 1, 6, 12, 18, 24, 32, 40, 48, 56, 60. Train each new rank. Downrank it when damage is light (Icy Veins Restoration).",
+   "per_spec": {
+    "Elemental": "Self-heal between pulls.",
+    "Enhancement": "Self-heal after pulls; Lesser Healing Wave when in danger.",
+    "Restoration": "Main heal; Nature's Swiftness makes one instant for emergencies."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Rockbiter Weapon": {
+   "what": "Weapon imbue: more melee attack power and extra threat. Lasts 60 minutes.",
+   "when": "Keep it on your weapon while leveling Enhancement before 30; Windfury Weapon replaces it at 30.",
+   "rank_tip": "Ranks at 1, 8, 16, 24, 34, 44, 54. Train each new rank. Recast it with each new rank; the old imbue stays until it runs out.",
+   "per_spec": {
+    "Elemental": "Your only imbue before Flametongue Weapon at 10.",
+    "Enhancement": "Pre-30 solo imbue (Icy Veins). With Spirit Weapons it raises your threat (off-tank tool).",
+    "Restoration": "Your only imbue before Flametongue Weapon at 10."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Earth Shock": {
+   "what": "Instant Nature damage that interrupts spellcasting and causes high threat. Shares a cooldown with the other Shocks.",
+   "when": "Interrupt casters and healers, or use it as instant damage. Enhancement uses it to spend the Stormstrike bonus.",
+   "rank_tip": "Ranks at 4, 8, 14, 24, 36, 48, 60. Train each new rank. Wowhead: keep rank 1 on a bar as a cheap interrupt.",
+   "per_spec": {
+    "Elemental": "Interrupt, or pull far-away casters into your AoE.",
+    "Enhancement": "Damage after Stormstrike (+20%). Use Frost Shock instead if threat is a problem.",
+    "Restoration": "Your only interrupt (Icy Veins)."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Stoneskin Totem": {
+   "what": "Earth totem: party members near it take less Physical damage. 5 minutes.",
+   "when": "Solo when you fight several enemies at once. Comes from the Call of Earth quest at 4.",
+   "rank_tip": "Ranks at 4, 14, 24, 34, 44, 54. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Solo defensive Earth totem (Icy Veins).",
+    "Enhancement": "Defensive alternative to Strength of Earth Totem while leveling.",
+    "Restoration": "Solo defense; Strength of Earth Totem in melee groups."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Earthbind Totem": {
+   "what": "Earth totem that slows nearby enemies by 50% for 45 s; 15 s cooldown. With the Earthbound talent it also roots them for 5 s when you drop it.",
+   "when": "Kiting and escaping. With Earthbound, drop it, step back and keep casting.",
+   "rank_tip": "Learned at 6.",
+   "per_spec": {
+    "Elemental": "Earthbound turns it into a 5 s root: a free kiting window.",
+    "Enhancement": "Escape tool when a pull goes wrong.",
+    "Restoration": "Escape tool, or slow adds that chase you."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Lightning Shield": {
+   "what": "Elemental Shield: lightning charges strike attackers for Nature damage. Endgametools lists 3 charges and 10 minutes.",
+   "when": "Keep it up while leveling; refresh it right after the last spell of a fight. Water Shield replaces it (one Elemental Shield at a time).",
+   "rank_tip": "Ranks at 8, 16, 24, 32, 40, 48, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Leveling shield until you have Water Shield.",
+    "Enhancement": "Keep it up; Shamanistic Focus cuts its cost by 45%.",
+    "Restoration": "Use it before you have Water Shield at 20."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Stoneclaw Totem": {
+   "what": "Earth totem that taunts nearby enemies for 15 s; 30 s cooldown.",
+   "when": "Emergency: it soaks an extra enemy while you kill the first one.",
+   "rank_tip": "Ranks at 8, 18, 28, 38, 48, 58. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Emergency tank when an extra enemy joins.",
+    "Enhancement": "Emergency tank when an extra enemy joins.",
+    "Restoration": "Emergency tank when an extra enemy joins."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Flame Shock": {
+   "what": "Instant Fire damage plus a 12 s damage-over-time effect. Shares the Shock cooldown. Call of Flame extends it by up to 9 s.",
+   "when": "Put it on targets that live long enough for the full damage; refresh it when it falls off.",
+   "rank_tip": "Ranks at 10, 18, 28, 40, 52, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "First spell on every target; refresh when it falls off.",
+    "Enhancement": "Keep it on the target if missing (Icy Veins); cycle it on packs.",
+    "Restoration": "Only for damage when healing is quiet."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Searing Totem": {
+   "what": "Fire totem that attacks one enemy within 20 yd; 30-55 s depending on rank. Your first Fire totem, from the Call of Fire quest at 10 (no trainer teaches it before).",
+   "when": "Single targets, and as the anchor for Fire Nova. Cheaper than Magma Totem.",
+   "rank_tip": "Ranks at 10, 20, 30, 40, 50, 60. Train each new rank. Icy Veins links a high rank (10438) as the quest reward; check which rank you get.",
+   "per_spec": {
+    "Elemental": "Single-target Fire totem; drop it last in raids (Icy Veins).",
+    "Enhancement": "Your Fire totem when mana is short; Magma Totem otherwise.",
+    "Restoration": "Same as Elemental; drop it last."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://dailyrespawn.com/article/how-to-get-all-four-totems-as-a-horde-shaman-in-wow-forever-earth-fire-water-air",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Strength of Earth Totem": {
+   "what": "Earth totem: more Strength for party and raid members within 30 yd. 5 minutes.",
+   "when": "The standard Earth totem with melee in the group, and Enhancement's own Earth totem.",
+   "rank_tip": "Ranks at 10, 24, 38, 52, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Earth totem in melee groups and raids.",
+    "Enhancement": "Your Earth totem solo and in groups.",
+    "Restoration": "Earth totem in melee groups and raids."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools. First level conflicts: Wowhead says 4+, endgametools 10.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Flametongue Weapon": {
+   "what": "Weapon imbue: bonus Fire damage per hit based on weapon speed, scaling with spell power. 60 minutes.",
+   "when": "Casters keep it on their weapon (Wowhead leveling). Enhancement uses it in groups before 30 (Icy Veins).",
+   "rank_tip": "Ranks at 10, 18, 26, 36, 46, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Your imbue from 10 (Wowhead, Nov 4, before the hotfix).",
+    "Enhancement": "Groups before 30; Windfury Weapon from 30. Older Flametongue + spell power advice is stale since the Nov 10/11 hotfix.",
+    "Restoration": "Your imbue from 10 (Wowhead, Nov 4)."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  "Fire Nova": {
+   "what": "New baseline spell that replaced Fire Nova Totem: Fire damage erupts from your active Fire totem, and you can repeat it. 10 s cooldown (6 s with Trial by Fire).",
+   "when": "On packs, with a Fire totem down next to the enemies and spare mana. High mana cost and threat.",
+   "rank_tip": "Ranks at 12, 22, 32, 42, 52. Train each new rank.",
+   "per_spec": {
+    "Elemental": "AoE with Chain Lightning; spend Clearcasting on it.",
+    "Enhancement": "On cooldown in AoE; single target after Earth Shock if a Fire totem is up.",
+    "Restoration": "Only for damage when mana allows."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Purge": {
+   "what": "Removes beneficial magic from an enemy.",
+   "when": "When an enemy has a magic buff worth removing.",
+   "rank_tip": "Ranks at 12, 32. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Utility; costs healing time."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools. Effects removed conflict: endgametools rank 1 says 1, Icy Veins up to two.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Ancestral Spirit": {
+   "what": "Resurrects a dead ally. 10 s cast, out of combat only.",
+   "when": "After a death or wipe, once combat ends.",
+   "rank_tip": "Ranks at 12, 24, 36, 48, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Rez duty in groups.",
+    "Enhancement": "Rez duty in groups.",
+    "Restoration": "Your job after a wipe."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Cure Poison": {
+   "what": "Removes one poison from the target.",
+   "when": "When you or a party member is poisoned.",
+   "rank_tip": "Learned at 16.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Poison Cleansing Totem covers the party from 22."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Tremor Totem": {
+   "what": "Earth totem: removes Fear, Charm and Sleep effects from party members. 5 minutes.",
+   "when": "Against enemies that fear, charm or sleep.",
+   "rank_tip": "Learned at 18.",
+   "per_spec": {
+    "Elemental": "Situational Earth totem.",
+    "Enhancement": "Situational Earth totem.",
+    "Restoration": "Situational Earth totem."
+   },
+   "unconfirmed": true,
+   "flag": "Pulse interval conflicts on Icy Veins (5 s vs 2 s).",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ]
+  },
+  "Ghost Wolf": {
+   "what": "Turn into a ghost wolf: +40% run speed, outdoors only, no cooldown.",
+   "when": "Between fights while leveling. Improved Ghost Wolf makes it faster to cast and usable indoors.",
+   "rank_tip": "Learned at 20.",
+   "per_spec": {
+    "Elemental": "Travel between pulls.",
+    "Enhancement": "Travel between pulls; Improved Ghost Wolf 2/2 makes it instant.",
+    "Restoration": "Travel between pulls."
+   },
+   "unconfirmed": true,
+   "flag": "Cast time conflicts: Icy Veins guide 2 s, Icy Veins DB/endgametools 3 s.",
+   "sources": [
+    "https://db.icy-veins.com/wow-forever/spells/2645",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Frost Shock": {
+   "what": "Frost damage that slows the target by 50% for 8 s. Shares the Shock cooldown; lower threat than Earth Shock.",
+   "when": "Kiting and runners, or instead of Earth Shock when threat is a problem in dungeons.",
+   "rank_tip": "Ranks at 20, 34, 46, 58. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Kiting tool.",
+    "Enhancement": "Swap in for Earth Shock if you pull threat.",
+    "Restoration": "Kiting tool."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Frostbrand Weapon": {
+   "what": "Weapon imbue: chance on hit for Frost damage and a 25% slow. 60 minutes.",
+   "when": "Situational (kiting, PvP).",
+   "rank_tip": "Ranks at 20, 28, 38, 48, 58. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Rarely.",
+    "Enhancement": "Rarely; Windfury Weapon is the Enhancement imbue.",
+    "Restoration": "Rarely."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Healing Stream Totem": {
+   "what": "Water totem: a small heal to group members every 2 s. 5 minutes. Comes from the Call of Water quest at 20.",
+   "when": "Groups that take steady damage when someone else already covers mana. Restorative Totems makes it stronger.",
+   "rank_tip": "Ranks at 20, 30, 40, 50, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Water totem when the group's mana is covered (Icy Veins).",
+    "Enhancement": "Rarely; Mana Spring Totem is your Water totem.",
+    "Restoration": "Restorative Totems adds up to 50%."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Lesser Healing Wave": {
+   "what": "Faster, less efficient heal.",
+   "when": "Emergencies, when Healing Wave would land too late.",
+   "rank_tip": "Ranks at 20, 28, 36, 44, 52, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Emergency self-heal.",
+    "Enhancement": "Emergency self-heal (Icy Veins: when in danger).",
+    "Restoration": "Fast heal for spikes."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Call of the Elements": {
+   "what": "Unlocks the totem bar: drops your four preset totems (one per element) after a 3 s cast, for their combined mana.",
+   "when": "Before a pull or boss when you want all four totems at once. Icy Veins: dropping the ones you need one by one is often faster (1.0 s GCD each).",
+   "rank_tip": "Learned at 20.",
+   "per_spec": {
+    "Elemental": "Raid: Call of the Elements, with Searing Totem last.",
+    "Enhancement": "Raid: place all four with it.",
+    "Restoration": "Raid: Call of the Elements, Searing Totem last."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Totemic Recall": {
+   "what": "Destroys your totems and refunds 25% of their mana. Off the GCD (Icy Veins).",
+   "when": "When you move on from a spot.",
+   "rank_tip": "Learned at 20.",
+   "per_spec": {
+    "Elemental": "Use it when moving on.",
+    "Enhancement": "Use it when moving on.",
+    "Restoration": "Use it when moving on."
+   },
+   "unconfirmed": true,
+   "flag": "A beta bug skipped the refund (fixed Oct 1); verify in game.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Cure Disease": {
+   "what": "Removes one disease from the target.",
+   "when": "When you or a party member has a disease.",
+   "rank_tip": "Learned at 22.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Disease Cleansing Totem covers the party from 38."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Poison Cleansing Totem": {
+   "what": "Water totem: removes one poison from party members every 5 s. 5 minutes.",
+   "when": "Against enemies that poison.",
+   "rank_tip": "Learned at 22.",
+   "per_spec": {
+    "Elemental": "Situational.",
+    "Enhancement": "Situational.",
+    "Restoration": "Situational."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Totemic Call": {
+   "what": "New in Forever (Totemic Projection in the deep dive): moves your active totems to you. Costs 25% of base mana and is on the GCD.",
+   "when": "Only when time matters; Icy Veins says recalling and re-dropping is usually cheaper.",
+   "rank_tip": "Learned at 22.",
+   "per_spec": {
+    "Elemental": "Rarely.",
+    "Enhancement": "Rarely.",
+    "Restoration": "Rarely."
+   },
+   "unconfirmed": true,
+   "flag": "Cooldown conflicts: 30 s (Nov 2 notes, foreverguide) vs 1 min (deep dive, Wowhead). Verify in game.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://foreverguide.net/classes/shaman/",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/overview-pve-healer",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Water Breathing": {
+   "what": "Breathe underwater for 10 minutes. Uses Shiny Fish Scales.",
+   "when": "Underwater quests.",
+   "rank_tip": "Learned at 22.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Utility."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Frost Resistance Totem": {
+   "what": "Frost resistance for the whole raid (resistance totems are raid-wide in Forever). 5 minutes.",
+   "when": "Fights with heavy Frost damage.",
+   "rank_tip": "Ranks at 24, 38, 54. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Situational.",
+    "Enhancement": "Situational.",
+    "Restoration": "Situational."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Far Sight": {
+   "what": "Channelled remote view, outdoors only.",
+   "when": "Scouting.",
+   "rank_tip": "Learned at 26.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Utility."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+   ]
+  },
+  "Magma Totem": {
+   "what": "Fire totem: Fire damage to all enemies within 8 yd every 2 s for 20 s (longer with Trial by Fire). The highest-damage Fire totem, but mana-heavy.",
+   "when": "Packs; Enhancement's main Fire totem when mana allows.",
+   "rank_tip": "Ranks at 26, 36, 46, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "3+ targets (Icy Veins).",
+    "Enhancement": "Main Fire totem if mana allows; Searing Totem when mana is short.",
+    "Restoration": "Multi-target groups."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Mana Spring Totem": {
+   "what": "Water totem: mana every 2 s to group members. 5 minutes.",
+   "when": "Icy Veins' go-to Water totem for every spec.",
+   "rank_tip": "Ranks at 26, 36, 46, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Your Water totem.",
+    "Enhancement": "Your Water totem.",
+    "Restoration": "Your Water totem; Restorative Totems adds 25%."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Fire Resistance Totem": {
+   "what": "Fire resistance for the whole raid. 5 minutes.",
+   "when": "Fights with heavy Fire damage.",
+   "rank_tip": "Ranks at 28, 42, 58. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Situational.",
+    "Enhancement": "Situational.",
+    "Restoration": "Situational."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Flametongue Totem": {
+   "what": "Fire totem with a weaker Flametongue effect on party and raid main-hand attacks. 5 minutes. Does not stack with Windfury Totem.",
+   "when": "Rarely: Icy Veins says it is not worth it with melee because it replaces Windfury Totem.",
+   "rank_tip": "Ranks at 28, 38, 48, 58. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Skip it with melee (exclusive with Windfury Totem).",
+    "Enhancement": "Skip it; Windfury Totem is better.",
+    "Restoration": "Skip it with melee."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Water Walking": {
+   "what": "Walk on water for 10 minutes; breaks on damage, Ghost Wolf or mounting. Uses Fish Oil.",
+   "when": "Crossing water.",
+   "rank_tip": "Learned at 28.",
+   "per_spec": {
+    "Elemental": "Utility.",
+    "Enhancement": "Utility.",
+    "Restoration": "Utility."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Astral Recall": {
+   "what": "A second Hearthstone with a 15 min cooldown that is not shared with your Hearthstone.",
+   "when": "Back to your inn when the Hearthstone is on cooldown.",
+   "rank_tip": "Learned at 30.",
+   "per_spec": {
+    "Elemental": "Travel.",
+    "Enhancement": "Travel.",
+    "Restoration": "Travel."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+   ]
+  },
+  "Grounding Totem": {
+   "what": "Air totem that pulls one harmful single-target spell onto itself, then is destroyed. 45 s, 15 s cooldown.",
+   "when": "Against casters (Icy Veins).",
+   "rank_tip": "Learned at 30.",
+   "per_spec": {
+    "Elemental": "Against casters.",
+    "Enhancement": "Against casters.",
+    "Restoration": "Against casters."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Nature Resistance Totem": {
+   "what": "Nature resistance for the whole raid. 5 minutes.",
+   "when": "Fights with heavy Nature damage.",
+   "rank_tip": "Ranks at 30, 44, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Situational.",
+    "Enhancement": "Situational.",
+    "Restoration": "Situational."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Reincarnation": {
+   "what": "Passive: resurrect yourself with 20% health and mana. 1 h cooldown, uses an Ankh.",
+   "when": "After a death you did not see coming; always carry an Ankh.",
+   "rank_tip": "Learned at 30. Improved Reincarnation lowers the cooldown.",
+   "per_spec": {
+    "Elemental": "Carry Ankhs.",
+    "Enhancement": "Carry Ankhs.",
+    "Restoration": "Carry Ankhs; after a wipe, reincarnate and rez the group."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Windfury Weapon": {
+   "what": "Weapon imbue: 20% chance per hit for two extra attacks with bonus attack power. 60 minutes.",
+   "when": "Enhancement from 30, always. Since the Nov 10/11 hotfix it works together with Windfury Totem, and Blizzard wants Windfury at the heart of Enhancement.",
+   "rank_tip": "Ranks at 30, 40, 50, 60. Train each new rank. Recast it with each new rank.",
+   "per_spec": {
+    "Elemental": "Not your imbue.",
+    "Enhancement": "Your imbue from 30, solo, dungeon and raid (Icy Veins Nov 13).",
+    "Restoration": "Not your imbue."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  "Call of the Spirits": {
+   "what": "Second totem-bar preset for Call of the Elements.",
+   "when": "Keep a second set (for example AoE or resistance totems).",
+   "rank_tip": "Learned at 30.",
+   "per_spec": {
+    "Elemental": "Second preset.",
+    "Enhancement": "Second preset.",
+    "Restoration": "Second preset."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflicts: deep dive/foreverguide 30, endgametools 40.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://foreverguide.net/classes/shaman/",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Chain Lightning": {
+   "what": "Lightning that jumps between enemies. Launch notes: 2.5 s cast, primary target about 145% of a comparable Lightning Bolt for about 225% of its mana. 6 s cooldown, removed during Lightning Mastery.",
+   "when": "Packs. In long single-target fights, only with Clearcasting (mana).",
+   "rank_tip": "Ranks at 32, 40, 48, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "On cooldown in AoE and during Lightning Mastery; single target outside it.",
+    "Enhancement": "Rarely; Maelstrom Weapon only speeds up Lightning Bolt.",
+    "Restoration": "Damage only if mana allows."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Windfury Totem": {
+   "what": "Air totem: party/raid buff, 20% chance per main-hand hit for an extra attack. 5 minutes. Since Nov 13 every melee ability's main-hand strike can trigger it.",
+   "when": "With melee in the group, and for Enhancement even solo (it stacks with your Windfury Weapon now).",
+   "rank_tip": "Ranks at 32, 42, 52. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Air totem in melee groups.",
+    "Enhancement": "Drop it even solo (Icy Veins Nov 13).",
+    "Restoration": "Air totem in melee groups."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  "Sentry Totem": {
+   "what": "Air totem that gives you vision of the area and warns you when it is attacked. 5 minutes.",
+   "when": "Rarely.",
+   "rank_tip": "Learned at 34.",
+   "per_spec": {
+    "Elemental": "Rarely.",
+    "Enhancement": "Rarely.",
+    "Restoration": "Rarely."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Windwall Totem": {
+   "what": "Air totem that reduces ranged damage taken by the party. 5 minutes.",
+   "when": "Wowhead: almost never worth it.",
+   "rank_tip": "Ranks at 36, 46, 56. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Rarely.",
+    "Enhancement": "Rarely.",
+    "Restoration": "Rarely."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+   ]
+  },
+  "Disease Cleansing Totem": {
+   "what": "Water totem: removes one disease from party members every 5 s. 5 minutes.",
+   "when": "Against enemies that cause diseases.",
+   "rank_tip": "Learned at 38.",
+   "per_spec": {
+    "Elemental": "Situational.",
+    "Enhancement": "Situational.",
+    "Restoration": "Situational."
+   },
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Call of the Ancestors": {
+   "what": "Third totem-bar preset for Call of the Elements.",
+   "when": "Keep a third set for special fights.",
+   "rank_tip": "Learned at 40.",
+   "per_spec": {
+    "Elemental": "Third preset.",
+    "Enhancement": "Third preset.",
+    "Restoration": "Third preset."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflicts: deep dive/foreverguide 40, endgametools 30.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://foreverguide.net/classes/shaman/",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  "Chain Heal": {
+   "what": "Heal that jumps between injured targets. +25% on a target with your Riptide.",
+   "when": "Group damage; cast it on an injured target that has Riptide.",
+   "rank_tip": "Ranks at 40, 46, 54. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Rarely.",
+    "Enhancement": "Rarely.",
+    "Restoration": "Main group heal."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Grace of Air Totem": {
+   "what": "Air totem: more Agility for party and raid members. 5 minutes.",
+   "when": "When another Shaman already has Windfury Totem down (Icy Veins).",
+   "rank_tip": "Ranks at 42, 56, 60. Train each new rank.",
+   "per_spec": {
+    "Elemental": "Air totem when another Shaman runs Windfury.",
+    "Enhancement": "Air totem when another Shaman runs Windfury.",
+    "Restoration": "Air totem when another Shaman runs Windfury."
+   },
+   "unconfirmed": true,
+   "flag": "Later rank levels only from endgametools. Exclusivity with Windfury Totem conflicts between sources; verify in game.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Stormstrike": {
+   "what": "Enhancement talent (16th point). Since the Nov 10/11 hotfix: strike for 100% weapon damage, 8 s cooldown; your next Lightning Bolt, Chain Lightning or Earth Shock on that target deals 20% more within 12 s. Can trigger Windfury Weapon.",
+   "when": "On cooldown, then Earth Shock (or a 5-stack Lightning Bolt) to spend the bonus.",
+   "rank_tip": "Talent.",
+   "per_spec": {
+    "Elemental": "Not in your tree.",
+    "Enhancement": "Your core button; react to Improved Stormstrike resets.",
+    "Restoration": "Not in your tree."
+   },
+   "unconfirmed": true,
+   "flag": "Level conflict: talent tree says 25, Icy Veins DB 17364 says 40.",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://db.icy-veins.com/wow-forever/spells/17364"
+   ]
+  },
+  "Water Shield": {
+   "what": "Restoration talent (11th point): 3 water globes; when you are hit or one of your spells crits, you get 2% of maximum mana back. 10 minutes. Replaces Lightning Shield.",
+   "when": "Restoration always. Elemental and Enhancement can use it for mana too (Icy Veins).",
+   "rank_tip": "Talent.",
+   "per_spec": {
+    "Elemental": "Swap to it when mana is the problem.",
+    "Enhancement": "Optional mana shield (Icy Veins leveling build takes it).",
+    "Restoration": "Always up."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Mana Tide Totem": {
+   "what": "Restoration talent (16th point): Water totem that restores mana every 3 s to group members for 12 s. 5 min cooldown.",
+   "when": "Use it early (Icy Veins: at about 80% mana) so it comes back sooner.",
+   "rank_tip": "Ranks at 25, 38, 48 and 58 (beta notes, endgametools).",
+   "per_spec": {
+    "Elemental": "Raid support build takes it.",
+    "Enhancement": "Not in the usual builds.",
+    "Restoration": "Your mana cooldown."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Nature's Swiftness": {
+   "what": "Restoration talent (21st point): your next Nature spell with a cast under 10 s is instant. 3 min cooldown.",
+   "when": "Emergency: Nature's Swiftness, then Healing Wave.",
+   "rank_tip": "Talent.",
+   "per_spec": {
+    "Elemental": "Not in your tree.",
+    "Enhancement": "Not in your tree.",
+    "Restoration": "Save it for an emergency Healing Wave."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ]
+  },
+  "Lightning Mastery": {
+   "what": "Elemental talent (31st point, formerly Elemental Mastery): for 15 s, Lightning Bolt casts 0.5 s faster and Chain Lightning has no cooldown. 3 min cooldown.",
+   "when": "Your burst window: line up Berserking, potions and trinkets with it.",
+   "rank_tip": "Talent.",
+   "per_spec": {
+    "Elemental": "Burst window; spam Chain Lightning on packs inside it.",
+    "Enhancement": "Not in your tree.",
+    "Restoration": "Not in your tree."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Riptide": {
+   "what": "Restoration talent (31st point): a heal over time for 15 s; Chain Heal cast directly on that target heals 25% more.",
+   "when": "On the most injured target when it is ready, then Chain Heal onto it.",
+   "rank_tip": "Talent; ranks at 40, 50, 60.",
+   "per_spec": {
+    "Elemental": "Not in your tree.",
+    "Enhancement": "Not in your tree.",
+    "Restoration": "Your capstone heal."
+   },
+   "unconfirmed": true,
+   "flag": "Rank 2/3 levels [50, 60] come only from the endgametools spell list (secondary); rank 1 at 40 from Icy Veins/Wowhead. Numbers conflict: 6 s cooldown with an initial heal (deep dive, Icy Veins) vs 12 s HoT-only (Nov 2 notes). Verify in game.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  "Rage of the Farseer": {
+   "what": "Enhancement talent (31st point): +30% attack speed for 25 s, 3 min cooldown. Personal only: not a group Bloodlust/Heroism.",
+   "when": "On cooldown in longer fights, together with Berserking and trinkets.",
+   "rank_tip": "Talent.",
+   "per_spec": {
+    "Elemental": "Not in your tree.",
+    "Enhancement": "Main cooldown (skipped by Icy Veins' solo/dungeon build).",
+    "Restoration": "Not in your tree."
+   },
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  }
+ },
+ "talents": {
+  "Convection": {
+   "tree": "Elemental",
+   "what": "5 points: Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%.",
+   "why": "Cheaper Shocks and Lightning Bolts: pure mana savings for Elemental.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Concussion": {
+   "tree": "Elemental",
+   "what": "5 points: Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%.",
+   "why": "More damage from your main nukes.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Devastation": {
+   "tree": "Elemental",
+   "what": "3 points: Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec.",
+   "why": "Spell crits make your melee crit more; Enhancement's raid build goes into Elemental for it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Reverberation": {
+   "tree": "Elemental",
+   "what": "5 points: Reduces the cooldown of your Shock spells by 1 sec.",
+   "why": "Shocks more often.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Alacrity": {
+   "tree": "Elemental",
+   "what": "3 points: Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.5 sec.",
+   "why": "Faster Lightning Bolt and Chain Lightning; Icy Veins' first Elemental leveling pick (15).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ]
+  },
+  "Call of Flame": {
+   "tree": "Elemental",
+   "what": "3 points: Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec.",
+   "why": "Stronger Fire totems, Flame Shock and Fire Nova, and a longer Flame Shock.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Focus": {
+   "tree": "Elemental",
+   "what": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+   "why": "Gold medal (11th point). Clearcasting: free damage spells; spend it on Chain Lightning or Fire Nova.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Warding": {
+   "tree": "Elemental",
+   "what": "3 points: Reduces damage taken from Fire, Frost, and Nature effects by 10%.",
+   "why": "Less Fire, Frost and Nature damage taken.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Trial by Fire": {
+   "tree": "Elemental",
+   "what": "2 points: Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec.",
+   "why": "Better Fire Nova (shorter cooldown) and longer Magma Totem; Enhancement's raid build ends here.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Eye of the Storm": {
+   "tree": "Elemental",
+   "what": "3 points: Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage.",
+   "why": "Cast Lightning while being hit.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Earthbound": {
+   "tree": "Elemental",
+   "what": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast.",
+   "why": "Gold medal (16th point). Earthbind Totem roots for 5 s: a free kiting window while leveling.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ]
+  },
+  "Elemental Reach": {
+   "tree": "Elemental",
+   "what": "2 points: Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards.",
+   "why": "More range for Lightning Bolt, Chain Lightning and Fire Nova.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Call of Thunder": {
+   "tree": "Elemental",
+   "what": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%.",
+   "why": "Gold medal (21st point). +5% crit on Lightning Bolt and Chain Lightning; it replaced Lava Burst before launch.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Lightning Overload": {
+   "tree": "Elemental",
+   "what": "3 points: Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+   "why": "Free half-damage copies of Lightning Bolt and Chain Lightning, no threat.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Fury": {
+   "tree": "Elemental",
+   "what": "5 points: Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%.",
+   "why": "Bigger crits from spells and Fire totems.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Lightning Mastery": {
+   "tree": "Elemental",
+   "what": "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec.",
+   "why": "Capstone (31st point): 15 s burst window.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  "Earth's Grasp": {
+   "tree": "Enhancement",
+   "what": "2 points: Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%.",
+   "why": "Tougher Stoneclaw Totem, bigger Earthbind Totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Thundering Strikes": {
+   "tree": "Enhancement",
+   "what": "5 points: Improves your chance to get a critical strike with all spells and attacks by 5%.",
+   "why": "+crit with everything; Elemental and Restoration leveling builds pick it up late.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Ancestral Knowledge": {
+   "tree": "Enhancement",
+   "what": "5 points: Increases your Intellect by 10%.",
+   "why": "More Intellect: more mana, and attack power through Mental Dexterity.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Guardian Totems": {
+   "tree": "Enhancement",
+   "what": "2 points: Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec.",
+   "why": "Stronger Stoneskin/Windwall Totems, faster Grounding Totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Mental Dexterity": {
+   "tree": "Enhancement",
+   "what": "3 points: Increases your Attack Power by an amount equal to 100% of your Intellect.",
+   "why": "Intellect becomes attack power: 33/66/100% since the Nov 10/11 hotfix (was 50/100/150%).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  "Improved Lightning Shield": {
+   "tree": "Enhancement",
+   "what": "3 points: Increases the damage done by your Lightning Shield orbs by 15%.",
+   "why": "More Lightning Shield damage.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Elemental Weapons": {
+   "tree": "Enhancement",
+   "what": "3 points: Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%.",
+   "why": "Stronger imbues, including +40% Windfury Weapon effect at 3/3.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Shamanistic Focus": {
+   "tree": "Enhancement",
+   "what": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%.",
+   "why": "Gold medal (11th point). 45% cheaper Shocks and Lightning Shield: big mana saver for Enhancement.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Anticipation": {
+   "tree": "Enhancement",
+   "what": "3 points: Increases your chance to dodge by an additional 6%.",
+   "why": "More dodge.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Toughness": {
+   "tree": "Enhancement",
+   "what": "5 points: Increases your Stamina by 10%.",
+   "why": "More Stamina.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Flurry": {
+   "tree": "Enhancement",
+   "what": "5 points: Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.",
+   "why": "+30% attack speed for 3 swings after a melee crit.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Stormstrike": {
+   "tree": "Enhancement",
+   "what": "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+   "why": "Gold medal (16th point, reachable at 25). Enhancement's core button; Icy Veins takes it as early as possible.",
+   "unconfirmed": true,
+   "flag": "Icy Veins DB 17364 shows level 40; the talent tree puts it at 25.",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://db.icy-veins.com/wow-forever/spells/17364",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  "Improved Ghost Wolf": {
+   "tree": "Enhancement",
+   "what": "2 points: Reduces the cast time of your Ghost Wolf spell by 3 sec, and Ghost Wolf may be used indoors.",
+   "why": "Faster Ghost Wolf (instant at 2/2) and usable indoors. Optional in Icy Veins' raid build.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Spirit Weapons": {
+   "tree": "Enhancement",
+   "what": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active.",
+   "why": "Gold medal (21st point). Parry chance; less threat normally, more threat with Rockbiter Weapon (off-tank).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Mental Quickness": {
+   "tree": "Enhancement",
+   "what": "2 points: Increases your spell damage and healing by up to 30% of your Intellect.",
+   "why": "Intellect becomes spell damage and healing.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Improved Stormstrike": {
+   "tree": "Enhancement",
+   "what": "2 points: When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry.",
+   "why": "Stormstrike gives 50% mana regen while casting for 15 s, and dodges/parries reset Stormstrike.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Maelstrom Weapon": {
+   "tree": "Enhancement",
+   "what": "5 points: melee hits can give a stack that makes your next Lightning Bolt 20% faster and 20% cheaper, up to 5 stacks (instant at 5), 30 s. Chance depends on main-hand weapon speed.",
+   "why": "Melee hits build stacks; each makes your next Lightning Bolt 20% faster and cheaper (instant at 5). Hotfix: 20% per stack at all ranks, 6/7/8/9/10 procs per minute by rank.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  "Rage of the Farseer": {
+   "tree": "Enhancement",
+   "what": "Increases your attack speed by 30% for 25 sec.",
+   "why": "Capstone (31st point): personal +30% attack speed for 25 s. Not a group Bloodlust.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Improved Healing Wave": {
+   "tree": "Restoration",
+   "what": "5 points: Reduces the casting time of your Healing Wave spell by 0.5 sec.",
+   "why": "Faster Healing Wave.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Tidal Focus": {
+   "tree": "Restoration",
+   "what": "5 points: Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%.",
+   "why": "Cheaper heals and +5% hit; Icy Veins counts it toward Elemental's spell hit.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Mindfulness": {
+   "tree": "Restoration",
+   "what": "3 points: Allows 50% of your Mana regeneration to continue while casting.",
+   "why": "Up to 50% of your mana regen continues while casting; early enough for Elemental and Enhancement to dip into.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Natural Grace": {
+   "tree": "Restoration",
+   "what": "3 points: Reduces the threat generated by your spells by 15%.",
+   "why": "Less threat from your spells.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Totemic Focus": {
+   "tree": "Restoration",
+   "what": "5 points: Reduces the Mana cost of your totems and any spells that summon or move them by 25%.",
+   "why": "Cheaper totems, including Call of the Elements and Totemic Call.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Improved Reincarnation": {
+   "tree": "Restoration",
+   "what": "2 points: Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%.",
+   "why": "Shorter Reincarnation cooldown, more health; Elemental's leveling build takes it for quality of life.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Ancestral Healing": {
+   "tree": "Restoration",
+   "what": "3 points: Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells.",
+   "why": "Heal crits raise the target's armor.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Healing Focus": {
+   "tree": "Restoration",
+   "what": "3 points: Gives your healing spells a 70% chance to not lose casting time when you take damage.",
+   "why": "Finish heals while being hit.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Water Shield": {
+   "tree": "Restoration",
+   "what": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min. Only one Elemental Shield can be active on the Shaman at any one time.",
+   "why": "Gold medal (11th point). Mana back when hit or on spell crits; Restoration's default shield.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Tidal Mastery": {
+   "tree": "Restoration",
+   "what": "5 points: Increases the critical effect chance of your healing spells by 5%.",
+   "why": "+5% crit on heals (also more Water Shield procs).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Restorative Totems": {
+   "tree": "Restoration",
+   "what": "5 points: Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%.",
+   "why": "Stronger Mana Spring (+25%) and Healing Stream (+50%) Totems.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Mana Tide Totem": {
+   "tree": "Restoration",
+   "what": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards.",
+   "why": "Gold medal (16th point). Group mana cooldown.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Healing Way": {
+   "tree": "Restoration",
+   "what": "3 points: Increases the amount healed by your Healing Wave spell by 25%.",
+   "why": "+25% Healing Wave; no longer a stacking buff.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  "Nature's Swiftness": {
+   "tree": "Restoration",
+   "what": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
+   "why": "Gold medal (21st point). Instant emergency Healing Wave.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Purification": {
+   "tree": "Restoration",
+   "what": "5 points: Increases the effectiveness of your healing spells by 10%.",
+   "why": "+10% healing.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  "Riptide": {
+   "tree": "Restoration",
+   "what": "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%.",
+   "why": "Capstone (31st point). HoT that boosts Chain Heal on that target.",
+   "unconfirmed": true,
+   "flag": "Numbers conflict between sources (6 s with an initial heal vs 12 s HoT-only); calculator shows a HoT-only tooltip.",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  }
+ },
+ "mechanics": [
+  {
+   "title": "Mana: the five-second rule",
+   "body": "Spirit-based mana regen pauses for 5 s after you spend any mana, including instants and totems. Let melee finish a low target instead of casting one more spell, refresh Lightning Shield right after the last spell of a fight, and stop casting when it is safe so mana can build. MP5 keeps ticking inside the rule.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+   ],
+   "id": "five-second-rule",
+   "topic": "mana"
+  },
+  {
+   "title": "Mindfulness: regen while casting",
+   "body": "Restoration talent (row 2, reachable at 15): 17/33/50% of your mana regen continues while you cast. It is early enough for Elemental and Enhancement to dip into; Icy Veins' Enhancement leveling build starts with it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "id": "mindfulness",
+   "topic": "mana"
+  },
+  {
+   "title": "Mana Tide Totem",
+   "body": "Restoration talent (16th point, from 25): a Water totem that restores mana every 3 s to your group for 12 s, 5 min cooldown. Icy Veins: use it at about 80% mana so it is back sooner.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "mana-tide",
+   "topic": "mana"
+  },
+  {
+   "title": "Shamanistic Focus",
+   "body": "Enhancement gold medal (11th point, from 20): Shocks and Lightning Shield cost 45% less mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "id": "shamanistic-focus",
+   "topic": "mana"
+  },
+  {
+   "title": "Improved Stormstrike regen",
+   "body": "Enhancement talent (row 5): every Stormstrike gives 50% mana regen while casting for 15 s at 2/2, and dodges or parries can reset Stormstrike's cooldown.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "improved-stormstrike-regen",
+   "topic": "mana"
+  },
+  {
+   "title": "Water Shield and crits",
+   "body": "Water Shield returns 2% of maximum mana per globe when you are hit or when one of your spells crits. Crit also feeds it for Restoration.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-stat-priority"
+   ],
+   "id": "water-shield-mana",
+   "topic": "mana"
+  },
+  {
+   "title": "Totem mana",
+   "body": "Call of the Elements costs all four totems at once. Totemic Recall refunds 25% of your totems' mana; Totemic Call is expensive (25% of base mana) and on the GCD, so recall and re-drop instead.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "id": "totem-mana",
+   "topic": "mana"
+  },
+  {
+   "title": "Clearcasting",
+   "body": "Elemental Focus (11th Elemental point) gives a 10% chance after a damage spell to make your next damage spell free. Spend it on expensive spells: Chain Lightning or Fire Nova.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+   ],
+   "id": "clearcasting",
+   "topic": "mana"
+  },
+  {
+   "title": "Low-rank spells and procs",
+   "body": "Blizzard reduced the chance for talents that trigger a free effect to proc from spells of a much lower rank (to stop proc fishing). Downranking still saves mana, but may give fewer procs.",
+   "unconfirmed": true,
+   "flag": "Blizzard says the penalty applies to similar talents across classes; which Shaman talents are affected is not stated.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "id": "low-rank-procs",
+   "topic": "mana"
+  },
+  {
+   "title": "No wand to fall back on",
+   "body": "Shamans have no wand. When mana runs dry: melee, drink, and keep Rockbiter or Flametongue Weapon up. Icy Veins: always carry water.",
+   "unconfirmed": true,
+   "flag": "'No wand' comes from one Wowhead news article.",
+   "sources": [
+    "https://www.wowhead.com/forever/news/how-does-elemental-shaman-look-in-wow-forever-383356",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "id": "no-wand",
+   "topic": "mana"
+  },
+  {
+   "title": "No group Bloodlust",
+   "body": "Forever has no Bloodlust or Heroism. Rage of the Farseer (Enhancement 31st point) is inspired by them but is personal: +30% attack speed for 25 s, 3 min cooldown, no spell haste.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ],
+   "id": "no-bloodlust"
+  },
+  {
+   "title": "Earthbound",
+   "body": "Elemental gold medal (16th point, from 25): Earthbind Totem also roots nearby enemies for 5 s when dropped. Icy Veins takes it for leveling.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "earthbound"
+  },
+  {
+   "title": "Lightning Mastery",
+   "body": "Elemental capstone (31st point, from 40; formerly Elemental Mastery): 15 s with 0.5 s faster Lightning Bolt and no Chain Lightning cooldown, 3 min cooldown. Line Berserking up with it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "lightning-mastery"
+  },
+  {
+   "title": "Stormstrike after the hotfix",
+   "body": "Nov 10/11 hotfix: Stormstrike deals 100% weapon damage (was 150%) on an 8 s cooldown (was 6 s). It still adds 20% to your next Lightning Bolt, Chain Lightning or Earth Shock on that target within 12 s. Guides quoting 150%/6 s are stale.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ],
+   "id": "stormstrike-hotfix"
+  },
+  {
+   "title": "Riptide: numbers disagree",
+   "body": "Riptide is Restoration's capstone (from 40): a 15 s HoT that boosts Chain Heal on that target. Sources disagree on the rest: 6 s cooldown with an instant heal (deep dive, Icy Veins) vs about 40% less mana, 12 s cooldown and no initial heal (Nov 2 notes). Check your tooltip.",
+   "unconfirmed": true,
+   "flag": "Riptide cooldown and initial heal conflict; verify in game.",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "riptide-conflict"
+  },
+  {
+   "title": "Track Maelstrom Weapon",
+   "body": "Since Nov 10 Maelstrom Weapon can be tracked in Blizzard's Cooldown Manager (/cdm). Put it where you can see the stacks and cast Lightning Bolt at 5.",
+   "unconfirmed": true,
+   "flag": "The /cdm slash command is not in the sources; the Cooldown Manager tracking is.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ],
+   "id": "cdm-maelstrom"
+  },
+  {
+   "title": "Shocks share a cooldown",
+   "body": "Earth Shock, Flame Shock and Frost Shock share one cooldown. Earth Shock interrupts, Flame Shock burns over time, Frost Shock slows with less threat.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ],
+   "id": "shared-shocks"
+  },
+  {
+   "title": "One Elemental Shield",
+   "body": "Only one Elemental Shield is active at a time: Water Shield replaces Lightning Shield.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ],
+   "id": "one-shield"
+  },
+  {
+   "title": "Enhancement is two-handed",
+   "body": "Dual wield is gone. Enhancement is a two-handed spec; Two-Handed Axes and Maces, Enhancing Totems, Weapon Mastery and Improved Weapon Totems are baseline. Visit a weapon trainer early for 2H Axes and Maces (Icy Veins).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://foreverguide.net/classes/shaman/",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "id": "two-handed"
+  },
+  {
+   "title": "Talents and gold medals",
+   "body": "Talents start at 10. One-point gold medal talents sit at the 11th, 16th, 21st and 31st point of each tree. Respec at a class trainer in a major city; Dual Specialization at 40.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ],
+   "id": "talents"
+  },
+  {
+   "title": "Totem tools in your bags",
+   "body": "Each element needs its totem item in your bags (Earth, Fire, Water, Air Totem). They are not used up. You get them from the class quests at 4, 10, 20 and 30.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://db.icy-veins.com/wow-forever/items/5175",
+    "https://db.icy-veins.com/wow-forever/items/5176",
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests"
+   ],
+   "id": "totem-items"
+  },
+  {
+   "title": "Weak crowd control",
+   "body": "Blizzard calls lack of effective crowd control the Shaman's weakness. Earthbind Totem (Earthbound), Frost Shock and Stoneclaw Totem are your tools.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "id": "crowd-control"
+  },
+  {
+   "title": "Troll racials",
+   "body": "Berserking: +10% melee, ranged and spell haste, 3 min cooldown; use it with Rage of the Farseer or Lightning Mastery. Rapid Regeneration (new): regenerate 50% of max health over time, 3 min cooldown; less downtime. Regeneration: 20% of health regen continues in combat. Beast Slaying: +5% damage to Beasts.",
+   "unconfirmed": true,
+   "flag": "Berserking duration conflicts: 12 s (Icy Veins) vs 15 s (Blizzard Oct 26 notes, Wowhead).",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/race-guide",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "troll-racials"
+  }
+ ],
+ "totems": [
+  {
+   "title": "Totems in Forever",
+   "body": "One totem per element (Earth, Fire, Water, Air). All totems have a 1.0 s GCD (was 1.5). Buff totems last 5 minutes (was 2). Totems are stationary and affect allies within 30 yd. Blizzard added a built-in totem tracker that shows your totems and time left; right-click one to dismiss it. This addon does not replace it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "totems-forever"
+  },
+  {
+   "title": "Call of the Elements, Spirits and Ancestors",
+   "body": "At 20, Call of the Elements unlocks the totem bar: set one totem per element and drop all four with one 3 s cast for their combined mana. Call of the Spirits and Call of the Ancestors add a second and third preset. Icy Veins: dropping only the ones you need is often faster.",
+   "unconfirmed": true,
+   "flag": "Preset levels conflict: Spirits 30 / Ancestors 40 (deep dive) vs Ancestors 30 / Spirits 40 (endgametools).",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://foreverguide.net/classes/shaman/",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ],
+   "id": "call-of-the-elements"
+  },
+  {
+   "title": "Totemic Recall and Totemic Call",
+   "body": "Totemic Recall (20) destroys your totems and refunds 25% of their mana, off the GCD: use it when you move on. Totemic Call (22) moves your totems to you for 25% of base mana, on the GCD; usually recall and re-drop instead.",
+   "unconfirmed": true,
+   "flag": "Totemic Call cooldown conflicts: 30 s (Nov 2 notes) vs 1 min (deep dive, Wowhead). Verify in game.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/overview-pve-healer",
+    "https://foreverguide.net/classes/shaman/"
+   ],
+   "id": "recall-and-call"
+  },
+  {
+   "title": "Resistance totems are raid-wide",
+   "body": "Frost, Fire and Nature Resistance Totems now affect the whole raid. Strength of Earth, Grace of Air, Windfury and Flametongue Totems are raid-wide too (Oct 15 notes).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "raid-wide"
+  },
+  {
+   "title": "Removed: Fire Nova Totem and Tranquil Air Totem",
+   "body": "Fire Nova Totem and Tranquil Air Totem are gone in Forever. Fire Nova is now a spell (from 12).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "id": "removed-totems"
+  },
+  {
+   "title": "Fire Nova at your Fire totem",
+   "body": "Fire Nova (12) erupts from your active Fire totem and can be cast again and again: 10 s cooldown, 6 s with Trial by Fire. No Fire totem, no Fire Nova; drop Searing or Magma Totem next to the enemies first. It costs a lot of mana and makes threat.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://db.icy-veins.com/wow-forever/items/5176"
+   ],
+   "id": "fire-nova"
+  },
+  {
+   "title": "Weapon imbues",
+   "body": "Rockbiter, Flametongue, Frostbrand and Windfury Weapon last 60 minutes (was 5) and stack with sharpening stones, weightstones and wizard oils. Since the Nov 10/11 hotfix imbues also stack with weapon totems: Windfury Weapon and Windfury Totem can both proc. Blizzard wants Windfury at the heart of Enhancement: Windfury Weapon from 30, always. Before 30: Rockbiter Weapon solo, Flametongue Weapon in groups. Casters use Flametongue Weapon (Wowhead, Nov 4). Older advice that Flametongue Weapon + spell power gear beats Windfury Weapon for Enhancement is stale.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/bis-gear"
+   ],
+   "id": "imbues"
+  },
+  {
+   "title": "Shields: Lightning Shield and Water Shield",
+   "body": "Lightning Shield (8): charges hit attackers for Nature damage, about the most mana-efficient damage you have; 3 charges, 10 min (endgametools). Water Shield (Restoration 11th point, from 20): 3 globes, 2% of max mana back when hit or on a spell crit, 10 min. Only one at a time. Restoration keeps Water Shield up; Elemental and Enhancement can swap to it for mana.",
+   "unconfirmed": true,
+   "flag": "Lightning Shield charges and duration only from endgametools.",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ],
+   "id": "shields"
+  },
+  {
+   "title": "Maelstrom Weapon",
+   "body": "Enhancement talent (row 6, from 35). Melee hits can give a stack; each stack makes your next Lightning Bolt 20% faster and 20% cheaper at every rank (Nov 10/11 hotfix), up to 5 stacks for an instant cast. Procs 6/7/8/9/10 times per minute by rank (was 20); slow weapons give a higher chance per swing (5/5 with a 3.6 speed weapon about 60%). Cast Lightning Bolt only at 5 stacks. Trackable in the Cooldown Manager.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "maelstrom-weapon"
+  },
+  {
+   "title": "Weapon totems: Windfury and Flametongue",
+   "body": "Windfury Totem and Flametongue Totem are party/raid buffs now, not weapon enchants. Since Nov 13 every melee ability's main-hand strike can proc Windfury Totem. The two do not stack with each other, so Icy Veins skips Flametongue Totem with melee.",
+   "unconfirmed": true,
+   "flag": "Whether Grace of Air Totem is also exclusive with Windfury Totem conflicts between sources.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "weapon-totems"
+  },
+  {
+   "title": "Which totems for your spec",
+   "body": "Enhancement: Strength of Earth, Magma (Searing if mana is short), Mana Spring, Windfury Totem, even solo. Elemental/Restoration solo: Stoneskin or Earthbind, Searing, Mana Spring. In groups: Strength of Earth and Windfury Totem with melee, Searing (Magma vs 3+), Mana Spring. Situational: Tremor vs fear, Poison/Disease Cleansing, Grounding vs casters, Stoneclaw to soak an extra mob.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "totems-by-spec"
+  }
+ ],
+ "roles": [
+  {
+   "title": "Totems the group needs",
+   "body": "Melee groups: Strength of Earth Totem and Windfury Totem. Mana Spring Totem for everyone. Searing Totem single target, Magma Totem on packs. Drop them where the fight will be; all affect allies within 30 yd.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "id": "group-totems"
+  },
+  {
+   "title": "One Windfury, then Grace of Air",
+   "body": "With two Shamans, one runs Windfury Totem and the other Grace of Air Totem (Icy Veins). Don't use Flametongue Totem with melee: it does not stack with Windfury Totem.",
+   "unconfirmed": true,
+   "flag": "Grace of Air vs Windfury Totem exclusivity conflicts between sources; verify in game.",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "id": "one-windfury"
+  },
+  {
+   "title": "Interrupts with Earth Shock",
+   "body": "Earth Shock interrupts spellcasts and is your only interrupt. Keep rank 1 on a bar for a cheap kick (Wowhead). Icy Veins: great against healers and casters that won't come to you.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+   ],
+   "id": "earth-shock-interrupt"
+  },
+  {
+   "title": "Purge",
+   "body": "Purge removes magic buffs from enemies. Use it when an enemy buffs itself.",
+   "unconfirmed": true,
+   "flag": "Number of effects removed conflicts (1 vs up to 2).",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "id": "purge"
+  },
+  {
+   "title": "Reincarnation and Ancestral Spirit",
+   "body": "Ancestral Spirit (12) resurrects allies out of combat. Reincarnation (30) brings you back with 20% health and mana once an hour for an Ankh; after a wipe, reincarnate and rez the group. Carry Ankhs.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ],
+   "id": "rez-duty"
+  },
+  {
+   "title": "Threat as Enhancement",
+   "body": "Rockbiter Weapon and Earth Shock add threat. Swap Earth Shock for Frost Shock if you pull aggro in dungeons. Spirit Weapons lowers your threat unless Rockbiter is active.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ],
+   "id": "enh-threat"
+  },
+  {
+   "title": "No Bloodlust in Forever",
+   "body": "Nobody should expect Bloodlust/Heroism from you: it does not exist in Forever. Rage of the Farseer is a personal cooldown.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "id": "no-lust-expectations"
+  },
+  {
+   "title": "Healing as Restoration",
+   "body": "Water Shield up, totems down before the pull. Riptide the most injured target, Chain Heal on group damage, Healing Wave (downranked when damage is light) otherwise. Nature's Swiftness + Healing Wave in an emergency; Mana Tide Totem early. Help with damage only when nobody needs healing.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ],
+   "id": "resto-healing"
+  },
+  {
+   "title": "Elemental raid support",
+   "body": "Icy Veins has an Elemental raid build that goes into Restoration for Mana Tide Totem for the group, and a maximum-throughput build that skips utility.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-spec-builds-talents"
+   ],
+   "id": "ele-raid-support"
+  }
+ ],
+ "leveling": {
+  "Enhancement": [
+   {
+    "title": "Rockbiter now, Windfury at 30",
+    "body": "Pull with rank 1 Lightning Bolt, then melee with a slow two-hander and Rockbiter Weapon; Earth Shock on cooldown. Heal with Healing Wave after pulls. At 30 switch to Windfury Weapon for good (Nov 10/11 hotfix: Windfury is the heart of Enhancement) and drop Windfury Totem even solo.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+     "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+    ]
+   },
+   {
+    "title": "Horde Troll path",
+    "body": "Valley of Trials (Call of Earth at 4), then Durotar (Call of Fire at 10 also runs through the Barrens). Icy Veins zones: 10-13 The Barrens, 14-17 Silverpine Forest, 18-20 Barrens/Stonetalon, 21-23 Hillsbrad/Stonetalon, 24-26 Ashenvale/Duskwood, 27-28 Hillsbrad/Wetlands, 29-30 Wetlands/Thousand Needles.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+     "https://db.icy-veins.com/wow-forever/quests/1516",
+     "https://www.icy-veins.com/wow-forever/zones-and-maps"
+    ]
+   },
+   {
+    "title": "Talent path",
+    "body": "Icy Veins: Stormstrike and Improved Stormstrike as early as possible (Stormstrike reachable at 25), then Mindfulness and Water Shield in Restoration, then Elemental Focus. Before 25 Icy Veins suggests a Restoration start with an optional respec at 25.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Weapon first",
+    "body": "Weapon DPS from a slow two-hander (3.3-3.8 speed) matters most while leveling, then Intellect, Strength, Spirit. Visit a weapon trainer in Orgrimmar for Two-Handed Axes and Maces early.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Totems while questing",
+    "body": "Magma Totem when mana allows, else Searing Totem; Stoneskin Totem for defense; Grounding Totem vs casters; Windfury Totem even solo from 32. Totemic Recall when you move on.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Dual spec at 40: Enhancement + Restoration",
+    "body": "The addon's plan for Tazu: Enhancement as spec A for questing, Restoration as spec B for dungeon healing. Dual Specialization unlocks at 40.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+    ]
+   },
+   {
+    "title": "Herbalism is fine",
+    "body": "You already have Herbalism: keep it. It makes gold and gives the Incense Candle (Intellect) camp buff. Icy Veins' top pick for Shaman is Leatherworking + Skinning, if you ever want a change.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+    ]
+   }
+  ],
+  "Elemental": [
+   {
+    "title": "Flame Shock, then Lightning Bolt",
+    "body": "Open from max range with Lightning Bolt, Flame Shock the target, keep casting Lightning Bolt. Lightning Shield between pulls (Water Shield once talented). Fire Nova from 12 and Chain Lightning from 32 for packs; Earth Shock to interrupt casters. Carry lots of water.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   {
+    "title": "Horde Troll path",
+    "body": "Valley of Trials (Call of Earth at 4), Durotar and the Barrens (Call of Fire at 10). Then Icy Veins zones: Barrens, Silverpine Forest, Stonetalon, Hillsbrad, Ashenvale, Wetlands and Thousand Needles by 30.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+     "https://www.icy-veins.com/wow-forever/zones-and-maps",
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Talent path",
+    "body": "Icy Veins: Elemental Alacrity by 15, Earthbound at 25, Call of Thunder at 30, Lightning Overload at 31, Lightning Mastery at 40, then Tidal Focus, Mindfulness and Water Shield from 41.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Mana is the limit",
+    "body": "Elemental runs out of mana. Use Clearcasting on expensive spells, refresh Lightning Shield right after the last cast, drink between pulls, and pick mana talents (Icy Veins).",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+    ]
+   },
+   {
+    "title": "Earthbind and Earthbound",
+    "body": "Earthbind Totem slows; with Earthbound (25) it roots for 5 s. Drop it, step back, keep casting.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+    ]
+   },
+   {
+    "title": "Dual spec at 40",
+    "body": "The addon's plan for Tazu is Enhancement (A) + Restoration (B). Elemental is a solid caster leveler if you prefer range.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+    ]
+   },
+   {
+    "title": "Herbalism is fine",
+    "body": "Keep Herbalism: gold, and the Incense Candle (Intellect) helps Elemental mana. Icy Veins' top pick is Leatherworking + Skinning.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+    ]
+   }
+  ],
+  "Restoration": [
+   {
+    "title": "Quest as Enhancement, heal in groups",
+    "body": "Icy Veins does not recommend Restoration for solo leveling. Quest as Enhancement and heal dungeons; with dual spec at 40 you can keep both.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Horde Troll path",
+    "body": "Valley of Trials, Durotar and the Barrens first. Dungeons along the way: Ragefire Chasm (13-18), Wailing Caverns, Shadowfang Keep, Blackfathom Deeps, Razorfen Kraul.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+     "https://www.icy-veins.com/wow-forever/zones-and-maps"
+    ]
+   },
+   {
+    "title": "Talent path",
+    "body": "Icy Veins: Mindfulness at 15, Water Shield at 20, Mana Tide Totem at 25, Nature's Swiftness at 30, Healing Way at 31, Riptide at 40, Thundering Strikes at 41.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+    ]
+   },
+   {
+    "title": "Healing in dungeons",
+    "body": "Water Shield up; Healing Wave (downranked when damage is light), Lesser Healing Wave for spikes, Chain Heal from 40. Earth Shock is your interrupt. Help with Lightning Bolt only when nobody needs healing.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   {
+    "title": "Dual spec at 40",
+    "body": "Plan: Enhancement (A) for questing, Restoration (B) for groups.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+    ]
+   },
+   {
+    "title": "Herbalism is fine",
+    "body": "Keep Herbalism. Icy Veins' top pick is Leatherworking + Skinning; Herbalism pairs with Alchemy.",
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+    ]
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "title": "Skipping Call of Earth",
+   "body": "Without the Earth Totem item you cannot drop Earth totems. Do Call of Earth at 4 in the Valley of Trials.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Casting into the five-second rule",
+   "body": "One more spell on an almost-dead target stops your regen for 5 s. Let melee finish it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Forgetting the imbue",
+   "body": "Imbues last 60 minutes now; check your weapon after every hearth or long break.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "No Fire totem for Fire Nova",
+   "body": "Fire Nova needs an active Fire totem near the enemies. Drop Searing or Magma Totem first.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Not carrying Ankhs",
+   "body": "Reincarnation needs an Ankh. Keep a few once you are 30.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Leaving totems behind",
+   "body": "Totems stay where you dropped them. Totemic Recall when you move on refunds 25% of their mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Using stale Enhancement advice",
+   "body": "Guides from before Nov 10/11 recommend Flametongue Weapon with spell power gear and Stormstrike at 150%/6 s. Windfury Weapon is the Enhancement imbue now, Stormstrike is 100%/8 s.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/bis-gear",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Enhancement"
+  },
+  {
+   "title": "Casting Lightning Bolt below 5 Maelstrom stacks",
+   "body": "As Enhancement, a hard-cast Lightning Bolt costs swings. Wait for 5 stacks: then it is instant.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Enhancement"
+  },
+  {
+   "title": "Fast weapons",
+   "body": "Enhancement wants a slow two-hander (3.3+ speed): more Windfury value and more Maelstrom procs per swing.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-stat-priority",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ],
+   "spec": "Enhancement"
+  },
+  {
+   "title": "Flametongue Totem with melee",
+   "body": "It does not stack with Windfury Totem, so it replaces the better buff.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "spec": "any"
+  },
+  {
+   "title": "Chain Lightning on one target in long fights",
+   "body": "It costs about 225% of a Lightning Bolt. Outside Lightning Mastery use it only with Clearcasting in long fights.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ],
+   "spec": "Elemental"
+  },
+  {
+   "title": "Letting Flame Shock drop",
+   "body": "Elemental refreshes Flame Shock when it falls off; it is the first spell on every target.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Elemental"
+  },
+  {
+   "title": "Hoarding Mana Tide Totem",
+   "body": "Icy Veins uses it at about 80% mana, so it is back for the next pull.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ],
+   "spec": "Restoration"
+  },
+  {
+   "title": "Solo leveling as Restoration",
+   "body": "Icy Veins does not recommend it. Quest as Enhancement and heal in groups.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ],
+   "spec": "Restoration"
+  },
+  {
+   "title": "Expecting Bloodlust",
+   "body": "There is none in Forever; Rage of the Farseer only speeds up your own attacks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ],
+   "spec": "any"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "welcome",
+   "level": 1,
+   "spec": "any",
+   "title": "Welcome, Shaman",
+   "body": "You start with Lightning Bolt, Healing Wave and Rockbiter Weapon. Put Rockbiter on your weapon (it lasts an hour), pull with Lightning Bolt, melee, and heal with Healing Wave after the fight. Totems come from class quests, the first one at level 4.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests"
+   ]
+  },
+  {
+   "id": "troll",
+   "level": 1,
+   "spec": "any",
+   "title": "Troll racials",
+   "body": "Berserking: +10% haste, 3 min cooldown; save it for big pulls and later for Rage of the Farseer or Lightning Mastery. Rapid Regeneration: regenerate 50% of max health over time, 3 min cooldown. Regeneration keeps some health regen in combat, and Beast Slaying adds 5% damage to Beasts.",
+   "unconfirmed": true,
+   "flag": "Berserking duration conflicts (12 s vs 15 s).",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/race-guide"
+   ]
+  },
+  {
+   "id": "pick-spec",
+   "level": 1,
+   "spec": "any",
+   "title": "Which spec to level",
+   "body": "No talents until 10. This addon defaults to Enhancement for leveling (melee, Stormstrike from 25, Windfury at 30). Elemental is a solid caster leveler; Restoration is for groups, not solo.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ]
+  },
+  {
+   "id": "mana-1",
+   "level": 2,
+   "spec": "any",
+   "title": "Mana and the five-second rule",
+   "body": "Spending mana pauses Spirit regen for 5 s. Let melee finish weak enemies, and drink when you need to; Shamans have no wand.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/news/how-does-elemental-shaman-look-in-wow-forever-383356"
+   ]
+  },
+  {
+   "id": "call-of-earth",
+   "level": 4,
+   "spec": "any",
+   "title": "Call of Earth: your first totem",
+   "body": "Talk to Canaga Earthcaller in the Valley of Trials. Bring two Felstalker Hooves (Felstalkers near the Burning Blade Cave), take the Earth Sapta up the hidden path that starts at 44, 76, drink it at the Spirit Rock and return the Rough Quartz. Reward: the Earth Totem item and Stoneskin Totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://db.icy-veins.com/wow-forever/quests/1516"
+   ]
+  },
+  {
+   "id": "earth-shock",
+   "level": 4,
+   "spec": "any",
+   "title": "Earth Shock interrupts",
+   "body": "Earth Shock is instant Nature damage and interrupts spellcasting. Use it on casters and healers. It shares a cooldown with the other Shocks.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+   ]
+  },
+  {
+   "id": "earthbind",
+   "level": 6,
+   "spec": "any",
+   "title": "Earthbind Totem",
+   "body": "Slows nearby enemies by 50% for 45 s. Drop it and walk away when a fight goes wrong.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "trainer",
+   "level": 6,
+   "spec": "any",
+   "title": "Visit the trainer every two levels",
+   "body": "New ranks unlock every two levels. Training all ranks to 60 costs about 206-207 gold in total.",
+   "unconfirmed": true,
+   "flag": "Total training cost from foreverguide's summary only.",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://foreverguide.net/classes/shaman/"
+   ]
+  },
+  {
+   "id": "lightning-shield",
+   "level": 8,
+   "spec": "any",
+   "title": "Lightning Shield",
+   "body": "Charges hit anyone who strikes you. Keep it up while questing and refresh it right after a fight.",
+   "unconfirmed": true,
+   "flag": "Charges and duration only from endgametools.",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  {
+   "id": "stoneclaw",
+   "level": 8,
+   "spec": "any",
+   "title": "Stoneclaw Totem",
+   "body": "Taunts nearby enemies for 15 s. Drop it when an extra enemy joins, kill the first one, then the second.",
+   "unconfirmed": true,
+   "flag": "Level 8 only from endgametools.",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  {
+   "id": "call-of-fire",
+   "level": 10,
+   "spec": "any",
+   "title": "Call of Fire: your Fire totem",
+   "body": "Any Shaman trainer sends you to Kranal Fiss in the Barrens, north of the Crossroads. He sends you to Telf Joolan on a hidden path on Durotar's southern edge (starts at 36, 56). Gather a Reagent Pouch (Burning Blade Cultists north of Razor Hill) and Fire Tar (Razormane Thornweavers), defeat the Fire Elemental, use the brazier. Reward: Fire Totem, Totem of Charged Flames and Searing Totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://db.icy-veins.com/wow-forever/quests/1522"
+   ]
+  },
+  {
+   "id": "talents-10",
+   "level": 10,
+   "spec": "any",
+   "title": "Talents start",
+   "body": "Your first talent point comes at 10. Gold medal talents sit at the 11th, 16th, 21st and 31st point of each tree.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  {
+   "id": "flame-shock",
+   "level": 10,
+   "spec": "any",
+   "title": "Flame Shock and Flametongue Weapon",
+   "body": "Flame Shock: Fire damage plus a 12 s burn, sharing the Shock cooldown. Flametongue Weapon is the caster imbue and the Enhancement imbue in groups before 30.",
+   "unconfirmed": true,
+   "flag": "Levels only from endgametools for Flametongue Weapon ranks.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman",
+    "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "barrens",
+   "level": 10,
+   "spec": "any",
+   "title": "On to the Barrens",
+   "body": "Icy Veins: Horde quests in the Barrens at 10-13. Ragefire Chasm in Orgrimmar is the first dungeon.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/zones-and-maps"
+   ]
+  },
+  {
+   "id": "fire-nova",
+   "level": 12,
+   "spec": "any",
+   "title": "Fire Nova",
+   "body": "Fire Nova erupts from your Fire totem: drop Searing Totem next to a pack, then Fire Nova. It costs a lot of mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ]
+  },
+  {
+   "id": "rez",
+   "level": 12,
+   "spec": "any",
+   "title": "Ancestral Spirit and Purge",
+   "body": "Ancestral Spirit resurrects allies out of combat. Purge removes magic buffs from enemies.",
+   "unconfirmed": true,
+   "flag": "Levels from endgametools only.",
+   "sources": [
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  {
+   "id": "silverpine",
+   "level": 14,
+   "spec": "any",
+   "title": "Silverpine Forest",
+   "body": "Icy Veins sends Horde to Silverpine Forest at 14-17; Ruins of Lordaeron is a dungeon option there.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/zones-and-maps"
+   ]
+  },
+  {
+   "id": "enh-15",
+   "level": 15,
+   "spec": "Enhancement",
+   "title": "Early Enhancement points",
+   "body": "Icy Veins' leveling build starts in Restoration (Mindfulness, then Water Shield) and suggests an optional respec at 25 to grab Stormstrike.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "ele-15",
+   "level": 15,
+   "spec": "Elemental",
+   "title": "Elemental Alacrity",
+   "body": "Icy Veins takes Elemental Alacrity by 15: up to 0.5 s faster Lightning Bolt and Chain Lightning.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  {
+   "id": "resto-15",
+   "level": 15,
+   "spec": "Restoration",
+   "title": "Mindfulness",
+   "body": "Up to 50% of your mana regen continues while casting. Icy Veins takes it at 15.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+   ]
+  },
+  {
+   "id": "tremor",
+   "level": 18,
+   "spec": "any",
+   "title": "Tremor Totem",
+   "body": "Removes Fear, Charm and Sleep from your party. Drop it against enemies that fear.",
+   "unconfirmed": true,
+   "flag": "Pulse interval conflicts (5 s vs 2 s).",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "ghost-wolf",
+   "level": 20,
+   "spec": "any",
+   "title": "Ghost Wolf",
+   "body": "+40% run speed outdoors, no cooldown. Use it between every fight.",
+   "unconfirmed": true,
+   "flag": "Cast time conflicts (2 s vs 3 s).",
+   "sources": [
+    "https://db.icy-veins.com/wow-forever/spells/2645",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "call-of-the-elements",
+   "level": 20,
+   "spec": "any",
+   "title": "Call of the Elements and Totemic Recall",
+   "body": "Call of the Elements unlocks the totem bar: one preset totem per element, all four in one 3 s cast. Totemic Recall picks them up and refunds 25% of their mana.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "call-of-water",
+   "level": 20,
+   "spec": "any",
+   "title": "Call of Water",
+   "body": "Don't rush it: lots of travel. Ratchet, then Brine in the Southern Barrens, fetch trips to Tarren Mill and Ashenvale, then the Manifestation of Water in Silverpine. Reward: Water Totem and Healing Stream Totem.",
+   "unconfirmed": true,
+   "flag": "The chain's start NPC and quest IDs conflict between sources.",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://db.icy-veins.com/wow-forever/quests/63"
+   ]
+  },
+  {
+   "id": "water-shield",
+   "level": 20,
+   "spec": "any",
+   "title": "Water Shield",
+   "body": "Restoration's 11th point: 3 globes that return 2% of max mana when you are hit or crit. Restoration keeps it up; Icy Veins' Enhancement leveling build takes it too.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "lhw-frost",
+   "level": 20,
+   "spec": "any",
+   "title": "Lesser Healing Wave and Frost Shock",
+   "body": "Lesser Healing Wave is the fast emergency heal. Frost Shock slows the target and makes less threat than Earth Shock.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+   ]
+  },
+  {
+   "id": "totemic-call",
+   "level": 22,
+   "spec": "any",
+   "title": "Totemic Call",
+   "body": "Moves your totems to you, but costs 25% of base mana and a GCD. Usually recall and re-drop instead.",
+   "unconfirmed": true,
+   "flag": "Cooldown conflicts (30 s vs 1 min).",
+   "sources": [
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "stormstrike",
+   "level": 25,
+   "spec": "Enhancement",
+   "title": "Stormstrike",
+   "body": "Strike for 100% weapon damage (8 s cooldown); your next Lightning Bolt, Chain Lightning or Earth Shock on that target deals 20% more. Stormstrike, then Earth Shock.",
+   "unconfirmed": true,
+   "flag": "Icy Veins DB lists level 40; the talent tree allows 25.",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "earthbound",
+   "level": 25,
+   "spec": "Elemental",
+   "title": "Earthbound",
+   "body": "Earthbind Totem now roots nearby enemies for 5 s. Drop it, step back, keep casting.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+   ]
+  },
+  {
+   "id": "mana-tide",
+   "level": 25,
+   "spec": "Restoration",
+   "title": "Mana Tide Totem",
+   "body": "Group mana every 3 s for 12 s, 5 min cooldown. Use it early (about 80% mana).",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "magma",
+   "level": 26,
+   "spec": "any",
+   "title": "Magma Totem and Mana Spring Totem",
+   "body": "Magma Totem burns everything within 8 yd: the best Fire totem for packs, but mana-hungry. Mana Spring Totem is the go-to Water totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "call-of-air",
+   "level": 30,
+   "spec": "any",
+   "title": "Call of Air",
+   "body": "Any Shaman trainer sends you to Prate Cloudseer in Thousand Needles. Short quest; do it right away. Reward: the Air Totem.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://db.icy-veins.com/wow-forever/quests/1531"
+   ]
+  },
+  {
+   "id": "windfury",
+   "level": 30,
+   "spec": "Enhancement",
+   "title": "Windfury Weapon: the heart of Enhancement",
+   "body": "Windfury Weapon is your imbue from now on, solo and in groups. Since the Nov 10/11 hotfix it stacks with Windfury Totem, and Blizzard wants Windfury at the heart of Enhancement.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  {
+   "id": "reincarnation",
+   "level": 30,
+   "spec": "any",
+   "title": "Reincarnation",
+   "body": "Come back from death with 20% health and mana once an hour; uses an Ankh. Buy some.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "ns",
+   "level": 30,
+   "spec": "Restoration",
+   "title": "Nature's Swiftness",
+   "body": "Your next Nature spell under 10 s cast is instant. Save it for an emergency Healing Wave.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+   ]
+  },
+  {
+   "id": "call-of-thunder",
+   "level": 30,
+   "spec": "Elemental",
+   "title": "Call of Thunder and Lightning Overload",
+   "body": "Call of Thunder: +5% crit on Lightning Bolt and Chain Lightning (it replaced Lava Burst). Lightning Overload: up to 30% chance for a free half-damage copy.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "imp-ss",
+   "level": 30,
+   "spec": "Enhancement",
+   "title": "Improved Stormstrike",
+   "body": "Stormstrike gives 50% mana regen while casting for 15 s, and dodges or parries can reset it. Icy Veins takes it right after Stormstrike.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+   ]
+  },
+  {
+   "id": "call-of-spirits",
+   "level": 30,
+   "spec": "any",
+   "title": "A second totem preset",
+   "body": "Call of the Spirits adds a second totem-bar preset: for example one set for single target, one for packs.",
+   "unconfirmed": true,
+   "flag": "Level conflicts: 30 (deep dive) vs 40 (endgametools).",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  {
+   "id": "windfury-totem",
+   "level": 32,
+   "spec": "any",
+   "title": "Windfury Totem and Chain Lightning",
+   "body": "Windfury Totem: party buff for melee. Chain Lightning: hits several enemies, 6 s cooldown.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696"
+   ]
+  },
+  {
+   "id": "maelstrom",
+   "level": 35,
+   "spec": "Enhancement",
+   "title": "Maelstrom Weapon",
+   "body": "Melee hits build stacks; each makes your next Lightning Bolt 20% faster and cheaper. At 5 stacks it is instant: cast it then, never earlier. Track it in the Cooldown Manager.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "tempest",
+   "level": 35,
+   "spec": "any",
+   "title": "The Tempest's Weapons",
+   "body": "Call of Air's follow-up is long: Razorfen Kraul, Twisted Totems in four zones, and elites (some immune to Nature). Icy Veins: realistic at 35-40 or with a group. Rage of the Storm (16 Strength, 3.6 speed since the Nov 10 hotfix) suits Enhancement.",
+   "unconfirmed": true,
+   "flag": "Quest level conflicts (30 vs 40 in Icy Veins DB).",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/shaman-class-quests",
+    "https://db.icy-veins.com/wow-forever/quests/79442",
+    "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026"
+   ]
+  },
+  {
+   "id": "dual-spec",
+   "level": 40,
+   "spec": "any",
+   "title": "Dual Specialization",
+   "body": "Dual spec unlocks at 40. The addon's plan: Enhancement as spec A, Restoration as spec B.",
+   "unconfirmed": true,
+   "flag": "Cost not in the sources.",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+   ]
+  },
+  {
+   "id": "riding",
+   "level": 40,
+   "spec": "any",
+   "title": "Riding and your raptor",
+   "body": "Apprentice Riding (60%) at 40: Xar'Ti in Sen'jin Village teaches it, and Your First Riding Raptor gives a free raptor.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts"
+   ]
+  },
+  {
+   "id": "lightning-mastery",
+   "level": 40,
+   "spec": "Elemental",
+   "title": "Lightning Mastery",
+   "body": "15 s burst: faster Lightning Bolt, no Chain Lightning cooldown. Pop Berserking with it.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "rotf",
+   "level": 40,
+   "spec": "Enhancement",
+   "title": "Rage of the Farseer",
+   "body": "+30% attack speed for 25 s, 3 min cooldown. Personal only; pair it with Berserking.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "riptide",
+   "level": 40,
+   "spec": "Restoration",
+   "title": "Riptide and Chain Heal",
+   "body": "Riptide the most injured target, then Chain Heal onto it for 25% more healing.",
+   "unconfirmed": true,
+   "flag": "Riptide cooldown and initial heal conflict between sources.",
+   "sources": [
+    "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "ancestors",
+   "level": 40,
+   "spec": "any",
+   "title": "A third totem preset",
+   "body": "Call of the Ancestors adds a third preset.",
+   "unconfirmed": true,
+   "flag": "Level conflicts: 40 (deep dive) vs 30 (endgametools).",
+   "sources": [
+    "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+    "https://endgametools.com/en/wow-forever/spells/shaman"
+   ]
+  },
+  {
+   "id": "grace-of-air",
+   "level": 42,
+   "spec": "any",
+   "title": "Grace of Air Totem",
+   "body": "+Agility for the raid. With another Shaman, one runs Windfury Totem and the other Grace of Air.",
+   "unconfirmed": true,
+   "flag": "Exclusivity with Windfury Totem conflicts between sources.",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities"
+   ]
+  },
+  {
+   "id": "enh-stats",
+   "level": 50,
+   "spec": "Enhancement",
+   "title": "Enhancement stats",
+   "body": "Icy Veins (Nov 13): Weapon DPS > Hit (to 8%) > Expertise > Strength > Intellect > Spell power. Older lists with Intellect and spell power on top predate the hotfix.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-stat-priority",
+    "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/stat-priority-pve-dps"
+   ]
+  },
+  {
+   "id": "ele-stats",
+   "level": 50,
+   "spec": "Elemental",
+   "title": "Elemental stats",
+   "body": "Icy Veins: Spell power > Spell hit (to 17%) > Spell crit > Intellect > MP5.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-stat-priority"
+   ]
+  },
+  {
+   "id": "resto-stats",
+   "level": 50,
+   "spec": "Restoration",
+   "title": "Restoration stats",
+   "body": "Icy Veins: Healing > Spell crit > Intellect > Spirit > MP5. Crit also refills mana through Water Shield.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-stat-priority"
+   ]
+  },
+  {
+   "id": "enh-60",
+   "level": 60,
+   "spec": "Enhancement",
+   "title": "Enhancement at 60",
+   "body": "Icy Veins raid build: Stormstrike, Improved Stormstrike, Maelstrom Weapon, Rage of the Farseer, then Elemental down to Trial by Fire. A solo/dungeon build trades Rage of the Farseer for more mana sustain.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "ele-60",
+   "level": 60,
+   "spec": "Elemental",
+   "title": "Elemental at 60",
+   "body": "Icy Veins has a raid support build (down to Mana Tide Totem) and a maximum-throughput build.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "resto-60",
+   "level": 60,
+   "spec": "Restoration",
+   "title": "Restoration at 60",
+   "body": "Icy Veins uses one Restoration build for world, dungeons and raids.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-spec-builds-talents"
+   ]
+  },
+  {
+   "id": "max-level",
+   "level": 60,
+   "spec": "any",
+   "title": "Level 60",
+   "body": "Journeyman Riding (100%) at 60. Raids open Dec 9: Barrow Deeps, Hyjal Summit, Onyxia's Lair.",
+   "unconfirmed": false,
+   "flag": "",
+   "sources": [
+    "https://www.wowhead.com/forever/guide/unlocking-riding-skill-mounts",
+    "https://www.icy-veins.com/wow-forever/roadmap"
+   ]
+  }
+ ],
+ "first_learn_hints": {
+  "Lightning Bolt": "Pull with it from range; it is your first damage spell.",
+  "Healing Wave": "Heal yourself up after a fight instead of waiting.",
+  "Rockbiter Weapon": "Put it on your weapon now: it lasts an hour.",
+  "Earth Shock": "Instant damage that interrupts casters.",
+  "Stoneskin Totem": "Your first totem: drop it when fighting several enemies.",
+  "Earthbind Totem": "Slows enemies around it: drop it and walk away.",
+  "Lightning Shield": "Keep it up while questing; it hits back.",
+  "Stoneclaw Totem": "Taunts an extra enemy while you finish the first.",
+  "Flame Shock": "Fire damage plus a burn; shares the Shock cooldown.",
+  "Searing Totem": "Fire totem for single targets and the anchor for Fire Nova.",
+  "Strength of Earth Totem": "More Strength for you and melee allies.",
+  "Flametongue Weapon": "Caster imbue, and Enhancement's group imbue before 30.",
+  "Fire Nova": "Erupts from your Fire totem: drop one next to a pack first.",
+  "Purge": "Strips magic buffs from an enemy.",
+  "Ancestral Spirit": "Resurrect allies out of combat.",
+  "Cure Poison": "Removes a poison.",
+  "Tremor Totem": "Removes Fear, Charm and Sleep from your party.",
+  "Ghost Wolf": "+40% speed outdoors: use it between every fight.",
+  "Frost Shock": "Slows the target; less threat than Earth Shock.",
+  "Frostbrand Weapon": "Slowing imbue for kiting.",
+  "Healing Stream Totem": "Small group heal every 2 s.",
+  "Lesser Healing Wave": "Fast emergency heal.",
+  "Call of the Elements": "Drop all four preset totems in one cast.",
+  "Totemic Recall": "Pick up your totems and get 25% of their mana back.",
+  "Cure Disease": "Removes a disease.",
+  "Poison Cleansing Totem": "Cleanses poisons from the party.",
+  "Totemic Call": "Moves your totems to you; expensive.",
+  "Water Breathing": "Breathe underwater; uses Shiny Fish Scales.",
+  "Magma Totem": "Burns every enemy near it; best Fire totem for packs.",
+  "Mana Spring Totem": "Mana for the group: your go-to Water totem.",
+  "Water Walking": "Walk on water; uses Fish Oil.",
+  "Astral Recall": "A second Hearthstone.",
+  "Grounding Totem": "Eats one harmful spell aimed at your party.",
+  "Reincarnation": "Come back after death; carry Ankhs.",
+  "Windfury Weapon": "Enhancement's imbue from now on.",
+  "Chain Lightning": "Hits several enemies.",
+  "Windfury Totem": "Party melee buff; Enhancement drops it even solo.",
+  "Chain Heal": "Jumping group heal.",
+  "Grace of Air Totem": "Agility for the raid when another Shaman runs Windfury.",
+  "Stormstrike": "Press it on cooldown, then Earth Shock.",
+  "Water Shield": "Mana back when hit or on crits.",
+  "Mana Tide Totem": "Group mana cooldown; use it early.",
+  "Nature's Swiftness": "Instant emergency Healing Wave.",
+  "Lightning Mastery": "15 s burst window: faster Lightning Bolt, free Chain Lightning.",
+  "Riptide": "HoT that boosts Chain Heal on that target.",
+  "Rage of the Farseer": "Personal +30% attack speed; pair with Berserking.",
+  "Call of the Spirits": "A second totem preset.",
+  "Call of the Ancestors": "A third totem preset."
+ },
+ "rotation": {
+  "Enhancement": {
+   "solo": {
+    "summary": "Imbue and Lightning Shield up. Pull with rank 1 Lightning Bolt, melee with a slow two-hander, Earth Shock on cooldown; from 25 Stormstrike, from 30 Windfury Weapon, from 35 Lightning Bolt at 5 Maelstrom stacks. Heal after pulls, Ghost Wolf between them.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Windfury Weapon",
+      "when": "imbue_missing",
+      "note": "From 30, always (Nov 10/11 hotfix; Icy Veins Nov 13)."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Keep it up; Shamanistic Focus makes it cheap."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "out_of_combat",
+      "note": "Pull from range with rank 1 (Icy Veins leveling)."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "Single target; Magma Totem instead when mana allows."
+     },
+     {
+      "spell": "Magma Totem",
+      "when": "manual",
+      "note": "Packs, if mana allows (Icy Veins)."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "If missing on the target (Icy Veins)."
+     },
+     {
+      "spell": "Stormstrike",
+      "when": "ready",
+      "note": "On cooldown (8 s since the hotfix); react to Improved Stormstrike resets."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "stacks_at_least:Maelstrom Weapon:5",
+      "note": "Only at 5 Maelstrom Weapon stacks: instant, 20% faster and cheaper per stack."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "ready",
+      "note": "Spends the Stormstrike bonus; also your interrupt. Frost Shock if threat is a problem."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "fire_totem_out",
+      "note": "With a Fire totem down near the enemies."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Drop it even solo: it stacks with Windfury Weapon now."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Or Stoneskin Totem for defense."
+     },
+     {
+      "spell": "Rage of the Farseer",
+      "when": "manual",
+      "note": "Longer fights; Icy Veins' solo build skips it."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial for big pulls."
+     },
+     {
+      "spell": "Stoneclaw Totem",
+      "when": "manual",
+      "note": "Emergency: soak an extra enemy."
+     },
+     {
+      "spell": "Healing Wave",
+      "when": "manual",
+      "note": "After the pull, with spare mana."
+     },
+     {
+      "spell": "Lesser Healing Wave",
+      "when": "manual",
+      "note": "When in danger."
+     },
+     {
+      "spell": "Ghost Wolf",
+      "when": "manual",
+      "note": "Between fights from 20."
+     },
+     {
+      "spell": "Rockbiter Weapon",
+      "when": "imbue_missing",
+      "note": "Before 30 (fallback until you know Windfury Weapon). Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "Let melee finish a low target instead of one more spell (five-second rule).",
+     "Visit a weapon trainer for Two-Handed Axes and Maces.",
+     "Totemic Recall when you move on.",
+     "Track Maelstrom Weapon in the Cooldown Manager."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+     "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+    ]
+   },
+   "dungeon": {
+    "summary": "Windfury Weapon (before 30: Flametongue Weapon in groups), Lightning Shield, totems: Strength of Earth, Magma (Searing if mana is short), Mana Spring, Windfury. Then Flame Shock, Stormstrike, 5-stack Lightning Bolt, Earth Shock, Fire Nova.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Windfury Weapon",
+      "when": "imbue_missing",
+      "note": "From 30 (Icy Veins Nov 13)."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Keep it up."
+     },
+     {
+      "spell": "Magma Totem",
+      "when": "no_fire_totem",
+      "note": "Main Fire totem."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "If mana is restricted or before Magma Totem."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Party melee buff; stacks with your imbue."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Melee buff."
+     },
+     {
+      "spell": "Mana Spring Totem",
+      "when": "totem_missing:Water",
+      "note": "Mana for the group."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "If missing on the target (Icy Veins)."
+     },
+     {
+      "spell": "Stormstrike",
+      "when": "ready",
+      "note": "On cooldown (8 s since the hotfix); react to Improved Stormstrike resets."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "stacks_at_least:Maelstrom Weapon:5",
+      "note": "Only at 5 Maelstrom Weapon stacks: instant, 20% faster and cheaper per stack."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "ready",
+      "note": "Spends the Stormstrike bonus; also your interrupt. Frost Shock if threat is a problem."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "fire_totem_out",
+      "note": "With a Fire totem down near the enemies."
+     },
+     {
+      "spell": "Rage of the Farseer",
+      "when": "ready",
+      "note": "With Berserking and trinkets."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial, with Rage of the Farseer."
+     },
+     {
+      "spell": "Frost Shock",
+      "when": "manual",
+      "note": "Instead of Earth Shock if you pull threat."
+     },
+     {
+      "spell": "Purge",
+      "when": "manual",
+      "note": "Strip enemy magic buffs."
+     },
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Groups before 30 (Icy Veins). Listed last: fallback only."
+     },
+     {
+      "spell": "Rockbiter Weapon",
+      "when": "imbue_missing",
+      "note": "Only before you know Flametongue Weapon. Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "AoE: Magma Totem > Fire Nova on cooldown > Flame Shock on several targets > Rage of the Farseer > Stormstrike > 5-stack Lightning Bolt > Earth Shock.",
+     "Don't use Flametongue Totem: it replaces Windfury Totem."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+     "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+    ]
+   },
+   "raid": {
+    "summary": "Call of the Elements for Strength of Earth, Magma (or Searing), Mana Spring and Windfury Totem. Windfury Weapon, Lightning Shield. Rage of the Farseer with Berserking, Flame Shock, Stormstrike, 5-stack Lightning Bolt, Earth Shock, Fire Nova.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Windfury Weapon",
+      "when": "imbue_missing",
+      "note": "Go-to imbue (Icy Veins Nov 13)."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Keep it up."
+     },
+     {
+      "spell": "Call of the Elements",
+      "when": "manual",
+      "note": "Place all four totems before the pull."
+     },
+     {
+      "spell": "Magma Totem",
+      "when": "no_fire_totem",
+      "note": "Searing Totem if mana is short."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Raid melee buff."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Raid melee buff."
+     },
+     {
+      "spell": "Rage of the Farseer",
+      "when": "ready",
+      "note": "With trinkets and Berserking."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial, with Rage of the Farseer."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "If missing on the target (Icy Veins)."
+     },
+     {
+      "spell": "Stormstrike",
+      "when": "ready",
+      "note": "On cooldown (8 s since the hotfix); react to Improved Stormstrike resets."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "stacks_at_least:Maelstrom Weapon:5",
+      "note": "Only at 5 Maelstrom Weapon stacks: instant, 20% faster and cheaper per stack."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "ready",
+      "note": "Spends the Stormstrike bonus; also your interrupt. Frost Shock if threat is a problem."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "fire_totem_out",
+      "note": "With a Fire totem down near the enemies."
+     },
+     {
+      "spell": "Rockbiter Weapon",
+      "when": "imbue_missing",
+      "note": "Only if you don't know Windfury Weapon yet. Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "Raids open Dec 9.",
+     "Gear: Weapon DPS > Hit > Expertise > Strength > Intellect (Icy Veins Nov 13)."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+     "https://news.blizzard.com/en-us/article/24315281/wow-forever-hotfixes-november-13-2026",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+     "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-stat-priority"
+    ]
+   }
+  },
+  "Elemental": {
+   "solo": {
+    "summary": "Shield and imbue up. Open from range with Lightning Bolt, Flame Shock, then Lightning Bolt. Chain Lightning and Fire Nova for packs, Lightning Mastery as a burst window, Earthbind Totem to kite.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Caster imbue from 10 (Wowhead)."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Between pulls; Water Shield when mana is the problem."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "Refresh when it falls off."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "Single target; anchors Fire Nova."
+     },
+     {
+      "spell": "Lightning Mastery",
+      "when": "ready",
+      "note": "Burst window: Chain Lightning has no cooldown inside it."
+     },
+     {
+      "spell": "Chain Lightning",
+      "when": "ready",
+      "note": "Packs (from 32)."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "fire_totem_out",
+      "note": "Packs, with spare mana."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "always",
+      "note": "Filler."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "manual",
+      "note": "Interrupt casters or pull them into your AoE."
+     },
+     {
+      "spell": "Earthbind Totem",
+      "when": "manual",
+      "note": "Kite; with Earthbound it roots for 5 s."
+     },
+     {
+      "spell": "Stoneskin Totem",
+      "when": "manual",
+      "note": "Defense when fighting several enemies."
+     },
+     {
+      "spell": "Healing Wave",
+      "when": "manual",
+      "note": "After the pull."
+     },
+     {
+      "spell": "Rockbiter Weapon",
+      "when": "imbue_missing",
+      "note": "Only before Flametongue Weapon at 10. Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "Spend Clearcasting on Chain Lightning or Fire Nova.",
+     "Refresh Lightning Shield right after the last spell of a fight.",
+     "Carry water: mana is Elemental's limit."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+    ]
+   },
+   "dungeon": {
+    "summary": "Totems down (Strength of Earth and Windfury with melee, Searing or Magma, Mana Spring). Flame Shock, Lightning Mastery, Chain Lightning, Lightning Bolt filler; on 3+ targets Chain Lightning and Fire Nova on cooldown.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Caster imbue."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Water Shield when mana is low."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "Magma Totem for 3+ targets."
+     },
+     {
+      "spell": "Magma Totem",
+      "when": "manual",
+      "note": "3+ targets."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "With melee."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "With melee; Grace of Air if another Shaman has Windfury."
+     },
+     {
+      "spell": "Mana Spring Totem",
+      "when": "totem_missing:Water",
+      "note": "Mana for the group."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "Skip it on trash that dies fast if mana is short."
+     },
+     {
+      "spell": "Lightning Mastery",
+      "when": "ready",
+      "note": "With Berserking."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial."
+     },
+     {
+      "spell": "Chain Lightning",
+      "when": "ready",
+      "note": "Packs; on one target only outside Lightning Mastery."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "fire_totem_out",
+      "note": "3+ targets."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "always",
+      "note": "Filler."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "manual",
+      "note": "Interrupt."
+     },
+     {
+      "spell": "Purge",
+      "when": "manual",
+      "note": "Strip enemy magic buffs."
+     }
+    ],
+    "tips": [
+     "Don't use Flametongue Totem with melee: it replaces Windfury Totem."
+    ],
+    "unconfirmed": false,
+    "flag": "",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities"
+    ]
+   },
+   "raid": {
+    "summary": "Call of the Elements with Searing Totem last (Magma for 3+). Flame Shock, Lightning Mastery with racials and trinkets, Chain Lightning outside the window (long fights: only with Clearcasting), Lightning Bolt filler.",
+    "kind": "damage",
+    "priority": [
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Caster imbue (Wowhead, pre-hotfix)."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Water Shield when mana is low."
+     },
+     {
+      "spell": "Call of the Elements",
+      "when": "manual",
+      "note": "Before the pull; Searing Totem last."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "Single target."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "Refresh when it falls off."
+     },
+     {
+      "spell": "Lightning Mastery",
+      "when": "ready",
+      "note": "With Berserking, potions and trinkets."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial."
+     },
+     {
+      "spell": "Chain Lightning",
+      "when": "proc:Clearcasting",
+      "note": "Long fights: only with Clearcasting outside Lightning Mastery."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "always",
+      "note": "Filler."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "manual",
+      "note": "3+ targets."
+     }
+    ],
+    "tips": [
+     "3+ targets: Lightning Mastery > Chain Lightning on cooldown > Fire Nova on cooldown > Flame Shock on targets without it > Lightning Bolt.",
+     "No published raid Water totem for Elemental yet."
+    ],
+    "unconfirmed": true,
+    "flag": "Icy Veins Elemental pages predate the Nov 10/11 hotfix (which changed Enhancement only).",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/elemental-shaman-ranged-dps-pve-rotation-cooldowns-abilities",
+     "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips"
+    ]
+   }
+  },
+  "Restoration": {
+   "solo": {
+    "summary": "Restoration is not recommended for solo leveling (Icy Veins). If you must: shield and imbue up, Flame Shock and Lightning Bolt, Earth Shock, Healing Wave after the fight.",
+    "kind": "healing",
+    "priority": [
+     {
+      "spell": "Water Shield",
+      "when": "shield_missing",
+      "note": "From 20."
+     },
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "From 10 (Wowhead)."
+     },
+     {
+      "spell": "Flame Shock",
+      "when": "target_debuff_missing:Flame Shock",
+      "note": "Damage."
+     },
+     {
+      "spell": "Searing Totem",
+      "when": "no_fire_totem",
+      "note": "Damage help."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "ready",
+      "note": "Damage and interrupt."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "always",
+      "note": "Damage filler."
+     },
+     {
+      "spell": "Healing Wave",
+      "when": "manual",
+      "note": "After the fight."
+     },
+     {
+      "spell": "Riptide",
+      "when": "manual",
+      "note": "Self HoT from 40."
+     },
+     {
+      "spell": "Rockbiter Weapon",
+      "when": "imbue_missing",
+      "note": "Before 10. Listed last: fallback only."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Before Water Shield. Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "Quest as Enhancement and heal in groups."
+    ],
+    "unconfirmed": true,
+    "flag": "Solo Restoration is not a sourced leveling plan.",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+     "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+    ]
+   },
+   "dungeon": {
+    "summary": "Water Shield and totems before the pull. Riptide the most injured target, Chain Heal on group damage, Healing Wave otherwise. Nature's Swiftness for emergencies, Mana Tide Totem early. Earth Shock interrupts. Damage only when nobody needs healing.",
+    "kind": "healing",
+    "priority": [
+     {
+      "spell": "Water Shield",
+      "when": "shield_missing",
+      "note": "Always up."
+     },
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Wowhead leveling (pre-hotfix)."
+     },
+     {
+      "spell": "Mana Spring Totem",
+      "when": "totem_missing:Water",
+      "note": "Mana for the group."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Melee groups."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Melee groups."
+     },
+     {
+      "spell": "Riptide",
+      "when": "ready",
+      "note": "Most injured target, on cooldown."
+     },
+     {
+      "spell": "Chain Heal",
+      "when": "manual",
+      "note": "Group damage; on a target with Riptide."
+     },
+     {
+      "spell": "Healing Wave",
+      "when": "always",
+      "note": "Main heal; downrank when damage is light."
+     },
+     {
+      "spell": "Lesser Healing Wave",
+      "when": "manual",
+      "note": "Spikes."
+     },
+     {
+      "spell": "Nature's Swiftness",
+      "when": "manual",
+      "note": "Emergency: then Healing Wave."
+     },
+     {
+      "spell": "Mana Tide Totem",
+      "when": "mana_below:80",
+      "note": "Use early (Icy Veins: about 80% mana)."
+     },
+     {
+      "spell": "Earth Shock",
+      "when": "manual",
+      "note": "Interrupt."
+     },
+     {
+      "spell": "Lightning Bolt",
+      "when": "mana_above:80",
+      "note": "Only when nobody needs healing."
+     },
+     {
+      "spell": "Fire Nova",
+      "when": "manual",
+      "note": "Only if mana allows."
+     },
+     {
+      "spell": "Lightning Shield",
+      "when": "shield_missing",
+      "note": "Before Water Shield at 20. Listed last: fallback only."
+     }
+    ],
+    "tips": [
+     "Totemic Recall between pulls when you move on.",
+     "Mindfulness keeps regen going while you cast."
+    ],
+    "unconfirmed": true,
+    "flag": "Riptide cooldown and initial heal conflict between sources.",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities",
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling",
+     "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json"
+    ]
+   },
+   "raid": {
+    "summary": "Call of the Elements (Searing Totem last). Riptide on cooldown, Chain Heal on Riptide targets for group damage, Healing Wave single target. Mana Tide Totem and Nature's Swiftness as cooldowns.",
+    "kind": "healing",
+    "priority": [
+     {
+      "spell": "Water Shield",
+      "when": "shield_missing",
+      "note": "Always up."
+     },
+     {
+      "spell": "Flametongue Weapon",
+      "when": "imbue_missing",
+      "note": "Wowhead leveling (pre-hotfix)."
+     },
+     {
+      "spell": "Call of the Elements",
+      "when": "manual",
+      "note": "Before the pull."
+     },
+     {
+      "spell": "Strength of Earth Totem",
+      "when": "totem_missing:Earth",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Windfury Totem",
+      "when": "totem_missing:Air",
+      "note": "Raid buff."
+     },
+     {
+      "spell": "Riptide",
+      "when": "ready",
+      "note": "On cooldown on the most injured target."
+     },
+     {
+      "spell": "Chain Heal",
+      "when": "manual",
+      "note": "Group damage, on a Riptide target."
+     },
+     {
+      "spell": "Healing Wave",
+      "when": "always",
+      "note": "Single target; downrank when light."
+     },
+     {
+      "spell": "Nature's Swiftness",
+      "when": "manual",
+      "note": "Emergency."
+     },
+     {
+      "spell": "Mana Tide Totem",
+      "when": "mana_below:80",
+      "note": "Early, so it comes back sooner."
+     },
+     {
+      "spell": "Berserking",
+      "when": "manual",
+      "note": "Troll racial: faster casts in heavy damage phases."
+     }
+    ],
+    "tips": [
+     "No published raid Water totem for Restoration; Mana Tide Totem is a cooldown.",
+     "Raids open Dec 9."
+    ],
+    "unconfirmed": true,
+    "flag": "Riptide cooldown and initial heal conflict between sources.",
+    "sources": [
+     "https://www.icy-veins.com/wow-forever/restoration-shaman-healer-pve-rotation-cooldowns-abilities",
+     "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en" data-faction="neutral">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tazu's Addon</title>
+<meta name="description" content="Tazu's Addon: the Shaman companion for World of Warcraft: Forever. A weapon imbue button, a Fire Nova button, Shield and Totems hints, a rotation helper with Maelstrom Weapon stacks, gear, a Horde Troll leveling path, the totem class quests, talents and Learn the Shaman.">
+<meta name="theme-color" content="#06090b">
+<link rel="icon" href="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="extra.css">
+<script>
+  document.documentElement.classList.add("js");
+  try { var f = localStorage.getItem("tazus-faction"); if (f) document.documentElement.dataset.faction = f; } catch (e) {}
+</script>
+</head>
+<body>
+
+<!-- Screenshots: none yet. They come once Tim provides them, with other
+     players' names pixelated. Until then every screenshot slot is a
+     "Screenshot coming soon" card with a Blizzard spell icon. -->
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Tazu's Addon, back to top">
+    <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg" alt="" width="26" height="26" style="border-radius: 4px; border: 1px solid #7a5c36">
+    <span>Tazu's Addon</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#bar">Shaman bar</a>
+    <a href="#quests">Quests</a>
+    <a href="#tazu">Tazu</a>
+    <a href="#loot">Loot</a>
+    <a href="#tavern">Tavern</a>
+    <a href="https://github.com/ninepointlabs/tazus-addon">GitHub</a>
+  </nav>
+  <div class="faction" role="group" aria-label="Choose your faction">
+    <button type="button" data-pick="alliance" aria-pressed="false" title="For the Alliance!">
+      <img src="https://omaforge.ninepointlabs.com/assets/art/alliance-crest-sm.webp" alt="Alliance" width="28" height="35">
+    </button>
+    <button type="button" data-pick="horde" aria-pressed="false" title="For the Horde!">
+      <img src="https://omaforge.ninepointlabs.com/assets/art/horde-sigil-sm.webp" alt="Horde" width="28" height="35">
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <!-- Portrait slot: add Tazu's portrait here once Tim provides it. -->
+    <p class="kicker">The Shaman companion for World of Warcraft: Forever</p>
+    <h1 class="title">Tazu's Addon</h1>
+    <p class="named-for">Named for <a href="#tazu">Tazu, Troll Shaman of the Horde</a></p>
+    <p class="lede">
+      Elemental, Enhancement or Restoration. Keep the right imbue on your weapon with one
+      press, know which totem each element wants, see your shield's orbs run down, and
+      let the rotation helper show you the next spell you actually know.
+    </p>
+    <ul class="specs" aria-label="Specs">
+      <li class="spec ele"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg" alt="" width="30" height="30">Elemental</li>
+      <li class="spec enh"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightningshield.jpg" alt="" width="30" height="30">Enhancement</li>
+      <li class="spec resto"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_magicimmunity.jpg" alt="" width="30" height="30">Restoration</li>
+    </ul>
+    <div class="cta">
+      <a class="wow-btn" href="#loot">Claim your loot</a>
+      <a class="wow-btn ghost" href="#bar">Try the imbue button</a>
+    </div>
+    <p class="meta">Free and open source · MIT · WoW Forever only · <span data-version>first release coming soon</span> · <a href="https://github.com/ninepointlabs/tazus-addon">GitHub</a></p>
+  </div>
+  <div class="loading" aria-hidden="true">
+    <p class="loading-tip"><b>Tip:</b> <span id="tip">One press of the imbue button, out of combat, applies the recommended weapon imbue at your highest rank.</span></p>
+    <div class="loading-bar"><div class="loading-fill"></div></div>
+  </div>
+</section>
+
+<div class="facts-band">
+  <div class="facts" aria-label="At a glance">
+    <div class="fact"><b>3</b><span>specs, dual spec A/B</span></div>
+    <div class="fact"><b>4</b><span>elements, one hint</span></div>
+    <div class="fact"><b>5</b><span>totem class quests</span></div>
+    <div class="fact"><b>60</b><span>minutes per imbue</span></div>
+    <div class="fact"><b>1</b><span>press = 1 cast, always</span></div>
+  </div>
+</div>
+
+<section class="section bar-section" id="bar">
+  <div class="section-head">
+    <h2 class="heading">The Shaman Bar</h2>
+    <p class="sub">Imbue, Fire Nova, shield and totems. Four small cells, one press at a time.</p>
+  </div>
+
+  <div class="spotlight">
+    <div>
+      <h3>Your weapon, your shield, your totems.</h3>
+      <p>A small bar sits next to your action bars. Two cells are buttons you press; two are
+        hints that tell you what's missing. It sits beside Blizzard's own totem tracker and the
+        Call of the Elements bar, and never replaces them: you still drop totems from your bars.</p>
+      <p class="steps-title">The four cells</p>
+      <ol class="picks">
+        <li><b>Weapon imbue button.</b> One press out of combat applies the recommended imbue at
+          your highest rank. Following Blizzard's Nov 10/11 hotfix, Windfury Weapon is at the
+          heart of Enhancement; Rockbiter Weapon is the leveling fallback before 30. The cell shows
+          the time left.</li>
+        <li><b>Fire Nova button.</b> Lit only while one of your Fire totems is down. In Forever,
+          Fire Nova Totem is removed: Fire Nova erupts at your Fire totem instead.</li>
+        <li><b>Shield hint.</b> Lightning Shield or Water Shield, how many orbs are left, and a
+          <em>refresh me</em> when it's gone.</li>
+        <li><b>Totems hint.</b> Which Earth, Fire, Water and Air totem fits Solo, Dungeon or Raid,
+          with a nudge when one is missing.</li>
+      </ol>
+      <p class="steps-title">Imbues in Forever</p>
+      <ul class="rules">
+        <li>Imbues last 60 minutes.</li>
+        <li>They now stack with weapon totems.</li>
+        <li>Prefer another imbue? Pin it under <em>Settings › Shaman bar</em>.</li>
+      </ul>
+      <p class="steps-title">Blizzard's rules, kept</p>
+      <ul class="rules">
+        <li>Advice only: one key press is one cast. Nothing casts on its own, there's no <code>/click</code>, and no macros are created.</li>
+        <li>The hints are hints, not buttons. They never cast anything.</li>
+        <li>Keys are optional and none is bound by default. Pick one under <em>Settings › Shaman bar</em>. Super (Meta) combos are never used.</li>
+      </ul>
+    </div>
+
+    <div class="demo" id="shaman-demo" tabindex="0" aria-label="Shaman bar demo: press I for the imbue button, N for Fire Nova">
+      <div class="demo-bar"><span>Try it</span><small>pretend Shaman · demo values</small></div>
+      <div class="demo-toggles" role="group" aria-label="Level">
+        <label><input type="radio" name="demo-level" value="20" checked> Level 20</label>
+        <label><input type="radio" name="demo-level" value="40"> Level 40 Enhancement</label>
+      </div>
+      <ul class="elements" aria-label="Your totems: click to drop or pick up"></ul>
+      <div class="hint-row">
+        <div class="hint shield-hint" aria-live="polite"></div>
+        <div class="hint totem-hint" aria-live="polite"></div>
+      </div>
+      <div class="demo-combat"><span>Out of combat.</span><button type="button" class="wow-btn small ghost combat-toggle">Pull a mob</button></div>
+      <div class="demo-foot">
+        <div class="bar-btns">
+          <button type="button" class="bar-btn imbue-btn" aria-label="Apply weapon imbue"><span class="key">I</span><span class="left"></span></button>
+          <button type="button" class="bar-btn nova-btn" aria-label="Fire Nova"><span class="key">N</span></button>
+        </div>
+        <div class="demo-status" aria-live="polite"></div>
+      </div>
+      <div class="demo-actions">
+        <button type="button" class="wow-btn small ghost wait-btn">Wait 20 minutes</button>
+        <button type="button" class="wow-btn small ghost hit-btn">Take a hit</button>
+        <button type="button" class="wow-btn small ghost shield-btn">Cast your shield</button>
+      </div>
+      <p class="demo-note">A web demo of the addon's rules, not a screenshot. In game you drop totems from your own bars or Call of the Elements; here you click a slot. The I and N keys are just for the demo: in game you choose your own keys, or none.</p>
+    </div>
+  </div>
+
+  <div class="element-grid">
+    <div class="element-card earth"><h3><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_earthbindtotem.jpg" alt="" width="32" height="32" loading="lazy" decoding="async">Earth</h3><p>Unlocked by Call of Earth at level 4.</p></div>
+    <div class="element-card fire"><h3><img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_searingtotem.jpg" alt="" width="32" height="32" loading="lazy" decoding="async">Fire</h3><p>Call of Fire at 10. A Fire totem down lights the Fire Nova button.</p></div>
+    <div class="element-card water"><h3><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_manaregentotem.jpg" alt="" width="32" height="32" loading="lazy" decoding="async">Water</h3><p>Call of Water at 20.</p></div>
+    <div class="element-card air"><h3><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_windfury.jpg" alt="" width="32" height="32" loading="lazy" decoding="async">Air</h3><p>Call of Air at 30.</p></div>
+  </div>
+
+  <div class="in-game">
+    <figure><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_cyclone.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>The Shaman bar in game: imbue button, Fire Nova, Shield and Totems hints</span></div></figure>
+    <figure><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_earthbindtotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>The Totems hint next to Blizzard's totem tracker</span></div></figure>
+  </div>
+</section>
+
+<section class="section quests" id="quests">
+  <div class="section-head">
+    <h2 class="heading">Quest Log</h2>
+    <p class="sub">Everything Tazu's Addon does for your Shaman, one quest at a time.</p>
+  </div>
+
+  <div class="questlog">
+    <div class="ql-bar">
+      <span class="ql-name">Quest Log</span>
+      <span class="ql-count"><span id="ql-done">0</span>/10 accepted</span>
+    </div>
+    <div class="ql-body">
+      <ol class="ql-list" id="ql-list" aria-label="Quests"></ol>
+
+      <div class="ql-pages">
+
+        <div class="quest" id="q-home" data-zone="Valley of Trials" data-level="4">
+          <h3>Know What to Do Next</h3>
+          <p>Open the window with <code>/tazu</code> (or <code>/shaman</code>) and Home tells you what matters now: what to train, your next totem class quest, your riding gold, and anything that needs attention.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>See what to train now and at your next trainer visit</li>
+            <li>Never miss your next totem quest</li>
+            <li>Track your savings for riding</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>The window has Home, then <em>Play</em> (Rotation, Gear), <em>Progress</em> (Leveling, Talents), <em>Learn</em> (Learn the Shaman), What's new and Settings.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Codex of Next Steps</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Codex of Next Steps</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Shows what to do next, sorted by what matters.</span>
+                <i>"Type /tazu. Start on Home."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Home: Needs attention, your trainer and next totem quest</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-rotation" data-zone="Valley of Trials" data-level="6">
+          <h3>Storm, Strike, Shock</h3>
+          <p>Priority lists for Elemental, Enhancement and Restoration, filtered to the spells you actually know, with a small next-spell HUD, your Maelstrom Weapon stacks and a post-fight summary with mana tips. It only ever advises: nothing casts by itself.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Follow the priority for your spec and level</li>
+            <li>Watch your Maelstrom Weapon stacks</li>
+            <li>Read the post-fight summary and save some mana</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Rotation's sub-tabs are <em>Solo</em>, <em>Dungeon</em>, <em>Raid</em>, <em>Totems &amp; imbues</em>, <em>Cooldowns</em> and <em>Mana</em>. Spells you haven't trained yet are left out of the advice.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Whisper of the Next Bolt</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Whisper of the Next Bolt</b>
+                <span>Unique</span>
+                <span class="use">Use: Suggests your next spell. You still press the button.</span>
+                <i>"The storm advises. You decide."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Rotation, the next-spell HUD and Maelstrom Weapon stacks</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-bar" data-zone="Valley of Trials" data-level="8">
+          <h3>Weapon of the Storm</h3>
+          <p>The Shaman bar keeps your weapon imbued, your shield up and your totems in mind: an imbue button, a Fire Nova button, and Shield and Totems hints. Bind keys if you like.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Imbue your weapon with one press, out of combat</li>
+            <li>Refresh your shield when the orbs run out</li>
+            <li>Drop the totem each element is missing</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>See <a href="#bar">the Shaman bar</a> above for the full rules and a demo you can press.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_cyclone.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Windfury Whetstone</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Windfury Whetstone</b>
+                <span>Binds to a key (or none)</span>
+                <span class="use">Use: Reminds you which imbue goes on your weapon.</span>
+                <i>"Sixty minutes of wind, one press at a time."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_cyclone.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>The Shaman bar: imbue, Fire Nova, Shield and Totems</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-gear" data-zone="Orgrimmar" data-level="12">
+          <h3>Upgrade or Vendor?</h3>
+          <p>Hover any item and the tooltip says whether it's an upgrade for your spec. Upgrades in your bags glow, and you can mark where an item drops on your map.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Find the best gear for your level</li>
+            <li>Spot upgrades in your bags at a glance</li>
+            <li>Mark an item's source on the map</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Gear has <em>For my level</em>, <em>Best overall</em> and <em>By bracket</em>. Tooltips get upgrade lines; <em>Mark on map</em> shows where to go.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightningshield.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Appraiser's Hauberk</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Appraiser's Hauberk</b>
+                <span>Chest · Mail</span>
+                <span class="use">Equip: Tells you which hauberk is better, and why.</span>
+                <i>"Glows in the bag when it's worth wearing."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightningshield.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Gear and a tooltip upgrade line</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-leveling" data-zone="Durotar" data-level="14">
+          <h3>The Road From the Valley</h3>
+          <p>A Horde Troll leveling path laid out by level: trainer visits and milestones, zones and dungeons for your level, every spell rank, your class quests, and riding.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Plan your next trainer visits</li>
+            <li>Find zones and dungeons for your level</li>
+            <li>Save up for riding</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>The tabs are <em>Path</em>, <em>Zones &amp; dungeons</em>, <em>Trainer</em>, <em>Class quests</em> and <em>Riding &amp; gold</em>.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="uncommon">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_cyclone.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Map of the Long Road</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-uncommon">Map of the Long Road</b>
+                <span>Requires patience</span>
+                <span class="use">Use: Shows where to quest next.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_cyclone.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Leveling: Path and trainer visits</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-totems" data-zone="Durotar" data-level="20">
+          <h3>The Call of the Elements</h3>
+          <p>Every element's totem comes from a class quest. The addon tracks where you are in each chain and when the next one opens.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Call of Earth (level 4)</li>
+            <li>Call of Fire (level 10)</li>
+            <li>Call of Water (level 20)</li>
+            <li>Call of Air (level 30)</li>
+            <li>The Tempest's Weapons</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>They're on <em>Leveling › Class quests</em>, and Home nudges you when the next one is ready.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_earthbindtotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Totem of Four Voices</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Totem of Four Voices</b>
+                <span>Relic</span>
+                <span class="use">Use: Tells you which element is calling next.</span>
+                <i>"Earth, Fire, Water, Air. In that order."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_earthbindtotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Leveling › Class quests</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-talents" data-zone="Orgrimmar" data-level="30">
+          <h3>A Build You Can See</h3>
+          <p>Recommended builds for Elemental, Enhancement and Restoration, drawn on Forever's real talent trees and validated to 51 points. Dual spec A/B follows you: the plan is to level as Enhancement, then at 40 run Enhancement A and Restoration B.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>See every recommended build on the real trees</li>
+            <li>Set up dual spec at 40</li>
+            <li>Switch specs and let the addon follow</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>A build that no longer fits the current trees shows its link instead of a wrong picture.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="epic">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_magicimmunity.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Twin Tomes of Talent</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-epic">Twin Tomes of Talent</b>
+                <span>Unique · Dual spec</span>
+                <span class="use">Use: Shows a build point by point on Forever's trees.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_magicimmunity.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Talents on Forever's three trees</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-learn" data-zone="The Ring of the Elements" data-level="10">
+          <h3>Learn the Shaman</h3>
+          <p>How totems, imbues, shields and Maelstrom Weapon work, and your role in a group. New lessons unlock as you level.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Learn what each element's totems are for</li>
+            <li>Understand imbues and shields</li>
+            <li>Learn your role in a group</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>It's under <em>Learn</em> in the window. Anything the sources couldn't confirm is marked.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="legendary">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_manaregentotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Tome of the Whole Shaman</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-legendary">Tome of the Whole Shaman</b>
+                <span>Soulbound</span>
+                <span class="use">Use: Teaches you everything there is about the class.</span>
+                <i>"Unconfirmed facts are marked. The spirits reward honesty."</i>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_manaregentotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Learn the Shaman</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-reminders" data-zone="The Ring of the Elements" data-level="18">
+          <h3>Nothing Forgotten</h3>
+          <p>Reminders for your imbue, your shield, your totems, your class quests and Ghost Wolf. What's new collects Forever and Shaman changes from a change poller.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Keep your imbue and shield up</li>
+            <li>Catch every Shaman change in What's new</li>
+            <li>Check the source behind any fact</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Reminders appear on Home and as a small pop-up out of combat; choose which ones in Settings.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="uncommon">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_searingtotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Scroll of Honest Notes</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-uncommon">Scroll of Honest Notes</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Shows where every fact came from.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_searingtotem.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Reminders and What's new</span></div></figure>
+        </div>
+
+        <div class="quest" id="q-settings" data-zone="The Ring of the Elements" data-level="20">
+          <h3>Make It Yours</h3>
+          <p>Settings is where you pin a different imbue, set your keys (none by default) and show or hide the Shield and Totems hints.</p>
+          <h4>Objectives</h4>
+          <ul class="objectives">
+            <li>Pin your own imbue, or follow the recommendation</li>
+            <li>Pick your own keys, or none</li>
+            <li>Choose which hints and reminders you see</li>
+          </ul>
+          <h4>How it works</h4>
+          <div class="how"><p>Keys never use Super (Meta) combos: on Omarchy and many Linux desktops they belong to the desktop. What the buttons cast and their keys only change out of combat.</p></div>
+          <h4>Rewards</h4>
+          <div class="rewards">
+            <div class="item" tabindex="0" data-quality="rare">
+              <img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_sealoffire.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+              <span class="item-name">Signet of Preferences</span>
+              <div class="tooltip" role="tooltip">
+                <b class="q-rare">Signet of Preferences</b>
+                <span>Binds when installed</span>
+                <span class="use">Use: Makes the addon work your way.</span>
+              </div>
+            </div>
+          </div>
+          <figure class="shot"><div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_fire_sealoffire.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Screenshot coming soon</b><span>Settings › Shaman bar</span></div></figure>
+        </div>
+
+      </div>
+    </div>
+    <div class="ql-foot">
+      <button type="button" class="wow-btn small" id="accept">Accept</button>
+      <button type="button" class="wow-btn small ghost" id="next">Next quest ›</button>
+    </div>
+  </div>
+</section>
+
+<section class="section origin-section" id="tazu">
+  <div class="section-head">
+    <h2 class="heading">The Shaman Who Started It All</h2>
+    <p class="sub">Every addon has a first player. This one listens to the elements.</p>
+  </div>
+  <div class="origin">
+    <figure class="portrait">
+      <!-- Portrait comes once Tim provides it. -->
+      <div class="soon"><img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><b>Portrait coming soon</b><span>He's still carving his first totem.</span></div>
+      <figcaption>Tazu<span>Troll Shaman of the Horde</span></figcaption>
+    </figure>
+    <div class="origin-text">
+      <h3>Meet Tazu</h3>
+      <p>Tazu is the Shaman this addon is named for: a Troll of the Horde on Ganj, a Normal
+        (PvE) realm, where the only fights are the ones he picks.</p>
+      <p>He was created on 14 November 2026 and finished his first session at level 4 in the
+        Valley of Trials, in Durotar. Call of Earth is next. Tazu's Addon is built for him and
+        tested on him.</p>
+      <p>The plan: level as Enhancement, then at 40 take dual spec, with Enhancement on A and
+        Restoration on B.</p>
+      <p class="signoff">May the elements guide you, and your imbue never run out mid-pull.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section loot-section" id="loot">
+  <div class="section-head">
+    <h2 class="heading">Claim Your Loot</h2>
+    <p class="sub">No release yet: releases are coming. For World of Warcraft: Forever only.</p>
+  </div>
+
+  <div class="loot">
+    <div class="loot-bar"><span>Loot</span><span class="loot-from">Tazu's Addon · <span data-version>first release coming soon</span></span></div>
+
+    <div class="loot-item" data-quality="legendary">
+      <img src="https://omaforge.ninepointlabs.com/assets/ui/omaforge.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-legendary">With OmaForge on Linux</b>
+        <span>Legendary · find it, then install from the GitHub release once one exists; <code>omaforge update -c forever</code> keeps it current</span>
+<pre><code>omaforge search -c forever tazu
+omaforge install -c forever github:ninepointlabs/tazus-addon</code></pre>
+      </div>
+      <div class="loot-actions">
+        <a class="wow-btn small ghost" href="https://omaforge.ninepointlabs.com/">Get OmaForge</a>
+        <button type="button" class="wow-btn small ghost" data-copy>Copy</button>
+      </div>
+    </div>
+
+    <div class="loot-item" data-quality="epic">
+      <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_bag_10.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-epic">The zip, by hand</b>
+        <span>Epic · any OS · download the zip from GitHub Releases and unzip it into your Forever AddOns folder</span>
+<pre><code>World of Warcraft/_forever_/Interface/AddOns/TazusAddon</code></pre>
+      </div>
+      <div class="loot-actions">
+        <a class="wow-btn small" data-download="zip" href="https://github.com/ninepointlabs/tazus-addon/releases">Releases</a>
+      </div>
+    </div>
+
+    <div class="loot-item" data-quality="uncommon">
+      <img src="https://render.worldofwarcraft.com/us/icons/56/inv_misc_rune_01.jpg" alt="" width="48" height="48" loading="lazy" decoding="async">
+      <div class="loot-text">
+        <b class="q-uncommon">Then, in game</b>
+        <span>Uncommon · reload, open it and pick your spec</span>
+<pre><code>/reload
+/tazu</code></pre>
+      </div>
+      <div class="loot-actions">
+        <button type="button" class="wow-btn small ghost" data-copy>Copy</button>
+      </div>
+    </div>
+  </div>
+  <p class="loot-note" data-prerelease>Nothing is published yet. Once the first release is out, it appears on <a href="https://github.com/ninepointlabs/tazus-addon/releases">GitHub Releases</a> with its notes.</p>
+  <p class="loot-note">Source: <a href="https://github.com/ninepointlabs/tazus-addon">ninepointlabs/tazus-addon</a>. Classic Era and retail clients won't load it: it's built for Forever's Interface 16001.</p>
+</section>
+
+<section class="section tavern" id="tavern">
+  <div class="section-head">
+    <h2 class="heading">The Tavern</h2>
+    <p class="sub">Questions, answered by the innkeeper.</p>
+  </div>
+
+  <div class="gossip">
+    <div class="gossip-bar"><img src="https://render.worldofwarcraft.com/us/icons/56/inv_drink_06.jpg" alt="" width="32" height="32" loading="lazy" decoding="async"><span>The innkeeper</span></div>
+    <div class="gossip-body parchment">
+      <p class="greeting">Welcome, Shaman! Leave your totems by the door. What would you like to know?</p>
+
+      <details>
+        <summary>Does it work on Classic Era or retail?</summary>
+        <p>No. It's built for World of Warcraft: Forever only (Interface 16001), and other
+          clients won't load it. Forever's Shaman differs from Classic: Fire Nova Totem is gone,
+          and imbues now stack with weapon totems.</p>
+      </details>
+      <details>
+        <summary>Is this automation?</summary>
+        <p>No. One key press is one cast. The imbue and Fire Nova buttons only cast when you
+          click them or press their key. The Shield and Totems hints, the rotation helper and the
+          next-spell HUD only advise. No <code>/click</code>, and no macros are created.</p>
+      </details>
+      <details>
+        <summary>Does it replace Blizzard's totem tracker?</summary>
+        <p>No. Blizzard's built-in totem tracker and the Call of the Elements bar stay the way to
+          see and drop your totems. The Totems hint only says which totem fits and nudges you
+          when one is missing.</p>
+      </details>
+      <details>
+        <summary>Why Rockbiter Weapon and not Windfury?</summary>
+        <p>Before 30, Rockbiter Weapon is the leveling fallback. After Blizzard's Nov 10/11
+          hotfix, Windfury Weapon is at the heart of Enhancement. Want something else? Pin it
+          under <em>Settings › Shaman bar</em>.</p>
+      </details>
+      <details>
+        <summary>Why is the Fire Nova button dark?</summary>
+        <p>Because no Fire totem is down. In Forever, Fire Nova erupts at your Fire totem, so the
+          button only lights up while one is out.</p>
+      </details>
+      <details>
+        <summary>Why don't the buttons have keys?</summary>
+        <p>Keys are optional and none is bound by default, so it never steals a key you
+          already use. Pick one under <em>Settings › Shaman bar</em>. Super (Meta) combos are
+          never offered: on Omarchy and many Linux desktops they belong to the desktop.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Nothing. It's free and open source under the MIT license.</p>
+      </details>
+      <details>
+        <summary>Is there one for other classes?</summary>
+        <p>Yes, from the same workshop: <a href="https://andricsaddon.myazerothlife.com/">Andric's Addon</a> for Priests,
+          <a href="https://parzelles-addon.myazerothlife.com/">Parzelle's Addon</a> for Mages and
+          <a href="https://tristans-addon.myazerothlife.com/">Tristan's Addon</a> for Paladins. And
+          <a href="https://myazerothlife.com/">My Azeroth Life</a> is where the whole adventure lives.</p>
+      </details>
+      <details>
+        <summary>Is this made by Blizzard?</summary>
+        <p>No. Tazu's Addon is an unofficial, free and open source fan project by
+          <a href="https://ninepointlabs.com/">Nine Point Labs</a>. It isn't affiliated
+          with or endorsed by Blizzard Entertainment.</p>
+      </details>
+      <a class="gossip-bye" href="#top">Farewell.</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="crests" aria-hidden="true">
+    <img src="https://omaforge.ninepointlabs.com/assets/art/alliance-crest-sm.webp" alt="" width="40" height="50" loading="lazy" decoding="async">
+    <img src="https://render.worldofwarcraft.com/us/icons/56/spell_nature_bloodlust.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" style="border-radius: 50%; border: 1px solid #7a5c36">
+    <img src="https://omaforge.ninepointlabs.com/assets/art/horde-sigil-sm.webp" alt="" width="40" height="50" loading="lazy" decoding="async">
+  </div>
+  <nav class="footer-links" aria-label="Links">
+    <a href="https://github.com/ninepointlabs/tazus-addon">Source</a>
+    <a href="https://github.com/ninepointlabs/tazus-addon/releases">Releases</a>
+    <a href="https://github.com/ninepointlabs/tazus-addon/issues">Issues</a>
+    <a href="https://myazerothlife.com/">My Azeroth Life</a>
+    <a href="https://andricsaddon.myazerothlife.com/" title="Sister addon for Priests">Andric's Addon</a>
+    <a href="https://parzelles-addon.myazerothlife.com/" title="Sister addon for Mages">Parzelle's Addon</a>
+    <a href="https://tristans-addon.myazerothlife.com/" title="Sister addon for Paladins">Tristan's Addon</a>
+    <a href="https://omaforge.ninepointlabs.com/">OmaForge</a>
+  </nav>
+  <p class="legal">
+    Tazu's Addon is an unofficial fan project, not affiliated with or endorsed by Blizzard
+    Entertainment. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or
+    registered trademarks of Blizzard Entertainment, Inc. Game artwork, icons and the Alliance
+    and Horde emblems © Blizzard Entertainment, Inc. (artwork via
+    <a href="https://github.com/ninepointlabs/omaforge/blob/main/site/SOURCES.md">omaforge's sources</a>;
+    icons from Blizzard's public icon CDN). Tazu's Addon itself is MIT licensed.
+  </p>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<p class="zone-text" id="zone-text" aria-live="polite"></p>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <img alt="">
+  <p>Esc or click to close</p>
+</dialog>
+
+<script src="app.js" defer></script>
+<script src="demo.js" defer></script>
+</body>
+</html>
