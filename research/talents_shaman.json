@@ -1,0 +1,923 @@
+{
+ "class": "Shaman",
+ "version": "70938-3ee47080",
+ "client_build": 70938,
+ "trees": [
+  {
+   "name": "Elemental Combat",
+   "talents": [
+    {
+     "name": "Convection",
+     "row": 1,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 136116,
+     "node_id": 104773,
+     "url_id": "0",
+     "rank_spell_ids": [
+      16039,
+      16039,
+      16039,
+      16039,
+      16039
+     ],
+     "desc_rank1": "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+     "desc_max": "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%.",
+     "change": ""
+    },
+    {
+     "name": "Concussion",
+     "row": 1,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 136026,
+     "node_id": 104772,
+     "url_id": "1",
+     "rank_spell_ids": [
+      16035,
+      16035,
+      16035,
+      16035,
+      16035
+     ],
+     "desc_rank1": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%.",
+     "desc_max": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%.",
+     "change": "changed"
+    },
+    {
+     "name": "Elemental Devastation",
+     "row": 2,
+     "col": 1,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 135791,
+     "node_id": 104769,
+     "url_id": "2",
+     "rank_spell_ids": [
+      30160,
+      30160,
+      30160
+     ],
+     "desc_rank1": "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+     "desc_max": "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec.",
+     "change": "changed"
+    },
+    {
+     "name": "Reverberation",
+     "row": 2,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 5,
+     "icon": 135850,
+     "node_id": 104767,
+     "url_id": "3",
+     "rank_spell_ids": [
+      16040,
+      16040,
+      16040,
+      16040,
+      16040
+     ],
+     "desc_rank1": "Reduces the cooldown of your Shock spells by 0.2 sec.",
+     "desc_max": "Reduces the cooldown of your Shock spells by 1 sec.",
+     "change": ""
+    },
+    {
+     "name": "Elemental Alacrity",
+     "row": 2,
+     "col": 3,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 135990,
+     "node_id": 104771,
+     "url_id": "4",
+     "rank_spell_ids": [
+      16578,
+      16578,
+      16578
+     ],
+     "desc_rank1": "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.17 sec.",
+     "desc_max": "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.5 sec.",
+     "change": "changed"
+    },
+    {
+     "name": "Call of Flame",
+     "row": 2,
+     "col": 4,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 135817,
+     "node_id": 104770,
+     "url_id": "5",
+     "rank_spell_ids": [
+      16038,
+      16038,
+      16038
+     ],
+     "desc_rank1": "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+     "desc_max": "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec.",
+     "change": "changed"
+    },
+    {
+     "name": "Elemental Focus",
+     "row": 3,
+     "col": 1,
+     "max_rank": 1,
+     "required_points": 10,
+     "icon": 136170,
+     "node_id": 104768,
+     "url_id": "6",
+     "rank_spell_ids": [
+      16164
+     ],
+     "desc_rank1": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+     "desc_max": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+     "change": ""
+    },
+    {
+     "name": "Elemental Warding",
+     "row": 3,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 10,
+     "icon": 136094,
+     "node_id": 104765,
+     "url_id": "7",
+     "rank_spell_ids": [
+      28996,
+      28996,
+      28996
+     ],
+     "desc_rank1": "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
+     "desc_max": "Reduces damage taken from Fire, Frost, and Nature effects by 10%.",
+     "change": "changed"
+    },
+    {
+     "name": "Trial by Fire",
+     "row": 4,
+     "col": 1,
+     "max_rank": 2,
+     "required_points": 15,
+     "icon": 135824,
+     "node_id": 104764,
+     "url_id": "8",
+     "rank_spell_ids": [
+      16086,
+      16086
+     ],
+     "desc_rank1": "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+     "desc_max": "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec.",
+     "change": "new"
+    },
+    {
+     "name": "Eye of the Storm",
+     "row": 4,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 15,
+     "icon": 136032,
+     "node_id": 104763,
+     "url_id": "9",
+     "rank_spell_ids": [
+      29062,
+      29062,
+      29062
+     ],
+     "desc_rank1": "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+     "desc_max": "Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage.",
+     "change": "changed"
+    },
+    {
+     "name": "Earthbound",
+     "row": 4,
+     "col": 4,
+     "max_rank": 1,
+     "required_points": 15,
+     "icon": 136100,
+     "node_id": 104762,
+     "url_id": "a",
+     "rank_spell_ids": [
+      1222988
+     ],
+     "desc_rank1": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast.",
+     "desc_max": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast.",
+     "change": "new"
+    },
+    {
+     "name": "Elemental Reach",
+     "row": 5,
+     "col": 1,
+     "max_rank": 2,
+     "required_points": 20,
+     "icon": 136099,
+     "node_id": 104761,
+     "url_id": "b",
+     "rank_spell_ids": [
+      28999,
+      28999
+     ],
+     "desc_rank1": "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+     "desc_max": "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards.",
+     "change": "new"
+    },
+    {
+     "name": "Call of Thunder",
+     "row": 5,
+     "col": 2,
+     "max_rank": 1,
+     "required_points": 20,
+     "icon": 136014,
+     "node_id": 104760,
+     "url_id": "c",
+     "rank_spell_ids": [
+      16120
+     ],
+     "desc_rank1": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%.",
+     "desc_max": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%.",
+     "change": "changed"
+    },
+    {
+     "name": "Lightning Overload",
+     "row": 5,
+     "col": 3,
+     "max_rank": 3,
+     "required_points": 20,
+     "icon": 136050,
+     "node_id": 104759,
+     "url_id": "d",
+     "rank_spell_ids": [
+      408438,
+      408438,
+      408438
+     ],
+     "desc_rank1": "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+     "desc_max": "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+     "change": "new"
+    },
+    {
+     "name": "Elemental Fury",
+     "row": 6,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 25,
+     "icon": 135830,
+     "node_id": 104766,
+     "url_id": "e",
+     "rank_spell_ids": [
+      16089,
+      16089,
+      16089,
+      16089,
+      16089
+     ],
+     "desc_rank1": "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 20%.",
+     "desc_max": "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%.",
+     "change": "changed"
+    },
+    {
+     "name": "Lightning Mastery",
+     "row": 7,
+     "col": 2,
+     "max_rank": 1,
+     "required_points": 30,
+     "icon": 136111,
+     "node_id": 104758,
+     "url_id": "f",
+     "rank_spell_ids": [
+      16166
+     ],
+     "desc_rank1": "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec.",
+     "desc_max": "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec.",
+     "change": "changed"
+    }
+   ]
+  },
+  {
+   "name": "Enhancement",
+   "talents": [
+    {
+     "name": "Earth's Grasp",
+     "row": 1,
+     "col": 1,
+     "max_rank": 2,
+     "required_points": 0,
+     "icon": 136097,
+     "node_id": 104757,
+     "url_id": "g",
+     "rank_spell_ids": [
+      16043,
+      16043
+     ],
+     "desc_rank1": "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%.",
+     "desc_max": "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%.",
+     "change": "changed"
+    },
+    {
+     "name": "Thundering Strikes",
+     "row": 1,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 132325,
+     "node_id": 104753,
+     "url_id": "h",
+     "rank_spell_ids": [
+      16255,
+      16255,
+      16255,
+      16255,
+      16255
+     ],
+     "desc_rank1": "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+     "desc_max": "Improves your chance to get a critical strike with all spells and attacks by 5%.",
+     "change": "changed"
+    },
+    {
+     "name": "Ancestral Knowledge",
+     "row": 1,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 136162,
+     "node_id": 104756,
+     "url_id": "i",
+     "rank_spell_ids": [
+      17485,
+      17485,
+      17485,
+      17485,
+      17485
+     ],
+     "desc_rank1": "Increases your Intellect by 2%.",
+     "desc_max": "Increases your Intellect by 10%.",
+     "change": "changed"
+    },
+    {
+     "name": "Guardian Totems",
+     "row": 2,
+     "col": 1,
+     "max_rank": 2,
+     "required_points": 5,
+     "icon": 136098,
+     "node_id": 104754,
+     "url_id": "j",
+     "rank_spell_ids": [
+      16258,
+      16258
+     ],
+     "desc_rank1": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+     "desc_max": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec.",
+     "change": ""
+    },
+    {
+     "name": "Mental Dexterity",
+     "row": 2,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 136055,
+     "node_id": 104755,
+     "url_id": "k",
+     "rank_spell_ids": [
+      415140,
+      415140,
+      415140
+     ],
+     "desc_rank1": "Increases your Attack Power by an amount equal to 33% of your Intellect.",
+     "desc_max": "Increases your Attack Power by an amount equal to 100% of your Intellect.",
+     "change": "new"
+    },
+    {
+     "name": "Improved Lightning Shield",
+     "row": 2,
+     "col": 3,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 136051,
+     "node_id": 104751,
+     "url_id": "m",
+     "rank_spell_ids": [
+      16261,
+      16261,
+      16261
+     ],
+     "desc_rank1": "Increases the damage done by your Lightning Shield orbs by 5%.",
+     "desc_max": "Increases the damage done by your Lightning Shield orbs by 15%.",
+     "change": ""
+    },
+    {
+     "name": "Elemental Weapons",
+     "row": 3,
+     "col": 1,
+     "max_rank": 3,
+     "required_points": 10,
+     "icon": 135814,
+     "node_id": 104750,
+     "url_id": "n",
+     "rank_spell_ids": [
+      16266,
+      16266,
+      16266
+     ],
+     "desc_rank1": "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+     "desc_max": "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%.",
+     "change": "changed"
+    },
+    {
+     "name": "Shamanistic Focus",
+     "row": 3,
+     "col": 3,
+     "max_rank": 1,
+     "required_points": 10,
+     "icon": 136027,
+     "node_id": 104749,
+     "url_id": "o",
+     "rank_spell_ids": [
+      1223030
+     ],
+     "desc_rank1": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%.",
+     "desc_max": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%.",
+     "change": "new"
+    },
+    {
+     "name": "Anticipation",
+     "row": 3,
+     "col": 4,
+     "max_rank": 3,
+     "required_points": 10,
+     "icon": 136056,
+     "node_id": 104748,
+     "url_id": "p",
+     "rank_spell_ids": [
+      16254,
+      16254,
+      16254
+     ],
+     "desc_rank1": "Increases your chance to dodge by an additional 2%.",
+     "desc_max": "Increases your chance to dodge by an additional 6%.",
+     "change": "changed"
+    },
+    {
+     "name": "Toughness",
+     "row": 4,
+     "col": 1,
+     "max_rank": 5,
+     "required_points": 15,
+     "icon": 135892,
+     "node_id": 104746,
+     "url_id": "q",
+     "rank_spell_ids": [
+      16252,
+      16252,
+      16252,
+      16252,
+      16252
+     ],
+     "desc_rank1": "Increases your Stamina by 2%.",
+     "desc_max": "Increases your Stamina by 10%.",
+     "change": "changed"
+    },
+    {
+     "name": "Flurry",
+     "row": 4,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 15,
+     "icon": 132152,
+     "node_id": 104747,
+     "url_id": "r",
+     "rank_spell_ids": [
+      16256,
+      16256,
+      16256,
+      16256,
+      16256
+     ],
+     "desc_rank1": "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+     "desc_max": "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.",
+     "change": "changed"
+    },
+    {
+     "name": "Stormstrike",
+     "row": 4,
+     "col": 3,
+     "max_rank": 1,
+     "required_points": 15,
+     "icon": 132314,
+     "node_id": 104743,
+     "url_id": "s",
+     "rank_spell_ids": [
+      17364
+     ],
+     "desc_rank1": "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+     "desc_max": "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+     "change": "changed"
+    },
+    {
+     "name": "Improved Ghost Wolf",
+     "row": 4,
+     "col": 4,
+     "max_rank": 2,
+     "required_points": 15,
+     "icon": 136095,
+     "node_id": 104752,
+     "url_id": "l",
+     "rank_spell_ids": [
+      16262,
+      16262
+     ],
+     "desc_rank1": "Reduces the cast time of your Ghost Wolf spell by 1 sec, and Ghost Wolf may be used indoors.",
+     "desc_max": "Reduces the cast time of your Ghost Wolf spell by 3 sec, and Ghost Wolf may be used indoors.",
+     "change": "changed"
+    },
+    {
+     "name": "Spirit Weapons",
+     "row": 5,
+     "col": 1,
+     "max_rank": 1,
+     "required_points": 20,
+     "icon": 132269,
+     "node_id": 104745,
+     "url_id": "t",
+     "rank_spell_ids": [
+      16268
+     ],
+     "desc_rank1": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active.",
+     "desc_max": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active.",
+     "change": "new"
+    },
+    {
+     "name": "Mental Quickness",
+     "row": 5,
+     "col": 2,
+     "max_rank": 2,
+     "required_points": 20,
+     "icon": 136090,
+     "node_id": 104744,
+     "url_id": "u",
+     "rank_spell_ids": [
+      30812,
+      30812
+     ],
+     "desc_rank1": "Increases your spell damage and healing by up to 15% of your Intellect.",
+     "desc_max": "Increases your spell damage and healing by up to 30% of your Intellect.",
+     "change": "new"
+    },
+    {
+     "name": "Improved Stormstrike",
+     "row": 5,
+     "col": 3,
+     "max_rank": 2,
+     "required_points": 20,
+     "icon": 237581,
+     "node_id": 104742,
+     "url_id": "v",
+     "rank_spell_ids": [
+      1223031,
+      1223031
+     ],
+     "desc_rank1": "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
+     "desc_max": "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry.",
+     "change": "new"
+    },
+    {
+     "name": "Maelstrom Weapon",
+     "row": 6,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 25,
+     "icon": 237584,
+     "node_id": 104741,
+     "url_id": "w",
+     "rank_spell_ids": [
+      408498,
+      408498,
+      408498,
+      408498,
+      408498
+     ],
+     "desc_rank1": "When you deal damage with a melee attack, you have a (Mainhand Weapon Speed * 10)% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec.",
+     "desc_max": "When you deal damage with a melee attack, you have a (Mainhand Weapon Speed * 1000 / 60)% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec.",
+     "change": "new"
+    },
+    {
+     "name": "Rage of the Farseer",
+     "row": 7,
+     "col": 2,
+     "max_rank": 1,
+     "required_points": 30,
+     "icon": 136012,
+     "node_id": 104740,
+     "url_id": "x",
+     "rank_spell_ids": [
+      425336
+     ],
+     "desc_rank1": "Increases your attack speed by 30% for 25 sec.",
+     "desc_max": "Increases your attack speed by 30% for 25 sec.",
+     "change": "new"
+    }
+   ]
+  },
+  {
+   "name": "Restoration",
+   "talents": [
+    {
+     "name": "Improved Healing Wave",
+     "row": 1,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 136052,
+     "node_id": 104739,
+     "url_id": "y",
+     "rank_spell_ids": [
+      16182,
+      16182,
+      16182,
+      16182,
+      16182
+     ],
+     "desc_rank1": "Reduces the casting time of your Healing Wave spell by 0.1 sec.",
+     "desc_max": "Reduces the casting time of your Healing Wave spell by 0.5 sec.",
+     "change": ""
+    },
+    {
+     "name": "Tidal Focus",
+     "row": 1,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 0,
+     "icon": 135859,
+     "node_id": 104729,
+     "url_id": "z",
+     "rank_spell_ids": [
+      16179,
+      16179,
+      16179,
+      16179,
+      16179
+     ],
+     "desc_rank1": "Reduces the Mana cost of your healing spells by 1% and improves your chance to hit by 1%.",
+     "desc_max": "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%.",
+     "change": "changed"
+    },
+    {
+     "name": "Mindfulness",
+     "row": 2,
+     "col": 1,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 136090,
+     "node_id": 104734,
+     "url_id": "A",
+     "rank_spell_ids": [
+      1223033,
+      1223033,
+      1223033
+     ],
+     "desc_rank1": "Allows 17% of your Mana regeneration to continue while casting.",
+     "desc_max": "Allows 50% of your Mana regeneration to continue while casting.",
+     "change": "new"
+    },
+    {
+     "name": "Natural Grace",
+     "row": 2,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 5,
+     "icon": 136041,
+     "node_id": 104736,
+     "url_id": "B",
+     "rank_spell_ids": [
+      29187,
+      29187,
+      29187
+     ],
+     "desc_rank1": "Reduces the threat generated by your spells by 5%.",
+     "desc_max": "Reduces the threat generated by your spells by 15%.",
+     "change": "changed"
+    },
+    {
+     "name": "Totemic Focus",
+     "row": 2,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 5,
+     "icon": 136057,
+     "node_id": 104735,
+     "url_id": "C",
+     "rank_spell_ids": [
+      16173,
+      16173,
+      16173,
+      16173,
+      16173
+     ],
+     "desc_rank1": "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",
+     "desc_max": "Reduces the Mana cost of your totems and any spells that summon or move them by 25%.",
+     "change": "changed"
+    },
+    {
+     "name": "Improved Reincarnation",
+     "row": 2,
+     "col": 4,
+     "max_rank": 2,
+     "required_points": 5,
+     "icon": 136080,
+     "node_id": 104737,
+     "url_id": "D",
+     "rank_spell_ids": [
+      16184,
+      16184
+     ],
+     "desc_rank1": "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
+     "desc_max": "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%.",
+     "change": "changed"
+    },
+    {
+     "name": "Ancestral Healing",
+     "row": 3,
+     "col": 1,
+     "max_rank": 3,
+     "required_points": 10,
+     "icon": 136109,
+     "node_id": 104731,
+     "url_id": "E",
+     "rank_spell_ids": [
+      16176,
+      16176,
+      16176
+     ],
+     "desc_rank1": "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
+     "desc_max": "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells.",
+     "change": "changed"
+    },
+    {
+     "name": "Healing Focus",
+     "row": 3,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 10,
+     "icon": 136043,
+     "node_id": 104733,
+     "url_id": "F",
+     "rank_spell_ids": [
+      16181,
+      16181,
+      16181
+     ],
+     "desc_rank1": "Gives your healing spells a 23% chance to not lose casting time when you take damage.",
+     "desc_max": "Gives your healing spells a 70% chance to not lose casting time when you take damage.",
+     "change": "changed"
+    },
+    {
+     "name": "Water Shield",
+     "row": 3,
+     "col": 3,
+     "max_rank": 1,
+     "required_points": 10,
+     "icon": 132315,
+     "node_id": 104732,
+     "url_id": "G",
+     "rank_spell_ids": [
+      408510
+     ],
+     "desc_rank1": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min. Only one Elemental Shield can be active on the Shaman at any one time.",
+     "desc_max": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min. Only one Elemental Shield can be active on the Shaman at any one time.",
+     "change": "new"
+    },
+    {
+     "name": "Tidal Mastery",
+     "row": 4,
+     "col": 1,
+     "max_rank": 5,
+     "required_points": 15,
+     "icon": 136107,
+     "node_id": 104738,
+     "url_id": "H",
+     "rank_spell_ids": [
+      16194,
+      16194,
+      16194,
+      16194,
+      16194
+     ],
+     "desc_rank1": "Increases the critical effect chance of your healing spells by 1%.",
+     "desc_max": "Increases the critical effect chance of your healing spells by 5%.",
+     "change": "changed"
+    },
+    {
+     "name": "Restorative Totems",
+     "row": 4,
+     "col": 2,
+     "max_rank": 5,
+     "required_points": 15,
+     "icon": 136053,
+     "node_id": 104730,
+     "url_id": "I",
+     "rank_spell_ids": [
+      16187,
+      16187,
+      16187,
+      16187,
+      16187
+     ],
+     "desc_rank1": "Increases the effect of your Mana Spring Totem by 5% and increases the effect of your Healing Stream Totem by 10%.",
+     "desc_max": "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%.",
+     "change": "changed"
+    },
+    {
+     "name": "Mana Tide Totem",
+     "row": 4,
+     "col": 3,
+     "max_rank": 1,
+     "required_points": 15,
+     "icon": 135861,
+     "node_id": 104728,
+     "url_id": "J",
+     "rank_spell_ids": [
+      16190
+     ],
+     "desc_rank1": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards.",
+     "desc_max": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards.",
+     "change": "changed"
+    },
+    {
+     "name": "Healing Way",
+     "row": 5,
+     "col": 2,
+     "max_rank": 3,
+     "required_points": 20,
+     "icon": 136044,
+     "node_id": 104727,
+     "url_id": "K",
+     "rank_spell_ids": [
+      29206,
+      29206,
+      29206
+     ],
+     "desc_rank1": "Increases the amount healed by your Healing Wave spell by 8%.",
+     "desc_max": "Increases the amount healed by your Healing Wave spell by 25%.",
+     "change": "changed"
+    },
+    {
+     "name": "Nature's Swiftness",
+     "row": 5,
+     "col": 3,
+     "max_rank": 1,
+     "required_points": 20,
+     "icon": 136076,
+     "node_id": 104726,
+     "url_id": "L",
+     "rank_spell_ids": [
+      16188
+     ],
+     "desc_rank1": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
+     "desc_max": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
+     "change": ""
+    },
+    {
+     "name": "Purification",
+     "row": 6,
+     "col": 3,
+     "max_rank": 5,
+     "required_points": 25,
+     "icon": 135865,
+     "node_id": 104725,
+     "url_id": "M",
+     "rank_spell_ids": [
+      16178,
+      16178,
+      16178,
+      16178,
+      16178
+     ],
+     "desc_rank1": "Increases the effectiveness of your healing spells by 2%.",
+     "desc_max": "Increases the effectiveness of your healing spells by 10%.",
+     "change": ""
+    },
+    {
+     "name": "Riptide",
+     "row": 7,
+     "col": 2,
+     "max_rank": 1,
+     "required_points": 30,
+     "icon": 252995,
+     "node_id": 104724,
+     "url_id": "N",
+     "rank_spell_ids": [
+      408521
+     ],
+     "desc_rank1": "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%.",
+     "desc_max": "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%.",
+     "change": "new"
+    }
+   ]
+  }
+ ],
+ "source_url": "https://static.icy-veins.com/r2/icydb/wowf/talents/70938-3ee47080/shaman.json",
+ "page_url": "https://www.icy-veins.com/wow-forever/shaman-talent-calculator",
+ "checked": "2026-11-14"
+}

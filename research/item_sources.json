@@ -1,0 +1,2216 @@
+{
+ "items": {
+  "15424": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/15424",
+   "checked": "2026-11-14"
+  },
+  "251533": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/251533",
+   "checked": "2026-11-14"
+  },
+  "271766": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/271766",
+   "checked": "2026-11-14"
+  },
+  "279844": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279844",
+   "checked": "2026-11-14"
+  },
+  "279480": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279480",
+   "checked": "2026-11-14"
+  },
+  "279895": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279895",
+   "checked": "2026-11-14"
+  },
+  "279841": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279841",
+   "checked": "2026-11-14"
+  },
+  "16987": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16987",
+   "checked": "2026-11-14"
+  },
+  "3741": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/3741",
+   "checked": "2026-11-14"
+  },
+  "16658": {
+   "quests": [
+    {
+     "name": "The Hunt Completed",
+     "quest_id": 247,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16658",
+   "checked": "2026-11-14"
+  },
+  "15458": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/15458",
+   "checked": "2026-11-14"
+  },
+  "3750": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/3750",
+   "checked": "2026-11-14"
+  },
+  "4107": {
+   "quests": [
+    {
+     "name": "Tiger Mastery (Part 4)",
+     "quest_id": 188,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/4107",
+   "checked": "2026-11-14"
+  },
+  "281673": {
+   "quests": [
+    {
+     "name": "The Offering of Blood",
+     "quest_id": 95885,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281673",
+   "checked": "2026-11-14"
+  },
+  "2933": {
+   "quests": [
+    {
+     "name": "An Audience with the King",
+     "quest_id": 396,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/2933",
+   "checked": "2026-11-14"
+  },
+  "282283": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/282283",
+   "checked": "2026-11-14"
+  },
+  "3431": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/3431",
+   "checked": "2026-11-14"
+  },
+  "277226": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/277226",
+   "checked": "2026-11-14"
+  },
+  "3566": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/3566",
+   "checked": "2026-11-14"
+  },
+  "281310": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281310",
+   "checked": "2026-11-14"
+  },
+  "252431": {
+   "min_level": 12,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 60,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Coarse Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Sulfuric Acid"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252431",
+   "checked": "2026-11-14"
+  },
+  "252435": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 16,
+      "name": "Light Leather"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Sulfuric Acid"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252435",
+   "checked": "2026-11-14"
+  },
+  "252494": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Shadowgem"
+     },
+     {
+      "count": 12,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252494",
+   "checked": "2026-11-14"
+  },
+  "252439": {
+   "min_level": 17,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 85,
+    "reagents": [
+     {
+      "count": 3,
+      "name": "Shadowgem"
+     },
+     {
+      "count": 14,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 3,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252439",
+   "checked": "2026-11-14"
+  },
+  "252447": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Elixir of Minor Fortitude"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 4,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252447",
+   "checked": "2026-11-14"
+  },
+  "252446": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Sulfuric Acid"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252446",
+   "checked": "2026-11-14"
+  },
+  "252451": {
+   "min_level": 22,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 110,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 6,
+      "name": "Sulfuric Acid"
+     },
+     {
+      "count": 6,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252451",
+   "checked": "2026-11-14"
+  },
+  "252455": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Elixir of Minor Fortitude"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252455",
+   "checked": "2026-11-14"
+  },
+  "252518": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 8,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252518",
+   "checked": "2026-11-14"
+  },
+  "252461": {
+   "min_level": 30,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 150,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Citrine"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Heavy Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252461",
+   "checked": "2026-11-14"
+  },
+  "252564": {
+   "min_level": 40,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 200,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Citrine"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Heavy Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252564",
+   "checked": "2026-11-14"
+  },
+  "280604": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/280604",
+   "checked": "2026-11-14"
+  },
+  "280607": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/280607",
+   "checked": "2026-11-14"
+  },
+  "280605": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/280605",
+   "checked": "2026-11-14"
+  },
+  "280696": {
+   "quests": [
+    {
+     "name": "The Tempest's Weapons (Thousand Needles)",
+     "quest_id": 79442,
+     "choice": false
+    },
+    {
+     "name": "The Tempest's Weapons (Arathi Highlands)",
+     "quest_id": 96016,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/280696",
+   "checked": "2026-11-14"
+  },
+  "6505": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6505",
+   "checked": "2026-11-14"
+  },
+  "277288": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/277288",
+   "checked": "2026-11-14"
+  },
+  "5306": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/5306",
+   "checked": "2026-11-14"
+  },
+  "1155": {
+   "min_level": 24,
+   "drops": [
+    {
+     "npc": "Twilight Lord Kelris",
+     "npc_id": 4832,
+     "chance": "30.6%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/1155",
+   "checked": "2026-11-14"
+  },
+  "5340": {
+   "quests": [
+    {
+     "name": "Apothecary Zamah",
+     "quest_id": 853,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/5340",
+   "checked": "2026-11-14"
+  },
+  "3851": {
+   "min_level": 26,
+   "crafted": {
+    "profession": "Blacksmithing",
+    "skill": 130,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Iron Bar"
+     },
+     {
+      "count": 2,
+      "name": "Strong Flux"
+     },
+     {
+      "count": 1,
+      "name": "Heavy Grinding Stone"
+     },
+     {
+      "count": 4,
+      "name": "Silver Bar"
+     },
+     {
+      "count": 2,
+      "name": "Heavy Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/3851",
+   "checked": "2026-11-14"
+  },
+  "17039": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/17039",
+   "checked": "2026-11-14"
+  },
+  "271095": {
+   "min_level": 13,
+   "drops": [
+    {
+     "npc": "Magmatus",
+     "npc_id": 261316,
+     "chance": "33.9%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/271095",
+   "checked": "2026-11-14"
+  },
+  "281312": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281312",
+   "checked": "2026-11-14"
+  },
+  "5613": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/5613",
+   "checked": "2026-11-14"
+  },
+  "248008": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/248008",
+   "checked": "2026-11-14"
+  },
+  "281297": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281297",
+   "checked": "2026-11-14"
+  },
+  "270070": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/270070",
+   "checked": "2026-11-14"
+  },
+  "6482": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6482",
+   "checked": "2026-11-14"
+  },
+  "16741": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16741",
+   "checked": "2026-11-14"
+  },
+  "15457": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/15457",
+   "checked": "2026-11-14"
+  },
+  "270046": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/270046",
+   "checked": "2026-11-14"
+  },
+  "1449": {
+   "quests": [
+    {
+     "name": "WANTED: Chok'sul",
+     "quest_id": 256,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/1449",
+   "checked": "2026-11-14"
+  },
+  "270039": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/270039",
+   "checked": "2026-11-14"
+  },
+  "252432": {
+   "min_level": 12,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 60,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Coarse Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252432",
+   "checked": "2026-11-14"
+  },
+  "252492": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 16,
+      "name": "Light Leather"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Cerulean Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252492",
+   "checked": "2026-11-14"
+  },
+  "252498": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252498",
+   "checked": "2026-11-14"
+  },
+  "252443": {
+   "min_level": 17,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 85,
+    "reagents": [
+     {
+      "count": 14,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 3,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 3,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252443",
+   "checked": "2026-11-14"
+  },
+  "252448": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 4,
+      "name": "Sulfuric Acid"
+     },
+     {
+      "count": 4,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252448",
+   "checked": "2026-11-14"
+  },
+  "252502": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Cerulean Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252502",
+   "checked": "2026-11-14"
+  },
+  "252510": {
+   "min_level": 22,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 110,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 6,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 6,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252510",
+   "checked": "2026-11-14"
+  },
+  "252456": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 3,
+      "name": "Sulfuric Acid"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252456",
+   "checked": "2026-11-14"
+  },
+  "252458": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Sulfuric Acid"
+     },
+     {
+      "count": 8,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252458",
+   "checked": "2026-11-14"
+  },
+  "252522": {
+   "min_level": 30,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 150,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Heavy Leather"
+     },
+     {
+      "count": 1,
+      "name": "Elemental Water"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252522",
+   "checked": "2026-11-14"
+  },
+  "271767": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/271767",
+   "checked": "2026-11-14"
+  },
+  "272996": {
+   "min_level": 13,
+   "drops": [
+    {
+     "npc": "Oggleflint",
+     "npc_id": 11517,
+     "chance": "32.6%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272996",
+   "checked": "2026-11-14"
+  },
+  "279874": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279874",
+   "checked": "2026-11-14"
+  },
+  "2042": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/2042",
+   "checked": "2026-11-14"
+  },
+  "252433": {
+   "min_level": 12,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 60,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Coarse Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252433",
+   "checked": "2026-11-14"
+  },
+  "252493": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 16,
+      "name": "Light Leather"
+     },
+     {
+      "count": 2,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 1,
+      "name": "Small Lustrous Pearl"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252493",
+   "checked": "2026-11-14"
+  },
+  "252499": {
+   "min_level": 15,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 75,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 2,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252499",
+   "checked": "2026-11-14"
+  },
+  "252444": {
+   "min_level": 17,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 85,
+    "reagents": [
+     {
+      "count": 14,
+      "name": "Light Leather"
+     },
+     {
+      "count": 1,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 3,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 3,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252444",
+   "checked": "2026-11-14"
+  },
+  "252507": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 4,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 4,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252507",
+   "checked": "2026-11-14"
+  },
+  "252503": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 100,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 4,
+      "name": "Cured Light Hide"
+     },
+     {
+      "count": 2,
+      "name": "Small Lustrous Pearl"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252503",
+   "checked": "2026-11-14"
+  },
+  "252511": {
+   "min_level": 22,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 110,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 3,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 6,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 6,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252511",
+   "checked": "2026-11-14"
+  },
+  "252515": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 2,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 3,
+      "name": "Small Lustrous Pearl"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252515",
+   "checked": "2026-11-14"
+  },
+  "252519": {
+   "min_level": 25,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 125,
+    "reagents": [
+     {
+      "count": 12,
+      "name": "Medium Leather"
+     },
+     {
+      "count": 3,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Medium Hide"
+     },
+     {
+      "count": 8,
+      "name": "Small Lustrous Pearl"
+     },
+     {
+      "count": 8,
+      "name": "Pristine Leather"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252519",
+   "checked": "2026-11-14"
+  },
+  "6691": {
+   "min_level": 30,
+   "drops": [
+    {
+     "npc": "Agathelos the Raging",
+     "npc_id": 4422,
+     "chance": "32%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6691",
+   "checked": "2026-11-14"
+  },
+  "6318": {
+   "min_level": 21,
+   "drops": [
+    {
+     "npc": "Odo the Blindwatcher",
+     "npc_id": 4279,
+     "chance": "31.2%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6318",
+   "checked": "2026-11-14"
+  },
+  "6689": {
+   "min_level": 29,
+   "drops": [
+    {
+     "npc": "Earthcaller Halmgar",
+     "npc_id": 4842,
+     "chance": "46.8%"
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/6689",
+   "checked": "2026-11-14"
+  },
+  "249398": {
+   "min_level": 20,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 130,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Simple Wood"
+     },
+     {
+      "count": 2,
+      "name": "Greater Magic Essence"
+     },
+     {
+      "count": 3,
+      "name": "Strange Dust"
+     },
+     {
+      "count": 1,
+      "name": "Large Glimmering Shard"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/249398",
+   "checked": "2026-11-14"
+  },
+  "252604": {
+   "min_level": 56,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 20,
+      "name": "Rugged Leather"
+     },
+     {
+      "count": 12,
+      "name": "Enchanted Leather"
+     },
+     {
+      "count": 2,
+      "name": "Rune Thread"
+     },
+     {
+      "count": 6,
+      "name": "Cured Rugged Hide"
+     },
+     {
+      "count": 40,
+      "name": "Blue Dragonscale"
+     },
+     {
+      "count": 20,
+      "name": "Fel Leather"
+     },
+     {
+      "count": 10,
+      "name": "Pristine Scale"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252604",
+   "checked": "2026-11-14"
+  },
+  "10250": {
+   "min_level": 58,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/10250",
+   "checked": "2026-11-14"
+  },
+  "273341": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/273341",
+   "checked": "2026-11-14"
+  },
+  "274203": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/274203",
+   "checked": "2026-11-14"
+  },
+  "22097": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22097",
+   "checked": "2026-11-14"
+  },
+  "18807": {
+   "quests": [
+    {
+     "name": "The Darkreaver Menace",
+     "quest_id": 7668,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/18807",
+   "checked": "2026-11-14"
+  },
+  "19050": {
+   "min_level": 56,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 290,
+    "reagents": [
+     {
+      "count": 5,
+      "name": "Essence of Earth"
+     },
+     {
+      "count": 5,
+      "name": "Living Essence"
+     },
+     {
+      "count": 2,
+      "name": "Ironweb Spider Silk"
+     },
+     {
+      "count": 5,
+      "name": "Mooncloth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19050",
+   "checked": "2026-11-14"
+  },
+  "22101": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22101",
+   "checked": "2026-11-14"
+  },
+  "273343": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/273343",
+   "checked": "2026-11-14"
+  },
+  "23260": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23260",
+   "checked": "2026-11-14"
+  },
+  "10249": {
+   "min_level": 56,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/10249",
+   "checked": "2026-11-14"
+  },
+  "279270": {
+   "min_level": 60,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 5,
+      "name": "Bolt of Runecloth"
+     },
+     {
+      "count": 1,
+      "name": "Mooncloth"
+     },
+     {
+      "count": 1,
+      "name": "Malleable Essence of Nature"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/279270",
+   "checked": "2026-11-14"
+  },
+  "19085": {
+   "min_level": 55,
+   "sold_by": [
+    {
+     "npc": "Jekyll Flandring",
+     "npc_id": 13219
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19085",
+   "checked": "2026-11-14"
+  },
+  "19086": {
+   "min_level": 55,
+   "sold_by": [
+    {
+     "npc": "Thanthaldis Snowgleam",
+     "npc_id": 13217
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19086",
+   "checked": "2026-11-14"
+  },
+  "10266": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/10266",
+   "checked": "2026-11-14"
+  },
+  "22102": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22102",
+   "checked": "2026-11-14"
+  },
+  "16666": {
+   "min_level": 58,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16666",
+   "checked": "2026-11-14"
+  },
+  "19595": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Illiyana Moonblaze",
+     "npc_id": 14753
+    },
+    {
+     "npc": "Kelm Hargunth",
+     "npc_id": 14754
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19595",
+   "checked": "2026-11-14"
+  },
+  "19596": {
+   "min_level": 50,
+   "sold_by": [
+    {
+     "npc": "Illiyana Moonblaze",
+     "npc_id": 14753
+    },
+    {
+     "npc": "Kelm Hargunth",
+     "npc_id": 14754
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19596",
+   "checked": "2026-11-14"
+  },
+  "22095": {
+   "quests": [
+    {
+     "name": "An Earnest Proposition (Orgrimmar)",
+     "quest_id": 8918,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22095",
+   "checked": "2026-11-14"
+  },
+  "17721": {
+   "min_level": 33,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 165,
+    "reagents": [
+     {
+      "count": 8,
+      "name": "Heavy Leather"
+     },
+     {
+      "count": 1,
+      "name": "Silken Thread"
+     },
+     {
+      "count": 4,
+      "name": "Elemental Earth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/17721",
+   "checked": "2026-11-14"
+  },
+  "12632": {
+   "min_level": 54,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 270,
+    "reagents": [
+     {
+      "count": 4,
+      "name": "Essence of Water"
+     },
+     {
+      "count": 20,
+      "name": "Rugged Leather"
+     },
+     {
+      "count": 4,
+      "name": "Blue Sapphire"
+     },
+     {
+      "count": 4,
+      "name": "Enchanted Leather"
+     },
+     {
+      "count": 1,
+      "name": "Rune Thread"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/12632",
+   "checked": "2026-11-14"
+  },
+  "22099": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22099",
+   "checked": "2026-11-14"
+  },
+  "18405": {
+   "min_level": 57,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 295,
+    "reagents": [
+     {
+      "count": 10,
+      "name": "Essence of Fire"
+     },
+     {
+      "count": 10,
+      "name": "Essence of Water"
+     },
+     {
+      "count": 8,
+      "name": "Ghost Dye"
+     },
+     {
+      "count": 16,
+      "name": "Bolt of Runecloth"
+     },
+     {
+      "count": 6,
+      "name": "Rune Thread"
+     },
+     {
+      "count": 8,
+      "name": "Mooncloth"
+     },
+     {
+      "count": 4,
+      "name": "Large Brilliant Shard"
+     },
+     {
+      "count": 10,
+      "name": "Viridian Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/18405",
+   "checked": "2026-11-14"
+  },
+  "22098": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22098",
+   "checked": "2026-11-14"
+  },
+  "20047": {
+   "min_level": 58,
+   "sold_by": [
+    {
+     "npc": "Samuel Hawke",
+     "npc_id": 15127
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/20047",
+   "checked": "2026-11-14"
+  },
+  "20163": {
+   "min_level": 58,
+   "sold_by": [
+    {
+     "npc": "Rutherford Twing",
+     "npc_id": 15126
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/20163",
+   "checked": "2026-11-14"
+  },
+  "252486": {
+   "min_level": 56,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 4,
+      "name": "Jade"
+     },
+     {
+      "count": 20,
+      "name": "Rugged Leather"
+     },
+     {
+      "count": 4,
+      "name": "Rune Thread"
+     },
+     {
+      "count": 2,
+      "name": "Cured Rugged Hide"
+     },
+     {
+      "count": 120,
+      "name": "Ironfeather"
+     },
+     {
+      "count": 20,
+      "name": "Fel Leather"
+     },
+     {
+      "count": 10,
+      "name": "Pristine Scale"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252486",
+   "checked": "2026-11-14"
+  },
+  "252606": {
+   "min_level": 56,
+   "crafted": {
+    "profession": "Leatherworking",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 20,
+      "name": "Rugged Leather"
+     },
+     {
+      "count": 12,
+      "name": "Enchanted Leather"
+     },
+     {
+      "count": 2,
+      "name": "Rune Thread"
+     },
+     {
+      "count": 4,
+      "name": "Cured Rugged Hide"
+     },
+     {
+      "count": 40,
+      "name": "Heavy Scorpid Scale"
+     },
+     {
+      "count": 20,
+      "name": "Fel Leather"
+     },
+     {
+      "count": 10,
+      "name": "Pristine Scale"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/252606",
+   "checked": "2026-11-14"
+  },
+  "16579": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16579",
+   "checked": "2026-11-14"
+  },
+  "254013": {
+   "min_level": 31,
+   "crafted": {
+    "profession": "Tailoring",
+    "skill": 145,
+    "reagents": [
+     {
+      "count": 2,
+      "name": "Fine Thread"
+     },
+     {
+      "count": 2,
+      "name": "Heavy Leather"
+     },
+     {
+      "count": 4,
+      "name": "Bolt of Silk Cloth"
+     },
+     {
+      "count": 1,
+      "name": "Elemental Earth"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/254013",
+   "checked": "2026-11-14"
+  },
+  "22096": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/22096",
+   "checked": "2026-11-14"
+  },
+  "16573": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16573",
+   "checked": "2026-11-14"
+  },
+  "19426": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Gelvas Grimegate",
+     "npc_id": 14828
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19426",
+   "checked": "2026-11-14"
+  },
+  "23125": {
+   "min_level": 55,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23125",
+   "checked": "2026-11-14"
+  },
+  "275982": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/275982",
+   "checked": "2026-11-14"
+  },
+  "272407": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Pix Xizzix",
+     "npc_id": 227853
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272407",
+   "checked": "2026-11-14"
+  },
+  "275977": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/275977",
+   "checked": "2026-11-14"
+  },
+  "275973": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/275973",
+   "checked": "2026-11-14"
+  },
+  "275738": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/275738",
+   "checked": "2026-11-14"
+  },
+  "272438": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Pix Xizzix",
+     "npc_id": 227853
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272438",
+   "checked": "2026-11-14"
+  },
+  "249469": {
+   "min_level": 50,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 265,
+    "reagents": [
+     {
+      "count": 1,
+      "name": "Blood of the Mountain"
+     },
+     {
+      "count": 1,
+      "name": "Essence of Undeath"
+     },
+     {
+      "count": 3,
+      "name": "Small Brilliant Shard"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/249469",
+   "checked": "2026-11-14"
+  },
+  "16022": {
+   "min_level": 50,
+   "crafted": {
+    "profession": "Engineering",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 4,
+      "name": "Gold Power Core"
+     },
+     {
+      "count": 1,
+      "name": "Mithril Mechanical Dragonling"
+     },
+     {
+      "count": 10,
+      "name": "Enchanted Thorium Bar"
+     },
+     {
+      "count": 6,
+      "name": "Enchanted Leather"
+     },
+     {
+      "count": 6,
+      "name": "Thorium Widget"
+     },
+     {
+      "count": 8,
+      "name": "Delicate Arcanite Converter"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/16022",
+   "checked": "2026-11-14"
+  },
+  "269741": {
+   "quests": [
+    {
+     "name": "Open Season",
+     "quest_id": 91696,
+     "choice": false
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/269741",
+   "checked": "2026-11-14"
+  },
+  "23451": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23451",
+   "checked": "2026-11-14"
+  },
+  "23466": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23466",
+   "checked": "2026-11-14"
+  },
+  "272683": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Sergeant Thunderhorn",
+     "npc_id": 14581
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272683",
+   "checked": "2026-11-14"
+  },
+  "272856": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Captain O'Neal",
+     "npc_id": 12782
+    },
+    {
+     "npc": "Nixi Fireclaw",
+     "npc_id": 32334
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272856",
+   "checked": "2026-11-14"
+  },
+  "20070": {
+   "min_level": 55,
+   "sold_by": [
+    {
+     "npc": "Samuel Hawke",
+     "npc_id": 15127
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/20070",
+   "checked": "2026-11-14"
+  },
+  "20214": {
+   "min_level": 55,
+   "sold_by": [
+    {
+     "npc": "Rutherford Twing",
+     "npc_id": 15126
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/20214",
+   "checked": "2026-11-14"
+  },
+  "281586": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/281586",
+   "checked": "2026-11-14"
+  },
+  "19102": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Thanthaldis Snowgleam",
+     "npc_id": 13217
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19102",
+   "checked": "2026-11-14"
+  },
+  "19101": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Jekyll Flandring",
+     "npc_id": 13219
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/19101",
+   "checked": "2026-11-14"
+  },
+  "274420": {
+   "min_level": 53,
+   "sold_by": [
+    {
+     "npc": "Dala Fairmaw",
+     "npc_id": 256629
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/274420",
+   "checked": "2026-11-14"
+  },
+  "23452": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23452",
+   "checked": "2026-11-14"
+  },
+  "23468": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23468",
+   "checked": "2026-11-14"
+  },
+  "272685": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Sergeant Thunderhorn",
+     "npc_id": 14581
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272685",
+   "checked": "2026-11-14"
+  },
+  "278158": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Captain O'Neal",
+     "npc_id": 12782
+    },
+    {
+     "npc": "Nixi Fireclaw",
+     "npc_id": 32334
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/278158",
+   "checked": "2026-11-14"
+  },
+  "15942": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/15942",
+   "checked": "2026-11-14"
+  },
+  "23199": {
+   "min_level": 60,
+   "source_url": "https://db.icy-veins.com/wow-forever/items/23199",
+   "checked": "2026-11-14"
+  },
+  "228176": {
+   "min_level": 60,
+   "crafted": {
+    "profession": "Enchanting",
+    "skill": 300,
+    "reagents": [
+     {
+      "count": 4,
+      "name": "Star Wood"
+     },
+     {
+      "count": 1,
+      "name": "Large Brilliant Shard"
+     },
+     {
+      "count": 8,
+      "name": "Greater Eternal Essence"
+     },
+     {
+      "count": 10,
+      "name": "Illusion Dust"
+     },
+     {
+      "count": 2,
+      "name": "Cerulean Dye"
+     },
+     {
+      "count": 4,
+      "name": "Magenta Dye"
+     },
+     {
+      "count": 8,
+      "name": "Viridian Dye"
+     }
+    ]
+   },
+   "source_url": "https://db.icy-veins.com/wow-forever/items/228176",
+   "checked": "2026-11-14"
+  },
+  "272433": {
+   "min_level": 60,
+   "sold_by": [
+    {
+     "npc": "Pix Xizzix",
+     "npc_id": 227853
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/items/272433",
+   "checked": "2026-11-14"
+  },
+  "17743": {
+   "source_url": "https://db.icy-veins.com/wow-forever/items/17743",
+   "checked": "2026-11-14"
+  }
+ },
+ "quests": {
+  "247": {
+   "level": 30,
+   "min_level": 20,
+   "faction": "Both",
+   "zone": "Ashenvale",
+   "pins": [
+    {
+     "zone": "Ashenvale",
+     "label": "Start and End: Senani Thunderheart",
+     "x": 73.7,
+     "y": 61.5
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/247",
+   "checked": "2026-11-14"
+  },
+  "188": {
+   "level": 37,
+   "min_level": 28,
+   "faction": "Both",
+   "zone": "Stranglethorn Vale",
+   "pins": [
+    {
+     "zone": "Stranglethorn Vale",
+     "label": "Start and End: Ajeck Rouack",
+     "x": 35.6,
+     "y": 10.6
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/188",
+   "checked": "2026-11-14"
+  },
+  "95885": {
+   "level": 23,
+   "min_level": 20,
+   "faction": "Both",
+   "zone": "Silverpine Forest",
+   "pins": [
+    {
+     "zone": "Silverpine Forest",
+     "label": "Start and End: Offering Stone",
+     "x": 58.1,
+     "y": 69.8
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/95885",
+   "checked": "2026-11-14"
+  },
+  "396": {
+   "level": 31,
+   "min_level": 16,
+   "faction": "Both",
+   "zone": "Stormwind City",
+   "end_npc": "Lady Katrana Prestor",
+   "start_npc": "Baros Alexston",
+   "pins": [
+    {
+     "zone": "Stormwind City",
+     "label": "End: Lady Katrana Prestor",
+     "x": 80.0,
+     "y": 38.3
+    },
+    {
+     "zone": "Stormwind City",
+     "label": "Start: Baros Alexston",
+     "x": 57.6,
+     "y": 47.9
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/396",
+   "checked": "2026-11-14"
+  },
+  "79442": {
+   "level": 40,
+   "min_level": 30,
+   "faction": "Horde",
+   "start_npc": "Rau Cliffrunner",
+   "end_npc": "Bath'rah the Windwatcher",
+   "pins": [
+    {
+     "zone": "Alterac Mountains",
+     "label": "Start: Rau Cliffrunner",
+     "x": 46.1,
+     "y": 51.6
+    },
+    {
+     "zone": "Alterac Mountains",
+     "label": "Start: Rau Cliffrunner",
+     "x": 28.3,
+     "y": 98.4
+    },
+    {
+     "zone": "Alterac Mountains",
+     "label": "End: Bath'rah the Windwatcher",
+     "x": 80.4,
+     "y": 66.9
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/79442",
+   "checked": "2026-11-14"
+  },
+  "96016": {
+   "level": 40,
+   "min_level": 30,
+   "faction": "Alliance",
+   "end_npc": "Bath'rah the Windwatcher",
+   "start_npc": "Veyric Thunderhame",
+   "pins": [
+    {
+     "zone": "Arathi Highlands",
+     "label": "End: Bath'rah the Windwatcher",
+     "x": 80.4,
+     "y": 66.9
+    },
+    {
+     "zone": "Arathi Highlands",
+     "label": "Start: Veyric Thunderhame",
+     "x": 59.6,
+     "y": 27.7
+    },
+    {
+     "zone": "Arathi Highlands",
+     "label": "Start: Veyric Thunderhame",
+     "x": 60.0,
+     "y": 26.8
+    },
+    {
+     "zone": "Arathi Highlands",
+     "label": "Start: Veyric Thunderhame",
+     "x": 59.8,
+     "y": 27.6
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/96016",
+   "checked": "2026-11-14"
+  },
+  "853": {
+   "level": 15,
+   "min_level": 10,
+   "faction": "Both",
+   "zone": "The Barrens",
+   "start_npc": "Apothecary Helbrim",
+   "end_npc": "Apothecary Zamah",
+   "pins": [
+    {
+     "zone": "Thunder Bluff",
+     "label": "Start: Apothecary Helbrim",
+     "x": 51.5,
+     "y": 30.2
+    },
+    {
+     "zone": "Thunder Bluff",
+     "label": "End: Apothecary Zamah",
+     "x": 22.8,
+     "y": 20.4
+    },
+    {
+     "zone": "Thunder Bluff",
+     "label": "End: Apothecary Zamah",
+     "x": 23.0,
+     "y": 21.0
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/853",
+   "checked": "2026-11-14"
+  },
+  "256": {
+   "level": 22,
+   "min_level": 17,
+   "faction": "Both",
+   "zone": "Loch Modan",
+   "end_npc": "Magistrate Bluntnose",
+   "start_npc": "WANTED",
+   "pins": [
+    {
+     "zone": "Loch Modan",
+     "label": "End: Magistrate Bluntnose",
+     "x": 34.6,
+     "y": 43.2
+    },
+    {
+     "zone": "Loch Modan",
+     "label": "Start: WANTED",
+     "x": 37.2,
+     "y": 46.5
+    },
+    {
+     "zone": "Loch Modan",
+     "label": "End: Magistrate Bluntnose",
+     "x": 34.6,
+     "y": 44.6
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/256",
+   "checked": "2026-11-14"
+  },
+  "7668": {
+   "level": 60,
+   "min_level": 58,
+   "faction": "Both",
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/7668",
+   "checked": "2026-11-14"
+  },
+  "8918": {
+   "level": 60,
+   "min_level": 58,
+   "faction": "Horde",
+   "zone": "Orgrimmar",
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/8918",
+   "checked": "2026-11-14"
+  },
+  "91696": {
+   "level": 58,
+   "min_level": 54,
+   "faction": "Both",
+   "zone": "Mount Hyjal",
+   "start_npc": "Barkskin Matriarch",
+   "end_npc": "Brerufa",
+   "pins": [
+    {
+     "zone": "Mount Hyjal",
+     "label": "Start: Barkskin Matriarch",
+     "x": 31.6,
+     "y": 58.5
+    },
+    {
+     "zone": "Mount Hyjal",
+     "label": "End: Brerufa",
+     "x": 20.6,
+     "y": 71.6
+    }
+   ],
+   "source_url": "https://db.icy-veins.com/wow-forever/quests/91696",
+   "checked": "2026-11-14"
+  }
+ },
+ "source": "https://db.icy-veins.com/wow-forever/ (early access)",
+ "checked": "2026-11-14",
+ "errors": []
+}
