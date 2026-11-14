@@ -3,11 +3,11 @@
 **What it is:** the WoW Forever-only, do-everything Shaman companion for **Tazu** (Troll Shaman, Horde, realm Ganj = `CAMWOWUS2Realm1PvE`, Normal/PvE). It follows the structure, window and website style of Andric's, Parzelle's and Tristan's addons (newest pattern where they differ), without Tristan's PvP section.
 
 **Repo:** https://github.com/ninepointlabs/tazus-addon (public), local `/home/tim/Projects/tazus-addon`, `origin` set. Commits use `Nine Point Labs <179739321+ninepointlabs@users.noreply.github.com>`.
-- **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`, **review only: not merged**. CI (Test workflow) passed on the PR: run 43603959958.
-- `main` holds only a base commit (LICENSE + .gitignore). A PR needs a base branch, so that one commit was pushed to `main` when the repo was created. Everything else is on the PR branch.
+- **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`. **Merged 2026-11-14 on Tim's request** with a merge commit, `1c1b3a8`. CI passed on the PR's last commit (run 43609429691).
+- Before the merge, `main` held only a base commit (LICENSE + .gitignore), pushed when the repo was created because a PR needs a base branch. Everything else came in through PR #1.
 - **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. There's nothing to install until a release exists.
-- **Not done (not authorized):** no merge, no tag, no release, no release notes, no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
-- Target: a loadable **v0.1.0** on the PR. The TOC says `@project-version@`; the packager fills it in on a tag.
+- **Not done (not authorized):** no tag, no release, no release notes, no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
+- A loadable **v0.1.0** is now on `main`, untagged. The TOC says `@project-version@`; the packager fills it in on a tag.
 
 ## Decisions (brief defaults, all still Tim's to change)
 
@@ -71,7 +71,7 @@ Tests also cover:
 ## Install / test on TUF
 
 ```sh
-cd ~/Projects/tazus-addon && git checkout feature/initial-addon
+cd ~/Projects/tazus-addon && git checkout main && git pull
 tools/install-dev.sh            # copies to …/_forever_/Interface/AddOns/TazusAddon
 python3 research/merge.py       # only after editing research/parts/*.json
 python3 tools/build_data.py     # regenerate Data/*.lua (--check fails if stale)
@@ -158,13 +158,16 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 - **CI:** `test.yml` runs on push to `main` and on PRs. `release.yml` (BigWigs packager) runs only on `v*` tags; none made.
 - **autonomix-cli:** not listed, because the addon ships no Linux executables.
 
-## Commits (PR branch `feature/initial-addon`)
+## Commits (PR #1, now on `main`)
 
 - `c19636b` Initial commit: MIT licence and .gitignore (also on `main`)
 - `c123568` Tazu's Addon v0.1.0: spec-aware Shaman companion for WoW Forever
 - `4134b3c` STATUS: first delivery on PR #1, checks, client, gaps and conflicts, in-game checklist
 - `ef34fd7` STATUS: record commit hashes
-- the STATUS commit noting the sister-addon fixes (see `git log`)
+- `4ece6a5` STATUS: sister-addon poller fixes and CI push triggers
+- `eca505d` STATUS: wow-addon topics set
+- `1c1b3a8` Merge pull request #1 (on `main`)
+- the STATUS commit recording the merge (see `git log`)
 
 ## Still to check in game
 

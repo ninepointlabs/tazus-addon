@@ -8,7 +8,7 @@ It's the fourth sibling of [Andric's Addon](https://andricsaddon.myazerothlife.c
 [Parzelle's Addon](https://parzelles-addon.myazerothlife.com) (Mage) and
 [Tristan's Addon](https://tristans-addon.myazerothlife.com) (Paladin), from the makers of [My Azeroth Life](https://myazerothlife.com).
 
-> **Status:** first delivery (v0.1.0) is in review as a pull request. No release yet. Screenshots come once Tazu has logged a few hours.
+> **Status:** first delivery (v0.1.0) is on `main`. No release yet. Screenshots come once Tazu has logged a few hours.
 
 - Website: https://tazus-addon.myazerothlife.com (files in `docs/`; the domain isn't live yet)
 - WoW Forever only (`WOW_PROJECT_ID 18`), Interface `16001`. No Ace3; Blizzard API only. MIT.
