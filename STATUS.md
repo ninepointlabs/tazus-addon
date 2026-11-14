@@ -5,7 +5,8 @@
 **Repo:** https://github.com/ninepointlabs/tazus-addon (public), local `/home/tim/Projects/tazus-addon`, `origin` set. Commits use `Nine Point Labs <179739321+ninepointlabs@users.noreply.github.com>`.
 - **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`, **review only: not merged**. CI (Test workflow) passed on the PR: run 43603959958.
 - `main` holds only a base commit (LICENSE + .gitignore). A PR needs a base branch, so that one commit was pushed to `main` when the repo was created. Everything else is on the PR branch.
-- **Not done (not authorized):** no merge, no tag, no release, no release notes, no CurseForge/Wago, no repo topics, no Pages setting, no DNS, no email or social posts.
+- **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. There's nothing to install until a release exists.
+- **Not done (not authorized):** no merge, no tag, no release, no release notes, no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
 - Target: a loadable **v0.1.0** on the PR. The TOC says `@project-version@`; the packager fills it in on a tag.
 
 ## Decisions (brief defaults, all still Tim's to change)
