@@ -5,9 +5,10 @@
 **Repo:** https://github.com/ninepointlabs/tazus-addon (public), local `/home/tim/Projects/tazus-addon`, `origin` set. Commits use `Nine Point Labs <179739321+ninepointlabs@users.noreply.github.com>`.
 - **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`. **Merged 2026-11-14 on Tim's request** with a merge commit, `1c1b3a8`. CI passed on the PR's last commit (run 43609429691).
 - Before the merge, `main` held only a base commit (LICENSE + .gitignore), pushed when the repo was created because a PR needs a base branch. Everything else came in through PR #1.
-- **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. There's nothing to install until a release exists.
-- **Not done (not authorized):** no tag, no release, no release notes, no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
-- A loadable **v0.1.0** is now on `main`, untagged. The TOC says `@project-version@`; the packager fills it in on a tag.
+- **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. Since the v0.1.0 release it installs from the release zip.
+- **Released:** **v0.1.0** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0. The annotated tag `v0.1.0` points at `b840895` on `main`. Before tagging, `omaforge clients` reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43609658936). Assets are `TazusAddon-v0.1.0.zip` (62 files; TOC `## Version: v0.1.0`, Interface 16001; no docs/research/tests/tools) and `release.json` (flavor `forever`, interface 16001). The release notes are the packager's auto-generated changelog from commit messages, as with Tristan's release; they haven't been rewritten. autonomix-cli isn't listed because the release ships no Linux executables. I haven't run `omaforge install` against the live AddOns folder.
+- **Not done (not authorized):** no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
+- **v0.1.0** is on `main` and released. In the repo the TOC says `@project-version@`; the packager filled in `v0.1.0` in the release zip.
 
 ## Decisions (brief defaults, all still Tim's to change)
 
@@ -88,7 +89,7 @@ In game: `/reload`, then `/tazu`. Check the client with `/run print(GetBuildInfo
 | `.toc` Interface used | `16001` (matches), in `TazusAddon_Forever.toc` and the identical `TazusAddon.toc` |
 | Runtime guard | runs only when `WOW_PROJECT_ID == 18` (`WOW_PROJECT_CAMELOT`); prints a message otherwise |
 
-Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs if it changed.
+Before any future tag, re-run `omaforge clients` and bump `## Interface` in both TOCs if it changed.
 
 ## Research
 
@@ -155,7 +156,7 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 - **Reagents:** Fish Oil (Water Walking), Shiny Fish Scales (Water Breathing) and Ankh (Reincarnation) are confirmed by Icy Veins. The reagent reminder only counts these for spells you know. The element totem items (5175–5178) are recorded but not reminded.
 - **Professions:** Leveling notes say Tazu has Herbalism and should keep it; Icy Veins' Leatherworking + Skinning pick is shown as the research recommendation.
 - **Website flavour:** the site uses the sister sites' playful quest-log rewards ("Codex of Next Steps" etc.). One invented NPC name, an innkeeper, was replaced with "the innkeeper".
-- **CI:** `test.yml` runs on push to `main` and on PRs. `release.yml` (BigWigs packager) runs only on `v*` tags; none made.
+- **CI:** `test.yml` runs on push to `main` and on PRs. `release.yml` (BigWigs packager) runs only on `v*` tags; `v0.1.0` is the only one so far.
 - **autonomix-cli:** not listed, because the addon ships no Linux executables.
 
 ## Commits (PR #1, now on `main`)
@@ -167,7 +168,8 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 - `4ece6a5` STATUS: sister-addon poller fixes and CI push triggers
 - `eca505d` STATUS: wow-addon topics set
 - `1c1b3a8` Merge pull request #1 (on `main`)
-- the STATUS commit recording the merge (see `git log`)
+- `b840895` STATUS, README: PR #1 merged to main (tagged `v0.1.0`)
+- the STATUS commit recording the release (see `git log`)
 
 ## Still to check in game
 

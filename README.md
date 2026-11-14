@@ -8,7 +8,7 @@ It's the fourth sibling of [Andric's Addon](https://andricsaddon.myazerothlife.c
 [Parzelle's Addon](https://parzelles-addon.myazerothlife.com) (Mage) and
 [Tristan's Addon](https://tristans-addon.myazerothlife.com) (Paladin), from the makers of [My Azeroth Life](https://myazerothlife.com).
 
-> **Status:** first delivery (v0.1.0) is on `main`. No release yet. Screenshots come once Tazu has logged a few hours.
+> **Status:** [v0.1.0](https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0) is out. Screenshots come once Tazu has logged a few hours.
 
 - Website: https://tazus-addon.myazerothlife.com (files in `docs/`; the domain isn't live yet)
 - WoW Forever only (`WOW_PROJECT_ID 18`), Interface `16001`. No Ace3; Blizzard API only. MIT.
@@ -29,7 +29,7 @@ It's the fourth sibling of [Andric's Addon](https://andricsaddon.myazerothlife.c
 
 ### With OmaForge (Linux)
 
-Once a release is out:
+Search for "tazu" in OmaForge, or:
 
 ```sh
 omaforge install -c forever github:ninepointlabs/tazus-addon
@@ -38,7 +38,7 @@ omaforge update -c forever          # later versions
 
 ### By hand (any OS)
 
-Download the zip from [GitHub Releases](https://github.com/ninepointlabs/tazus-addon/releases) (once there is one) and unzip it so the folder is
+Download the zip from [GitHub Releases](https://github.com/ninepointlabs/tazus-addon/releases) and unzip it so the folder is
 `World of Warcraft/_forever_/Interface/AddOns/TazusAddon`. From a checkout, `tools/install-dev.sh` copies only the files WoW needs.
 
 ## Getting started
