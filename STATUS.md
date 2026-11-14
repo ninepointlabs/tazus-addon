@@ -158,7 +158,7 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 
 - `c19636b` Initial commit: MIT licence and .gitignore (also on `main`)
 - `c123568` Tazu's Addon v0.1.0: spec-aware Shaman companion for WoW Forever
-- the STATUS.md commit that adds this file (its hash is in `git log`)
+- `4134b3c` STATUS: first delivery on PR #1, checks, client, gaps and conflicts, in-game checklist
 
 ## Still to check in game
 
