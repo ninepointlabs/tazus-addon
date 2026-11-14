@@ -12,6 +12,7 @@ local function test(name, fn)
         io.stderr:write("FAIL " .. name .. ": " .. tostring(err) .. "\n")
         -- Don't let one failure leave combat/secret state on for the next tests.
         S.combat, S.secretOwnAuras, S.secretCooldowns = false, false, false
+        S.mainHandLines, S.weaponEnchant, S.totems = nil, nil, nil
         M.RemoveSecrets()
     end
 end
@@ -461,18 +462,35 @@ test("imbue button: secure /cast macrotext, highest rank, combat freeze, keys", 
     S.weaponEnchant = { ms = 3600000 }
     ns.Imbue.Update()
     truthy(b.status:GetText():find("60m", 1, true), "time left shown: " .. tostring(b.status:GetText()))
+    -- Already on with time to spare: the button must not cast.
+    eq(b:GetAttribute("type"), nil, "Rockbiter already on -> disarmed")
+    eq(b:GetAttribute("macrotext"), nil, "no macrotext while already on")
+    -- Running out: armed again to refresh.
+    S.weaponEnchant = { ms = 200000 }
+    ns.Imbue.Update()
+    eq(b:GetAttribute("macrotext"), "/cast Rockbiter Weapon", "re-armed under 5 minutes")
+    -- An enchant we can't name (stone/oil): still armed.
+    S.mainHandLines, S.weaponEnchant = { "Axe" }, { ms = 3600000 }
+    ns.Imbue.Update()
+    eq(b:GetAttribute("macrotext"), "/cast Rockbiter Weapon", "unnamed enchant -> still casts")
+    S.mainHandLines, S.weaponEnchant = { "Axe", "Rockbiter 1 (60 min)" }, { ms = 3600000 }
+    ns.Imbue.Update()
+    eq(b:GetAttribute("type"), nil, "disarmed again")
     -- Windfury once known (level 30+), and frozen in combat
     know("Windfury Weapon")
     S.level = 32
     S.combat = true
     ns.Imbue.Update()
-    eq(b:GetAttribute("macrotext"), "/cast Rockbiter Weapon", "doesn't change in combat")
+    eq(b:GetAttribute("macrotext"), nil, "doesn't change in combat (stays disarmed: Rockbiter is on)")
     S.combat = false
     ns.Imbue.Update()
     eq(b:GetAttribute("macrotext"), "/cast Windfury Weapon", "Windfury out of combat")
     truthy(b.status:GetText():find("Rockbiter", 1, true), "wrong imbue flagged")
     -- pin
     ns.db.char.imbue.override = "Rockbiter Weapon"
+    ns.Imbue.Update()
+    eq(b:GetAttribute("type"), nil, "pinned Rockbiter is already on -> doesn't cast")
+    S.mainHandLines, S.weaponEnchant = nil, nil
     ns.Imbue.Update()
     eq(b:GetAttribute("macrotext"), "/cast Rockbiter Weapon", "pinned imbue")
     ns.db.char.imbue.override = nil

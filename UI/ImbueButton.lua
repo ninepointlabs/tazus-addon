@@ -28,6 +28,15 @@ Imb.CLICK = Imb.NAME
 Imb.ICON = "Interface\\Icons\\Spell_Nature_Cyclone"
 Imb.SOON = 5 * 60 -- "refresh soon" under 5 minutes left (addon choice)
 
+-- Is the suggested imbue already on the weapon with time to spare? Then the
+-- button must not cast (a press would just recast it). It re-arms once under
+-- SOON is left. Only a positive read counts: an enchant we can't name (stone,
+-- oil, or a tooltip we can't parse) or a hidden weapon keeps it armed.
+function Imb.AlreadyOn(im, want)
+    if not want or type(im) ~= "table" or im.name ~= want then return false end
+    return not (im.left and im.left < Imb.SOON)
+end
+
 local btn, cell, current
 
 local function knows(name) return ns.Progress.Knows(name) end
@@ -75,7 +84,14 @@ function Imb.View(st, want)
         v.status = UI.Hex(soon and UI.C.warn or UI.C.good) .. (left or "on") .. "|r"
         v.active = soon and true or false
         v.ok = not soon
-        if not im.name then table.insert(v.lines, "Your weapon has a temporary enchant; the addon can't tell which imbue it is.") end
+        if not im.name then
+            table.insert(v.lines, "Your weapon has a temporary enchant; the addon can't tell which imbue it is, so the button still casts.")
+        elseif soon then
+            table.insert(v.lines, want .. " is running out: press to refresh it.")
+        else
+            v.applied = true
+            table.insert(v.lines, want .. " is already on your weapon, so the button won't cast. It lights up again when under " .. math.floor(Imb.SOON / 60) .. " minutes are left.")
+        end
     end
     return v
 end
@@ -98,7 +114,12 @@ function Imb.Update()
         return
     end
     current = want
-    if want then
+    if want and Imb.AlreadyOn(st.imbue, want) then
+        -- Already on: disarm, so a press can't recast it.
+        btn:SetAttribute("type", nil)
+        btn:SetAttribute("macrotext", nil)
+        btn.icon:SetTexture(ns.Rotation.Icon(want))
+    elseif want then
         btn:SetAttribute("type", "macro")
         btn:SetAttribute("macrotext", Imb.MacroText(want))
         btn.icon:SetTexture(ns.Rotation.Icon(want))
@@ -129,7 +150,9 @@ function Imb.Build()
         GameTooltip:SetText("Weapon imbue: " .. (current or "none known"), 1, 0.82, 0)
         if s.why then GameTooltip:AddLine("Why: " .. s.why, 1, 1, 1, true) end
         for _, l in ipairs(s.lines or {}) do GameTooltip:AddLine(l, 0.85, 0.85, 0.85, true) end
-        GameTooltip:AddLine("Click or press " .. (Imb.Key() or "your key (Settings > Shaman bar)") .. ": one cast per press, highest rank you know.", 0.6, 0.6, 0.6, true)
+        if s:GetAttribute("type") then
+            GameTooltip:AddLine("Click or press " .. (Imb.Key() or "your key (Settings > Shaman bar)") .. ": one cast per press, highest rank you know.", 0.6, 0.6, 0.6, true)
+        end
         GameTooltip:AddLine("Imbues last 60 minutes, sit next to stones and oils, and stack with weapon totems since the Nov 10/11 hotfix.", 0.6, 0.6, 0.6, true)
         if InCombatLockdown() then GameTooltip:AddLine("In combat the button keeps its imbue until combat ends.", 1, 0.5, 0.3, true) end
         GameTooltip:Show()
