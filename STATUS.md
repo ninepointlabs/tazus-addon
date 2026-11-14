@@ -147,7 +147,10 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 - **Learn sources:**
   - Talent `tree` values use spec names ("Elemental", not the calculator's "Elemental Combat"); the Learn and Talents screens match that.
   - Generated data may cite other classes where a source does (for example "A Paladin's Judgement of Wisdom" in the mana summary). The leftover-text test exempts `Data/` and gear consumable notes.
-- **Poller fix:** curly quotes were turned into `"` after escaping, which produced invalid Lua. Fixed, with a regression test. **The sister addons' pollers have the same `lua_str` and likely the same bug.** I'm recommending a fix there, not touching it.
+- **Poller fix:** curly quotes were turned into `"` after escaping, which produced invalid Lua. Fixed, with a regression test.
+- **Sister-addon fixes (2026-11-14, at Tim's request, committed straight to `main` and pushed):**
+  - The same poller quote fix and regression test, in Andric's (`d3a46b9`), Parzelle's (`f6df84f`) and Tristan's (`118c686`) pollers. None of their committed `Data/Changes.lua` files was broken yet. Poller tests (5/5 each) and addon tests (Andric's 34/34, Parzelle's 38/38, Tristan's 44/44) passed locally. Tristan's CI passed.
+  - Andric's and Parzelle's `test.yml` now also run on pushes to `main`, not only on PRs: Andric's `6e29239`, Parzelle's `088e84f`. The first push-triggered runs passed (43609120325, 43609122044) and also covered the poller fix. This matches Tristan's setup.
 - **Reagents:** Fish Oil (Water Walking), Shiny Fish Scales (Water Breathing) and Ankh (Reincarnation) are confirmed by Icy Veins. The reagent reminder only counts these for spells you know. The element totem items (5175–5178) are recorded but not reminded.
 - **Professions:** Leveling notes say Tazu has Herbalism and should keep it; Icy Veins' Leatherworking + Skinning pick is shown as the research recommendation.
 - **Website flavour:** the site uses the sister sites' playful quest-log rewards ("Codex of Next Steps" etc.). One invented NPC name, an innkeeper, was replaced with "the innkeeper".
@@ -159,6 +162,8 @@ Before any tag, re-run `omaforge clients` and bump `## Interface` in both TOCs i
 - `c19636b` Initial commit: MIT licence and .gitignore (also on `main`)
 - `c123568` Tazu's Addon v0.1.0: spec-aware Shaman companion for WoW Forever
 - `4134b3c` STATUS: first delivery on PR #1, checks, client, gaps and conflicts, in-game checklist
+- `ef34fd7` STATUS: record commit hashes
+- the STATUS commit noting the sister-addon fixes (see `git log`)
 
 ## Still to check in game
 
