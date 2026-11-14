@@ -6,7 +6,7 @@
 - **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`. **Merged 2026-11-14 on Tim's request** with a merge commit, `1c1b3a8`. CI passed on the PR's last commit (run 43609429691).
 - Before the merge, `main` held only a base commit (LICENSE + .gitignore), pushed when the repo was created because a PR needs a base branch. Everything else came in through PR #1.
 - **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. Since the v0.1.0 release it installs from the release zip.
-- **Released:** **v0.1.0** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0. The annotated tag `v0.1.0` points at `b840895` on `main`. Before tagging, `omaforge clients` reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43609658936). Assets are `TazusAddon-v0.1.0.zip` (62 files; TOC `## Version: v0.1.0`, Interface 16001; no docs/research/tests/tools) and `release.json` (flavor `forever`, interface 16001). The release notes are the packager's auto-generated changelog from commit messages, as with Tristan's release; they haven't been rewritten. autonomix-cli isn't listed because the release ships no Linux executables. I haven't run `omaforge install` against the live AddOns folder.
+- **Released:** **v0.1.0** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0. The annotated tag `v0.1.0` points at `b840895` on `main`. Before tagging, `omaforge clients` reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43609658936). Assets are `TazusAddon-v0.1.0.zip` (62 files; TOC `## Version: v0.1.0`, Interface 16001; no docs/research/tests/tools) and `release.json` (flavor `forever`, interface 16001). The packager first generated release notes from commit messages; at Tim's request they were rewritten on 2026-11-14 as a short feature summary (highlights, install steps, fan-project notice). Only the release text changed, not the tag or the files. autonomix-cli isn't listed because the release ships no Linux executables. I haven't run `omaforge install` against the live AddOns folder.
 - **Not done (not authorized):** no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
 - **v0.1.0** is on `main` and released. In the repo the TOC says `@project-version@`; the packager filled in `v0.1.0` in the release zip.
 
@@ -169,7 +169,8 @@ Before any future tag, re-run `omaforge clients` and bump `## Interface` in both
 - `eca505d` STATUS: wow-addon topics set
 - `1c1b3a8` Merge pull request #1 (on `main`)
 - `b840895` STATUS, README: PR #1 merged to main (tagged `v0.1.0`)
-- the STATUS commit recording the release (see `git log`)
+- `d80ce8a` STATUS, README: v0.1.0 released
+- the STATUS commit noting the rewritten release notes (see `git log`)
 
 ## Still to check in game
 
