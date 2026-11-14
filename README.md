@@ -8,7 +8,7 @@ It's the fourth sibling of [Andric's Addon](https://andricsaddon.myazerothlife.c
 [Parzelle's Addon](https://parzelles-addon.myazerothlife.com) (Mage) and
 [Tristan's Addon](https://tristans-addon.myazerothlife.com) (Paladin), from the makers of [My Azeroth Life](https://myazerothlife.com).
 
-> **Status:** [v0.1.0](https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0) is out. Screenshots come once Tazu has logged a few hours.
+> **Status:** [v0.1.1](https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.1) is out. Screenshots come once Tazu has logged a few hours.
 
 - Website: https://tazus-addon.myazerothlife.com (files in `docs/`; the domain isn't live yet)
 - WoW Forever only (`WOW_PROJECT_ID 18`), Interface `16001`. No Ace3; Blizzard API only. MIT.
@@ -61,7 +61,7 @@ The window has grouped screens: **Home** · *Play:* Rotation, Gear · *Progress:
 
 ## The Shaman bar
 
-- **Weapon imbue button:** one press, out of combat, puts the recommended imbue for your spec and situation on your weapon at the highest rank you know. Windfury Weapon is at the heart of Enhancement after Blizzard's Nov 10/11 hotfix; Rockbiter Weapon is the leveling fallback before 30. It shows how long is left, flags a different imbue, and you can pin another one. Imbues last 60 minutes and now stack with weapon totems.
+- **Weapon imbue button:** one press, out of combat, puts the recommended imbue for your spec and situation on your weapon at the highest rank you know. Windfury Weapon is at the heart of Enhancement after Blizzard's Nov 10/11 hotfix; Rockbiter Weapon is the leveling fallback before 30. It shows how long is left, flags a different imbue, and you can pin another one. It won't cast while the imbue is already on with 5 minutes or more left, so a stray press doesn't waste mana. Imbues last 60 minutes and now stack with weapon totems.
 - **Fire Nova button:** Fire Nova Totem is gone in Forever; Fire Nova erupts at your current Fire totem. The button lights up only while one of your Fire totems is down.
 - **Shield hint:** Lightning Shield, or Water Shield for Restoration (and for anyone who has it when mana runs low); orbs left when readable; "refresh me" when it's gone.
 - **Totems hint:** which Earth / Fire / Water / Air totem fits your spec for Solo, Dungeon or Raid, and a nudge in a fight when one is missing or running out. It mentions Totemic Recall and Totemic Call once you know them.

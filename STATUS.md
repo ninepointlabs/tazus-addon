@@ -5,10 +5,11 @@
 **Repo:** https://github.com/ninepointlabs/tazus-addon (public), local `/home/tim/Projects/tazus-addon`, `origin` set. Commits use `Nine Point Labs <179739321+ninepointlabs@users.noreply.github.com>`.
 - **PR:** https://github.com/ninepointlabs/tazus-addon/pull/1, `feature/initial-addon` → `main`. **Merged 2026-11-14 on Tim's request** with a merge commit, `1c1b3a8`. CI passed on the PR's last commit (run 43609429691).
 - Before the merge, `main` held only a base commit (LICENSE + .gitignore), pushed when the repo was created because a PR needs a base branch. Everything else came in through PR #1.
-- **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. Since the v0.1.0 release it installs from the release zip.
+- **Repo topics:** `wow-addon` and `world-of-warcraft` were added 2026-11-14 at Tim's request, matching the sister repos. `omaforge search -c forever tazu` now finds `github:ninepointlabs/tazus-addon`. Since the v0.1.0 release it installs from the latest release zip.
 - **Released:** **v0.1.0** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.0. The annotated tag `v0.1.0` points at `b840895` on `main`. Before tagging, `omaforge clients` reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43609658936). Assets are `TazusAddon-v0.1.0.zip` (62 files; TOC `## Version: v0.1.0`, Interface 16001; no docs/research/tests/tools) and `release.json` (flavor `forever`, interface 16001). The packager first generated release notes from commit messages; at Tim's request they were rewritten on 2026-11-14 as a short feature summary (highlights, install steps, fan-project notice). Only the release text changed, not the tag or the files. autonomix-cli isn't listed because the release ships no Linux executables. I haven't run `omaforge install` against the live AddOns folder.
+- **Released:** **v0.1.1** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.1. The annotated tag `v0.1.1` points at `fb89992` on `main`, which is the imbue button fix; the Test run on that commit passed (43632627108). Before tagging, `omaforge clients` again reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43632671616). Assets are `TazusAddon-v0.1.1.zip` (TOC `## Version: v0.1.1`, Interface 16001; checked by downloading it) and `release.json`. It is marked Latest. The packager's commit-list notes were replaced with a short summary in the v0.1.0 style (the fix, `/tazu imbue debug`, install steps). No Linux executables, so no autonomix-cli.
 - **Not done (not authorized):** no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
-- **v0.1.0** is on `main` and released. In the repo the TOC says `@project-version@`; the packager filled in `v0.1.0` in the release zip.
+- **v0.1.1** is the latest release. In the repo the TOC says `@project-version@`; the packager fills in the tag's version in the release zip.
 
 ## Decisions (brief defaults, all still Tim's to change)
 
@@ -49,7 +50,7 @@ Tests also cover:
 - About: Tazu plus links to all three sister addons and myazerothlife.com.
 - Slash commands and events. No macros are created, and no Paladin, Mage, Priest, PvP or other leftover text appears in the window or code.
 
-## Features (v0.1.0)
+## Features (v0.1.1)
 
 - **Window:** Home · *Play:* Rotation, Gear · *Progress:* Leveling, Talents · *Learn:* Learn the Shaman · What's new · Settings. It keeps the sister addons' search box, "Sources & notes" popups and spec pill with the A/B profile.
   - Rotation sub-tabs: Solo · Dungeon · Raid · **Totems & imbues** · **Cooldowns** · Mana.
@@ -57,7 +58,7 @@ Tests also cover:
   - Settings: General · **Shaman bar** · Tooltips & bags · Reminders · About the data · About.
   - Learn adds a **Totems & imbues** section.
 - **Shaman bar** (`UI/ShamanBar.lua`, `UI/ImbueButton.lua`, `UI/FireNovaButton.lua`, `UI/Hints.lua`):
-  - **Imbue button:** `type=macro` + `/cast <Imbue>` (no rank, so you get your highest). Re-aimed only out of combat. Shows time left and flags a different imbue. You can pin another imbue in Settings.
+  - **Imbue button:** `type=macro` + `/cast <Imbue>` (no rank, so you get your highest). Re-aimed only out of combat. Shows time left and flags a different imbue. You can pin another imbue in Settings. **Since v0.1.1** it won't cast while the suggested imbue is already on the main hand with 5 minutes or more left: out of combat it clears its `type`/`macrotext`, then re-arms under 5 minutes. A different imbue, no imbue, an enchant it can't name, or a hidden weapon keeps it armed. In combat it keeps the state it had when the fight started.
   - **Fire Nova button:** `/cast Fire Nova`. Always on the bar once known, because secure frames can't be shown mid-fight; it's lit only while one of your Fire totems is down.
   - **Shield hint** and **Totems hint:** plain frames that never cast. Totem nudges appear only in combat or with an enemy targeted.
 - **Keys:** all optional and unbound by default. Set per character with `SetOverrideBindingClick`, out of combat only; Super/Meta refused. No `Bindings.xml`, no player macros, no `/click`.
@@ -156,7 +157,7 @@ Before any future tag, re-run `omaforge clients` and bump `## Interface` in both
 - **Reagents:** Fish Oil (Water Walking), Shiny Fish Scales (Water Breathing) and Ankh (Reincarnation) are confirmed by Icy Veins. The reagent reminder only counts these for spells you know. The element totem items (5175–5178) are recorded but not reminded.
 - **Professions:** Leveling notes say Tazu has Herbalism and should keep it; Icy Veins' Leatherworking + Skinning pick is shown as the research recommendation.
 - **Website flavour:** the site uses the sister sites' playful quest-log rewards ("Codex of Next Steps" etc.). One invented NPC name, an innkeeper, was replaced with "the innkeeper".
-- **CI:** `test.yml` runs on push to `main` and on PRs. `release.yml` (BigWigs packager) runs only on `v*` tags; `v0.1.0` is the only one so far.
+- **CI:** `test.yml` runs on push to `main` and on PRs. `release.yml` (BigWigs packager) runs only on `v*` tags; so far `v0.1.0` and `v0.1.1`.
 - **autonomix-cli:** not listed, because the addon ships no Linux executables.
 
 ## Commits (PR #1, now on `main`)
@@ -170,12 +171,14 @@ Before any future tag, re-run `omaforge clients` and bump `## Interface` in both
 - `1c1b3a8` Merge pull request #1 (on `main`)
 - `b840895` STATUS, README: PR #1 merged to main (tagged `v0.1.0`)
 - `d80ce8a` STATUS, README: v0.1.0 released
-- the STATUS commit noting the rewritten release notes (see `git log`)
+- `1b9fcae` STATUS: release notes rewritten as a feature summary
+- `fb89992` Imbue button: don't cast when the suggested imbue is already on (tagged `v0.1.1`)
+- the STATUS/README commit for v0.1.1 (see `git log`)
 
 ## Still to check in game
 
 1. Slash commands: are `/tazu` and `/shaman` free (not a Blizzard command or emote)? If one clashes, keep `/tazu` and drop the other.
-2. **Imbue button:** casts the right imbue at the highest rank with `/cast <Imbue>` (no rank). Does the main-hand tooltip show the imbue as "Rockbiter N (60 min)"-style text so the addon can name it? How does it look next to a sharpening stone or oil?
+2. **Imbue button:** casts the right imbue at the highest rank with `/cast <Imbue>` (no rank). Does the main-hand tooltip show the imbue as "Rockbiter N (60 min)"-style text so the addon can name it? How does it look next to a sharpening stone or oil? With Rockbiter on and 5+ minutes left, the button should stay dark and not cast; if it still casts, `/tazu imbue debug` shows whether the imbue was named ("on weapon=").
 3. **Totems:**
    - `GetTotemInfo` slot numbers and readability in combat on Forever.
    - The Fire Nova button lights with Searing or Magma Totem down.
