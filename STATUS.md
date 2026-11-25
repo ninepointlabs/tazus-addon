@@ -11,9 +11,9 @@
 - **Not done (not authorized):** no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
 - **v0.1.1** is the latest release. In the repo the TOC says `@project-version@`; the packager fills in the tag's version in the release zip.
 
-## v0.2 (2026-11-25): PR open, not merged, not tagged
+## v0.2 (2026-11-25): merged to main, not tagged
 
-**PR:** https://github.com/ninepointlabs/tazus-addon/pull/2, `feature/v0.2-dwarf-pvp` → `main`, one commit `3f3703f`. Built from `~/Projects/designer-briefs/tazus-addon-v0.2.md`. Per the brief there is no tag, release, publish or merge; Tim reviews the PR. The uncommitted edit in `research/NOTES.md` (the Nov 17 recheck log) is kept in the working tree. It is not committed and not discarded.
+**PR:** https://github.com/ninepointlabs/tazus-addon/pull/2, `feature/v0.2-dwarf-pvp` → `main`, one commit `3f3703f`. Built from `~/Projects/designer-briefs/tazus-addon-v0.2.md`. **Merged 2026-11-25 on Tim's request** with a merge commit, `a5b86f1`. No tag, release or publish. The uncommitted edit in `research/NOTES.md` (the Nov 17 recheck log) is kept in the working tree. It is not committed and not discarded.
 
 ### What changed
 1. **Alliance/Dwarf support.** Race and faction are detected (`UnitRace` / `UnitFactionGroup`).
