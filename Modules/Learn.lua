@@ -14,12 +14,24 @@ local function specOk(entrySpec, spec)
 end
 Learn.SpecOk = specOk
 
+-- Race/faction-specific entries (the Troll path, the Dwarf path, racials...)
+-- carry "races" ("Orc/Troll", "Dwarf") and/or "faction"; others are for everyone.
+-- race/faction default to the player's.
+function Learn.ForPlayer(e, race, faction)
+    if not e then return false end
+    race = race or ns.Progress.PlayerRace()
+    if faction == nil and UnitFactionGroup then faction = UnitFactionGroup("player") end
+    if e.faction and faction and e.faction ~= faction then return false end
+    if e.races and race and not ns.Progress.RaceMatches(e.races, race) then return false end
+    return true
+end
+
 -- Lessons for a spec split into unlocked / upcoming by level.
 function Learn.Lessons(level, spec)
     local c = Learn.Content()
     local unlocked, upcoming = {}, {}
     for _, l in ipairs(c and c.lessons or {}) do
-        if specOk(l.spec, spec) then
+        if specOk(l.spec, spec) and Learn.ForPlayer(l) then
             table.insert(l.level <= level and unlocked or upcoming, l)
         end
     end
@@ -32,7 +44,7 @@ function Learn.NewLessonsAt(level, spec)
     local out = {}
     local c = Learn.Content()
     for _, l in ipairs(c and c.lessons or {}) do
-        if l.level == level and specOk(l.spec, spec) then table.insert(out, l) end
+        if l.level == level and specOk(l.spec, spec) and Learn.ForPlayer(l) then table.insert(out, l) end
     end
     return out
 end

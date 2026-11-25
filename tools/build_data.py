@@ -327,7 +327,12 @@ def build(data: dict, learn: dict | None, talents: dict | None = None, sources: 
         "Roadmap": merged(data, "roadmap"),
         "Riding": merged(data, "riding"),
         "Mounts": merged(data, "mounts"),
+        # Start-zone paths per race (Orc/Troll, Dwarf...): the Leveling > Path card.
+        "LevelingPaths": merged(data, "leveling_paths"),
     }, src, files)
+
+    # PvP mode (v0.2): totem picks, the PvP totem set, world-PvP tips, rulesets.
+    write("PvP.lua", {"PvP": data.get("pvp") or {}}, src, files)
 
     # Shaman additions: totems, imbues, shields, reagents (feed the Shaman bar,
     # Rotation > Totems & imbues and reminders).

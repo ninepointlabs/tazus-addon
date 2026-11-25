@@ -76,7 +76,7 @@ function Summary.Finish(now, manaPct)
     for _, v in pairs(f.casts) do total = total + v end
     if f.duration < 4 or (total == 0 and f.hidden == 0) then return nil end
     local spec = ns.DB.ActiveSpec()
-    f.tips = Summary.Tips(f, spec, ns.DB.Profile().rotationContext, nil)
+    f.tips = Summary.Tips(f, spec, ns.DB.Context(), nil)
     Summary.last = f
     return f
 end

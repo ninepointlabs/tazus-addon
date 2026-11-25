@@ -59,7 +59,7 @@ end
 
 function FN.Build()
     if btn then return btn end
-    cell = ns.ShamanBar.Cell("firenova", 2)
+    cell = ns.ShamanBar.Cell("firenova", 4)
     btn = CreateFrame("Button", FN.NAME, cell, "SecureActionButtonTemplate, BackdropTemplate")
     ns.ShamanBar.Decorate(btn, cell, FN.ICON)
     btn:RegisterForClicks("AnyUp", "AnyDown")

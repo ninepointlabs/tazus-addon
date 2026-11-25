@@ -90,6 +90,51 @@ ns.Data.Gaps = {
     checked = "2026-11-14",
   },
   {
+    gap = "data.json zones_by_level cites zones-and-maps, but that page has no level table (only new zones + maps). The 10-30 Alliance/Horde rows must come from the Icy Veins class leveling slider, whose Alliance bands are 10-18 / 19-23 / 24-30, not 10-13/14-17/etc. Re-check the source of those rows.",
+    source_url = "https://www.icy-veins.com/wow-forever/zones-and-maps",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "No Forever-specific level range for Coldridge Valley alone; 1-5 is classic wiki text.",
+    source_url = "https://warcraft.wiki.gg/wiki/Coldridge_Valley",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "Trainer coordinates and subzones (Anvilmar, Kharanos, Forlorn Cavern, Aerie Peak) are Warcraft Tavern only; Wowhead pages showed zone but not coords.",
+    source_url = "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "Whether any Shaman trainer exists in Stormwind, Thelsamar or Menethil: no source lists one; not proven absent.",
+    source_url = "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "Tremor Totem pulse interval in Forever (2 s vs 5 s conflict on Icy Veins).",
+    source_url = "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "No Wowhead or Icy Veins Forever Shaman PvP guide found; Forever PvP tips are from Icy Veins leveling pages and Skill Capped (third party). Mobalytics not checked.",
+    source_url = "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "Wowhead curl fetches returned 403 this session; Wowhead pages were read via WebFetch and summarised in raw/wowhead_forever_webfetch_extracts.md, not archived as HTML.",
+    source_url = "https://www.wowhead.com/forever/spell=20594",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "No documented ruleset API.",
+    source_url = "https://warcraft.wiki.gg/wiki/API_GetRealmName",
+    checked = "2026-11-25",
+  },
+  {
+    gap = "Bleeds: the Stoneform hint only counts a debuff as a Bleed when the client reports dispelName 'Bleed'; whether Forever does is unverified (check in game).",
+    source_url = "https://db.icy-veins.com/wow-forever/spells/20594",
+    checked = "2026-11-25",
+  },
+  {
     gap = "Enhancement level-60 pre-raid list: Icy Veins page is a work in progress; Wowhead Enhancement BiS tables are empty.",
     source_url = "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-gear-best-in-slot",
     checked = "2026-11-14",
@@ -284,6 +329,12 @@ ns.Data.Conflicts = {
     detail = "endgametools rank 1: removes 1 magic effect. Icy Veins: removes up to two. Probably rank-dependent; not stated.",
     source_url = "https://endgametools.com/en/wow-forever/spells/shaman",
     checked = "2026-11-14",
+  },
+  {
+    topic = "Purge effects removed",
+    detail = "Icy Veins DB rank 1: removes 1 magic effect; Icy Veins leveling pages say 'up to two' (they link a higher rank).",
+    source_url = "https://db.icy-veins.com/wow-forever/spells/370",
+    checked = "2026-11-25",
   },
   {
     topic = "Enhancement gearing direction (spell power vs Windfury/Strength)",

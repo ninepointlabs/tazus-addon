@@ -37,6 +37,14 @@ S.General = function(L, c)
             or "Dual spec not learned yet (level 40, at your class trainer). The plan: Enhancement on A, Restoration on B for groups.") .. "|r", { size = 12, indent = 30 })
     end
 
+    L:Label("PvP mode")
+    local rs = ns.PvP.Ruleset()
+    L:Check("PvP mode for profile " .. ns.DB.ActiveId(), ns.DB.PvP(), function(v) ns.PvP.Set(v) UI.Refresh() end,
+        "World PvP rotation, your PvP totem set in the Totems hint, and PvP tips in Learn. Per profile, so A and B can differ.")
+    L:Text(UI.Hex(UI.C.dim) .. (rs == "pvp" and "This realm looks like a PvP-ruleset realm (its id ends in \"PvP\"), so the addon suggested PvP mode once. It never turns it on by itself."
+        or rs == "pve" and "This realm looks like a Normal-ruleset realm (its id ends in \"PvE\"). Turn PvP mode on whenever you want it."
+        or "The addon can't tell this realm's ruleset, so PvP mode is a manual switch.") .. " /tazu pvp toggles it.|r", { size = 12, indent = 30 })
+
     L:Label("Rotation helper & fight summary")
     L:Check("Show the on-screen rotation helper", ch.rotation.enabled, function(v) ch.rotation.enabled = v ns.Fire("HUD_TOGGLE") end)
     L:Check("Only in combat", ch.rotation.showInCombatOnly, function(v) ch.rotation.showInCombatOnly = v ns.Fire("HUD_TOGGLE") end)
@@ -47,7 +55,7 @@ S.General = function(L, c)
     L:Check("Hint the first time I learn a spell", ch.learn.hints, function(v) ch.learn.hints = v end)
     L:Check("Show minimap button", not g.minimap.hide, function(v) g.minimap.hide = not v ns.Fire("MINIMAP_TOGGLE") end)
     L:Check("Debug messages", g.debug, function(v) g.debug = v end)
-    L:Text(UI.Hex(UI.C.dim) .. "Slash: /tazu (or /shaman) · /tazu spec ele|enh|resto · /tazu rotation · /tazu totems · /tazu imbue key · /tazu nova key · /tazu bar|r", { size = 12 })
+    L:Text(UI.Hex(UI.C.dim) .. "Slash: /tazu (or /shaman) · /tazu spec ele|enh|resto · /tazu pvp · /tazu rotation · /tazu totems · /tazu imbue key · /tazu shock key · /tazu heal key · /tazu nova key · /tazu bar|r", { size = 12 })
 end
 
 -- Cycle a setting through steps (button label "Keep 20" -> next value).
@@ -70,8 +78,36 @@ local function keyRow(L, key, what, startCapture, clear)
     })
 end
 
+-- Totem set editor: per element, the guide pick or one of your known totems.
+local function totemSetEditor(L, c, setKey)
+    local p = ns.DB.Profile()
+    local saved = (p.totemSets and p.totemSets[setKey]) or {}
+    local guide
+    if setKey == "pvp" then
+        guide = ns.Shaman.ActiveTotemSet(c.spec, "pvp", nil, { totemSets = { pvp = {} } })
+    else
+        guide = ns.Shaman.RecommendedTotems(c.spec, p.rotationContext or "solo")
+    end
+    local any = false
+    for _, e in ipairs(ns.Shaman.ELEMENTS) do
+        local known = ns.Shaman.KnownTotems(e)
+        if #known > 0 then
+            any = true
+            L:Text(UI.Hex(ns.TotemAccent) .. e .. "|r" .. UI.Hex(UI.C.dim) .. "  guide pick: " .. (guide[e] or "none") .. "|r", { size = 12 })
+            local items = { { label = "Guide pick", active = saved[e] == nil, onClick = function()
+                ns.Shaman.SetTotemPick(setKey, e, nil) UI.Refresh() end } }
+            for _, n in ipairs(known) do
+                table.insert(items, { label = (n:gsub(" Totem$", "")), active = saved[e] == n, onClick = function()
+                    ns.Shaman.SetTotemPick(setKey, e, n) UI.Refresh() end })
+            end
+            L:Buttons(items)
+        end
+    end
+    if not any then L:Text(UI.Hex(UI.C.dim) .. "No totems yet: the first comes from Call of Earth at level 4.|r", { size = 12 }) end
+end
+
 S["Shaman bar"] = function(L, c)
-    L:Text("One small bar: the weapon imbue button and the Fire Nova button (they cast, one press = one cast), plus Shield and Totems hints (they only advise). Blizzard's totem tracker and Call of the Elements bar stay the way to see and drop totems. Drag the strip above the bar to move it.", { size = 13 })
+    L:Text("One small bar: the weapon imbue, Smart Shock, Smart Heal and Fire Nova buttons (they cast, one press = one cast), plus Shield, Totems and (Dwarves) Stoneform hints (they only advise). Blizzard's totem tracker and Call of the Elements bar stay the way to see and drop totems. Drag the strip above the bar to move it.", { size = 13 })
     L:Buttons({ { label = "Reset bar position", onClick = function() ns.ShamanBar.ResetPosition() end } })
 
     local cfg = ns.db.char.imbue
@@ -96,6 +132,33 @@ S["Shaman bar"] = function(L, c)
     L:Buttons(items, 104)
     keyRow(L, cfg.key, "Imbue", ns.Imbue.StartKeyCapture, ns.Imbue.SetKey)
 
+    local sc = ns.db.char.shock
+    L:Label("Smart Shock button")
+    L:Text("Earth Shock (instant damage that interrupts a cast) by default; hold the modifier for Frost Shock once you know it. Always your highest rank.", { size = 12 })
+    L:Check("Show the Smart Shock button", sc.enabled, function(v)
+        if InCombatLockdown() then ns.Print("Out of combat only.") return end
+        sc.enabled = v
+        ns.Shock.Refresh()
+    end)
+    local mods = {}
+    for _, m in ipairs(ns.Smart.MODS) do
+        table.insert(mods, { label = "Frost on " .. ns.Smart.MOD_LABEL[m], active = (sc.mod or "shift") == m, onClick = function()
+            ns.Shock.SetMod(m) UI.Refresh() end })
+    end
+    L:Buttons(mods, 120)
+    L:Text(UI.Hex(UI.C.dim) .. "Casts: " .. (ns.Smart.ShockText(nil, sc.mod) or "nothing yet (Earth Shock comes at level 4)") .. "|r", { size = 11 })
+    keyRow(L, sc.key, "Smart Shock", ns.Shock.StartKeyCapture, ns.Shock.SetKey)
+
+    L:Label("Smart Heal button")
+    L:Text("Healing Wave on your friendly target, or on you when you have none. Hold Alt for Lesser Healing Wave once you know it. Always your highest rank (no downranking).", { size = 12 })
+    L:Check("Show the Smart Heal button", ns.db.char.heal.enabled, function(v)
+        if InCombatLockdown() then ns.Print("Out of combat only.") return end
+        ns.db.char.heal.enabled = v
+        ns.Heal.Refresh()
+    end)
+    L:Text(UI.Hex(UI.C.dim) .. "Casts: " .. (ns.Smart.HealText() or "nothing yet") .. "|r", { size = 11 })
+    keyRow(L, ns.db.char.heal.key, "Smart Heal", ns.Heal.StartKeyCapture, ns.Heal.SetKey)
+
     L:Label("Fire Nova button")
     L:Text("Fire Nova erupts at your current Fire totem (Fire Nova Totem is gone in Forever). The button lights up only while one of your Fire totems is down.", { size = 12 })
     L:Check("Show the Fire Nova button", ns.db.char.fireNova.enabled, function(v)
@@ -108,7 +171,18 @@ S["Shaman bar"] = function(L, c)
     L:Label("Shield & totem hints")
     L:Check("Show the Shield hint", ns.db.char.shieldHint.enabled, function(v) ns.db.char.shieldHint.enabled = v ns.Hints.Refresh() end)
     L:Check("Show the Totems hint", ns.db.char.totemHint.enabled, function(v) ns.db.char.totemHint.enabled = v ns.Hints.Refresh() end,
-        "Which totem per element for your spec and Solo/Dungeon/Raid; nudges only in combat or with an enemy targeted.")
+        "Your totem set per element (PvE or, in PvP mode, PvP); nudges only in combat or with an enemy targeted.")
+    if c.race == "Dwarf" then
+        L:Check("Show the Stoneform hint", ns.db.char.stoneformHint.enabled, function(v) ns.db.char.stoneformHint.enabled = v ns.Hints.Refresh() end,
+            "Lights up when a Poison, Disease or Bleed is on you, only when the game lets the addon read your debuffs.")
+    end
+
+    L:Label("Totem sets (profile " .. ns.DB.ActiveId() .. ")")
+    L:Text("The Totems hint shows your PvE set, or your PvP set while PvP mode is on (" .. (ns.DB.PvP() and "on now" or "off now") .. "). Leave an element on Guide pick to follow the research, or pin a totem you know. Drop them with your action bar or Call of the Elements.", { size = 12 })
+    L:Label("PvE set")
+    totemSetEditor(L, c, "pve")
+    L:Label("PvP set")
+    totemSetEditor(L, c, "pvp")
 
     L:Space(6)
     L:Text(UI.Hex(UI.C.dim) .. "Pick keys your desktop doesn't use (on Omarchy, Super combos belong to the desktop, so they're never offered). No key is bound by default. What the secure buttons cast and their keys only change out of combat (Blizzard rule).|r", { size = 12 })

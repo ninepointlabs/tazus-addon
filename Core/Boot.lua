@@ -4,9 +4,11 @@ local ADDON, ns = ...
 local f = CreateFrame("Frame")
 ns.EventFrame = f
 
--- Shaman bar: imbue button, Fire Nova button, shield and totem hints (out of combat only).
+-- Shaman bar: imbue, Smart Shock, Smart Heal and Fire Nova buttons, shield, totem
+-- and Stoneform hints (out of combat only).
 function ns.RefreshBars()
     pcall(ns.Imbue.Refresh)
+    ns.Smart.Refresh()
     pcall(ns.FireNova.Refresh)
     pcall(ns.Hints.Refresh)
 end
@@ -55,6 +57,7 @@ local function OnLogin()
             ns.UI.ShowPicker()
         end)
     end
+    if ns.isShaman then C_Timer.After(4, function() pcall(ns.PvP.MaybeSuggest) end) end
     local unread = ns.Changes.UnreadCount()
     if unread > 0 then
         C_Timer.After(5, function() ns.Print(("%d unread in What's new. /tazu news"):format(unread)) end)
@@ -192,6 +195,13 @@ ns.On("SPEC_CHANGED", function()
     if ns.UI.UpdateMinimap then ns.UI.UpdateMinimap() end
     ns.Hud.Refresh()
 end)
+ns.On("PVP_MODE_CHANGED", function()
+    ns.Hud.Refresh()
+    pcall(ns.Hints.Update)
+    if not InCombatLockdown() then ns.RefreshBars() end
+    if ns.UI.Refresh then ns.UI.Refresh() end
+end)
+ns.On("TOTEM_SET_CHANGED", function() pcall(ns.Hints.Update) end)
 ns.On("HUD_TOGGLE", function() ns.Hud.Refresh() end)
 ns.On("HUD_RESET", function() ns.Hud.Place() end)
 ns.On("MINIMAP_TOGGLE", function() ns.UI.MinimapButton() end)
@@ -251,6 +261,15 @@ local function Slash(msg)
             ns.FireNova.Refresh()
             ns.Print("Fire Nova button " .. (cfg.enabled and "shown" or "hidden") .. ".")
         end
+    elseif cmd == "pvp" then
+        if arg == "on" then ns.PvP.Set(true)
+        elseif arg == "off" then ns.PvP.Set(false)
+        else ns.PvP.Toggle() end
+    elseif cmd == "shock" or cmd == "heal" then
+        local b = cmd == "shock" and ns.Shock or ns.Heal
+        if arg == "key" then b.StartKeyCapture()
+        elseif cmd == "shock" and ns.Smart.MOD_LABEL[arg] then ns.Shock.SetMod(arg) ns.Print("Smart Shock: Frost Shock on " .. ns.Smart.MOD_LABEL[arg] .. ".")
+        else b.Toggle() end
     elseif cmd == "bar" then
         if InCombatLockdown() then ns.Print("Out of combat only.") return end
         ns.ShamanBar.ResetPosition()
@@ -262,7 +281,8 @@ local function Slash(msg)
     else
         ns.Print("/tazu [home|rotation|gear|leveling|talents|learn|news|settings] · also: totems cooldowns mana trainer quests riding reminders sources about")
         ns.Print("/tazu spec [ele|enh|resto] · /tazu profile [A|B] · /tazu hud · /tazu reset-hud · /tazu remind")
-        ns.Print("/tazu imbue [key|debug] · /tazu nova [key] · /tazu bar (reset position)")
+        ns.Print("/tazu imbue [key|debug] · /tazu shock [key|shift|ctrl|alt] · /tazu heal [key] · /tazu nova [key] · /tazu bar (reset position)")
+        ns.Print("/tazu pvp [on|off] (PvP mode for this profile)")
     end
 end
 

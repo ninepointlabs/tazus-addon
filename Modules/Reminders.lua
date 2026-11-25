@@ -21,7 +21,7 @@ Reminders.ItemCount = itemCount
 -- the earliest one at or below your level that isn't done.
 function Reminders.ElementQuest(level, race, faction)
     for _, q in ipairs(ns.Progress.ClassQuests(race, faction)) do
-        if q.type == "class" and q.level <= (level or 1) and (q.missing or not ns.Progress.IsQuestDone(q.quest_id)) then
+        if q.type == "class" and q.level <= (level or 1) and (q.missing or not ns.Progress.ClassQuestDone(q)) then
             return q
         end
     end

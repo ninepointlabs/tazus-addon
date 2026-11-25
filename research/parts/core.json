@@ -80,7 +80,20 @@
     "foreverguide": "https://foreverguide.net/classes/shaman/",
     "dailyrespawn": "https://dailyrespawn.com/article/how-to-get-all-four-totems-as-a-horde-shaman-in-wow-forever-earth-fire-water-air",
     "foreverwisp": "https://www.foreverwisp.com/guides/wow-forever-shaman-call-of-earth-quest",
-    "endgametools_spells": "https://endgametools.com/en/wow-forever/spells/shaman"
+    "endgametools_spells": "https://endgametools.com/en/wow-forever/spells/shaman",
+    "iv_zones_1_60": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+    "iv_pvp_overview": "https://www.icy-veins.com/wow-forever/pvp-overview",
+    "iv_classic_pvp": "https://www.icy-veins.com/wow-classic/classic-shaman-pvp-guide",
+    "skillcapped_enh_pvp": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+    "wt_trainers": "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+    "ivdb_s20594": "https://db.icy-veins.com/wow-forever/spells/20594",
+    "ivdb_s8177": "https://db.icy-veins.com/wow-forever/spells/8177",
+    "ivdb_s8143": "https://db.icy-veins.com/wow-forever/spells/8143",
+    "ivdb_s2484": "https://db.icy-veins.com/wow-forever/spells/2484",
+    "wh_npc_257446": "https://www.wowhead.com/forever/npc=257446",
+    "wh_npc_258113": "https://www.wowhead.com/forever/npc=258113",
+    "wh_npc_258098": "https://www.wowhead.com/forever/npc=258098",
+    "wh_npc_270263": "https://www.wowhead.com/forever/npc=270263"
   },
   "spells_by_level": [
     {
@@ -242,10 +255,12 @@
       "id_source": "Icy Veins db links [2484]; Wowhead links [2484]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "also_sources": [
         "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
-        "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+        "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+        "https://db.icy-veins.com/wow-forever/spells/2484"
       ],
       "source_url": "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "flag": ""
     },
     {
       "name": "Lightning Shield",
@@ -296,8 +311,11 @@
       "id_source": "Icy Veins db links [10428]; Wowhead links [10427, 10428]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "source_url": "https://endgametools.com/en/wow-forever/spells/shaman",
       "unconfirmed": true,
-      "flag": "Levels [8, 18, 28, 38, 48, 58] come only from the endgametools spell list (secondary, client-data scrape); primary-confirmed levels: [].",
-      "checked": "2026-11-14"
+      "flag": "Levels [8, 18, 28, 38, 48, 58] come only from the endgametools spell list (secondary, client-data scrape); primary-confirmed levels: [8] (Icy Veins DB, 2026-11-25).",
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://db.icy-veins.com/wow-forever/spells/5730"
+      ]
     },
     {
       "name": "Flame Shock",
@@ -504,10 +522,12 @@
       "id_source": "Icy Veins db links [8143]; Wowhead links [8143]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "also_sources": [
         "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
-        "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips"
+        "https://www.wowhead.com/forever/guide/classes/shaman/restoration/healer-leveling-tips",
+        "https://db.icy-veins.com/wow-forever/spells/8143"
       ],
       "source_url": "https://www.wowhead.com/forever/guide/classes/shaman/elemental/dps-leveling-tips",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "flag": ""
     },
     {
       "name": "Ghost Wolf",
@@ -702,9 +722,10 @@
       ],
       "id_source": "Icy Veins db links [8166]; Wowhead links [8166]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "source_url": "https://endgametools.com/en/wow-forever/spells/shaman",
-      "unconfirmed": true,
-      "flag": "Levels [22] come only from the endgametools spell list (secondary, client-data scrape); primary-confirmed levels: [].",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://db.icy-veins.com/wow-forever/spells/8166"
+      ]
     },
     {
       "name": "Totemic Call",
@@ -930,9 +951,10 @@
       ],
       "id_source": "Icy Veins db links [8177]; Wowhead links [8177]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "source_url": "https://endgametools.com/en/wow-forever/spells/shaman",
-      "unconfirmed": true,
-      "flag": "Levels [30] come only from the endgametools spell list (secondary, client-data scrape); primary-confirmed levels: [].",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://db.icy-veins.com/wow-forever/spells/8177"
+      ]
     },
     {
       "name": "Nature Resistance Totem",
@@ -1126,9 +1148,10 @@
       ],
       "id_source": "Icy Veins db links [8170]; Wowhead links [8170]. Rank of these ids is not stated by the pages (several are high ranks); match the spell by name.",
       "source_url": "https://endgametools.com/en/wow-forever/spells/shaman",
-      "unconfirmed": true,
-      "flag": "Levels [38] come only from the endgametools spell list (secondary, client-data scrape); primary-confirmed levels: [].",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://db.icy-veins.com/wow-forever/spells/8170"
+      ]
     },
     {
       "name": "Call of the Ancestors",
@@ -2050,7 +2073,7 @@
       },
       {
         "level": 4,
-        "what": "Call of Earth quest (Canaga Earthcaller, Valley of Trials): Earth Totem + Stoneskin Totem. Earth Shock.",
+        "what": "Call of Earth quest, your race's version (Leveling > Class quests): Earth Totem + Stoneskin Totem. Earth Shock.",
         "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
         "checked": "2026-11-14"
       },
@@ -2756,10 +2779,19 @@
       "start_npc": "Teo Hammerstorm",
       "reward": "Earth Totem + Stoneskin Totem",
       "reward_spell": "Stoneskin Totem",
-      "notes": "Alliance Dwarf only (hidden for Tazu). Quest id conflicts with foreverwisp/Wowhead 94373.",
+      "notes": "Alliance Dwarf path. Teo Hammerstorm in Anvilmar (Dun Morogh 28.8, 66.2, Warcraft Tavern): 2 Iceclaw Bear Pendants from Frostmane Troll Whelps, then drink the Earth Sapta at the Spirit Stone (path from 25.8, 69.3). Quest id conflict: Icy Veins links 96243, Warcraft Tavern (forever.warcraftdb) 94373/94374/94375; any of them counts as done.",
       "id_source": "Icy Veins class quests page links",
       "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "alt_quest_ids": [
+        94373,
+        94374,
+        94375
+      ],
+      "coords": "28.8, 66.2",
+      "also_sources": [
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ]
     },
     {
       "type": "class",
@@ -2772,10 +2804,13 @@
       "start_npc": "any Shaman trainer; Bruegs Kindleborn",
       "reward": "Fire Totem + Totem of Charged Flames + Searing Totem",
       "reward_spell": "Searing Totem",
-      "notes": "Alliance Dwarf only (hidden for Tazu).",
+      "notes": "Alliance Dwarf path. Any Shaman trainer -> Bruegs Kindleborn (cave, path from Dun Morogh 86.7, 47.0) -> Braldir Ashmantle in Loch Modan (32.0, 66.3): Fire Tar (Tunnel Rat Geomancers, Silver Stream Mine) and a Reagent Pouch (Stonesplinter Seers), then the Fire Spirit Stone. Mobs up to level 14: bring a group (Warcraft Tavern).",
       "id_source": "Icy Veins class quests page links",
       "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ]
     },
     {
       "type": "class",
@@ -2787,10 +2822,14 @@
       "zone": "Loch Modan, Wetlands, Redridge, Ashenvale, Westfall",
       "reward": "Water Totem + Healing Stream Totem",
       "reward_spell": "Healing Stream Totem",
-      "notes": "Alliance Dwarf only (hidden for Tazu).",
+      "notes": "Alliance Dwarf path. Long (about 2 hours of travel, Warcraft Tavern): Norric -> Hervdana Saegrund (Wetlands cave 65.7, 76.4) with water samples from the Wetlands, Redridge and Ashenvale, then the Forgotten Shrine in Westfall (47.5, 60.4).",
       "id_source": "Icy Veins class quests page links",
       "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "start_npc": "any Shaman trainer; Norric Lochthane (Loch Modan 41.9, 19.0)",
+      "also_sources": [
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ]
     },
     {
       "type": "class",
@@ -2802,10 +2841,13 @@
       "zone": "Arathi Highlands",
       "start_npc": "any Shaman trainer; Veyric Thundervein",
       "reward": "Air Totem",
-      "notes": "Alliance Dwarf only (hidden for Tazu).",
+      "notes": "Alliance Dwarf path. One step: Veyric Thundervein in the Arathi Highlands (59.8, 27.6, Warcraft Tavern).",
       "id_source": "Icy Veins class quests page links",
       "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
-      "checked": "2026-11-14"
+      "checked": "2026-11-14",
+      "also_sources": [
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ]
     },
     {
       "type": "class",
@@ -2816,7 +2858,7 @@
       "quest_id": 96016,
       "zone": "Arathi Highlands, Razorfen Kraul, Thousand Needles, Alterac Mountains",
       "reward": "Elementalist's Guard + weapon choice (Lightning's Grasp / Tidebringer's Claw / Rage of the Storm)",
-      "notes": "Alliance Dwarf version (hidden for Tazu).",
+      "notes": "Alliance Dwarf path.",
       "id_source": "Icy Veins class quests page links",
       "source_url": "https://www.icy-veins.com/wow-forever/shaman-class-quests",
       "checked": "2026-11-14"
@@ -2843,7 +2885,67 @@
       "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
     ],
     "source_url": "https://db.icy-veins.com/wow-forever/quests/1522",
-    "checked": "2026-11-14"
+    "checked": "2026-11-14",
+    "alliance_trainers": [
+      "Teo Hammerstorm (Anvilmar, Coldridge Valley, Dun Morogh)",
+      "Ingrid Dunwald (Kharanos, Dun Morogh)",
+      "Eldrun Stormbreaker (Forlorn Cavern, Ironforge)",
+      "Farseer Maret Firetend (Aerie Peak, The Hinterlands)"
+    ],
+    "alliance_trainer_records": [
+      {
+        "name": "Teo Hammerstorm",
+        "location": "Anvilmar, Coldridge Valley, Dun Morogh",
+        "coords": "28.9, 66.2",
+        "npc_id": 257446,
+        "source_url": "https://www.wowhead.com/forever/npc=257446",
+        "notes": "Wowhead Forever confirms name, 'Shaman Trainer' tag, zone Dun Morogh. Coords and Anvilmar from Warcraft Tavern only (totem-quest guide gives 28.8, 66.2). Gives Call of Earth at 4.",
+        "also_sources": [
+          "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+          "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "name": "Ingrid Dunwald",
+        "location": "Kharanos, Dun Morogh",
+        "coords": "47.5, 52.0",
+        "npc_id": 258113,
+        "source_url": "https://www.wowhead.com/forever/npc=258113",
+        "notes": "Wowhead Forever confirms name, tag, zone. Kharanos + coords from Warcraft Tavern only.",
+        "also_sources": [
+          "https://www.warcrafttavern.com/forever/guides/class-trainers/"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "name": "Eldrun Stormbreaker",
+        "location": "Forlorn Cavern, Ironforge",
+        "coords": "47.3, 13.5",
+        "npc_id": 258098,
+        "source_url": "https://www.wowhead.com/forever/npc=258098",
+        "notes": "Wowhead Forever confirms name, tag, zone Ironforge. Forlorn Cavern + coords from Warcraft Tavern only.",
+        "also_sources": [
+          "https://www.warcrafttavern.com/forever/guides/class-trainers/"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "name": "Farseer Maret Firetend",
+        "location": "Aerie Peak, The Hinterlands",
+        "coords": "14.4, 42.6",
+        "npc_id": 270263,
+        "source_url": "https://www.wowhead.com/forever/npc=270263",
+        "notes": "Wowhead Forever confirms name, tag, zone Hinterlands. Aerie Peak + coords from Warcraft Tavern only (added after a reader comment).",
+        "also_sources": [
+          "https://www.warcrafttavern.com/forever/guides/class-trainers/"
+        ],
+        "checked": "2026-11-25"
+      }
+    ],
+    "alliance_flag": "Names and zones confirmed on Wowhead Forever NPC pages (Shaman Trainer). Subzones (Anvilmar, Kharanos, Forlorn Cavern, Aerie Peak) come from Warcraft Tavern only; no source lists a Stormwind, Thelsamar or Menethil Shaman trainer.",
+    "alliance_source_url": "https://www.wowhead.com/forever/npc=258098",
+    "alliance_checked": "2026-11-25"
   },
   "racials": [
     {
@@ -2975,9 +3077,13 @@
       "spell": "Stoneform",
       "spell_id": 20594,
       "type": "active",
-      "effect": "Immune to Poisons, Bleeds and Diseases and reduced Physical damage for 8 s, 3 min cooldown.",
+      "effect": "Instantly removes and grants immunity to Bleed, Poison and Disease effects and reduces Physical damage taken by 10% for 8 s; 3 min cooldown. Doesn't remove Magic or Curses in Forever.",
       "source_url": "https://www.icy-veins.com/wow-forever/race-guide",
-      "checked": "2026-11-09"
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://db.icy-veins.com/wow-forever/spells/20594",
+        "https://www.wowhead.com/forever/spell=20594"
+      ]
     },
     {
       "race": "Dwarf",
@@ -3117,7 +3223,7 @@
       "level": 6,
       "duration": "45 sec",
       "buff": null,
-      "what": "Slows nearby enemies by 50%; 15 s cooldown. Earthbound roots for 5 s on drop.",
+      "what": "Slows enemies within 10 yd by 50%; 15 s cooldown. The Elemental talent Earthbound makes it root for 5 s.",
       "solo": true,
       "group": true,
       "notes": "Kiting/escape tool.",
@@ -3125,7 +3231,8 @@
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/2484"
       ]
     },
     {
@@ -3134,15 +3241,16 @@
       "level": 8,
       "duration": "15 sec",
       "buff": null,
-      "what": "Taunts nearby enemies; 30 s cooldown.",
+      "what": "Taunts nearby creatures (not players); 30 s cooldown.",
       "solo": true,
       "group": false,
-      "notes": "Level 8 only from endgametools (secondary).",
+      "notes": "Level 8 confirmed by Icy Veins DB (2026-11-25).",
       "source_url": "https://www.icy-veins.com/wow-forever/enhancement-shaman-melee-dps-pve-rotation-cooldowns-abilities",
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/5730"
       ]
     },
     {
@@ -3176,7 +3284,8 @@
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/8143"
       ]
     },
     {
@@ -3276,7 +3385,8 @@
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/8166"
       ]
     },
     {
@@ -3325,7 +3435,8 @@
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/8170"
       ]
     },
     {
@@ -3358,7 +3469,8 @@
       "checked": "2026-11-14",
       "also_sources": [
         "https://endgametools.com/en/wow-forever/spells/shaman",
-        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman"
+        "https://news.blizzard.com/en-us/article/24302097/world-of-warcraft-forever-class-deep-dives-mage-and-shaman",
+        "https://db.icy-veins.com/wow-forever/spells/8177"
       ]
     },
     {
@@ -4004,6 +4116,12 @@
       "detail": "endgametools rank 1: removes 1 magic effect. Icy Veins: removes up to two. Probably rank-dependent; not stated.",
       "source_url": "https://endgametools.com/en/wow-forever/spells/shaman",
       "checked": "2026-11-14"
+    },
+    {
+      "topic": "Purge effects removed",
+      "detail": "Icy Veins DB rank 1: removes 1 magic effect; Icy Veins leveling pages say 'up to two' (they link a higher rank).",
+      "source_url": "https://db.icy-veins.com/wow-forever/spells/370",
+      "checked": "2026-11-25"
     }
   ],
   "gaps": [
@@ -4091,6 +4209,431 @@
       "gap": "Totemic Recall mana refund had a beta bug (fixed Oct 1); verify in game.",
       "source_url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
       "checked": "2026-11-14"
+    },
+    {
+      "gap": "data.json zones_by_level cites zones-and-maps, but that page has no level table (only new zones + maps). The 10-30 Alliance/Horde rows must come from the Icy Veins class leveling slider, whose Alliance bands are 10-18 / 19-23 / 24-30, not 10-13/14-17/etc. Re-check the source of those rows.",
+      "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "No Forever-specific level range for Coldridge Valley alone; 1-5 is classic wiki text.",
+      "source_url": "https://warcraft.wiki.gg/wiki/Coldridge_Valley",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "Trainer coordinates and subzones (Anvilmar, Kharanos, Forlorn Cavern, Aerie Peak) are Warcraft Tavern only; Wowhead pages showed zone but not coords.",
+      "source_url": "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "Whether any Shaman trainer exists in Stormwind, Thelsamar or Menethil: no source lists one; not proven absent.",
+      "source_url": "https://www.warcrafttavern.com/forever/guides/class-trainers/",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "Tremor Totem pulse interval in Forever (2 s vs 5 s conflict on Icy Veins).",
+      "source_url": "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "No Wowhead or Icy Veins Forever Shaman PvP guide found; Forever PvP tips are from Icy Veins leveling pages and Skill Capped (third party). Mobalytics not checked.",
+      "source_url": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "Wowhead curl fetches returned 403 this session; Wowhead pages were read via WebFetch and summarised in raw/wowhead_forever_webfetch_extracts.md, not archived as HTML.",
+      "source_url": "https://www.wowhead.com/forever/spell=20594",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "No documented ruleset API.",
+      "source_url": "https://warcraft.wiki.gg/wiki/API_GetRealmName",
+      "checked": "2026-11-25"
+    },
+    {
+      "gap": "Bleeds: the Stoneform hint only counts a debuff as a Bleed when the client reports dispelName 'Bleed'; whether Forever does is unverified (check in game).",
+      "source_url": "https://db.icy-veins.com/wow-forever/spells/20594",
+      "checked": "2026-11-25"
     }
-  ]
+  ],
+  "leveling_paths": [
+    {
+      "races": "Orc/Troll",
+      "faction": "Horde",
+      "levels": "1-5",
+      "zone": "Valley of Trials, Durotar",
+      "body": "The Orc and Troll start, then the rest of Durotar (Razor Hill, Sen'jin Village); the Barrens next (Icy Veins' Horde path). Call of Earth starts here at level 4.",
+      "source_url": "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+      "checked": "2026-11-14"
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "1-5",
+      "zone": "Coldridge Valley (Dun Morogh)",
+      "body": "Dwarf starting area; final starter quests lead to Kharanos. Shaman trainer Teo Hammerstorm in Anvilmar; Call of Earth at 4.",
+      "source_url": "https://warcraft.wiki.gg/wiki/Dun_Morogh",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://warcraft.wiki.gg/wiki/Coldridge_Valley",
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ],
+      "unconfirmed": true,
+      "flag": "1-5 is the classic wiki description ('very sheltered 1-5 leveling area'); no Forever source gives a separate Coldridge range."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "1-10",
+      "zone": "Dun Morogh (Kharanos)",
+      "body": "Dwarf/Gnome starting zone. Shaman trainer Ingrid Dunwald in Kharanos.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://warcraft.wiki.gg/wiki/Dun_Morogh",
+        "https://www.warcrafttavern.com/forever/guides/class-trainers/"
+      ]
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "10-20",
+      "zone": "Loch Modan",
+      "body": "Dwarf/Gnome secondary zone. Icy Veins leveling slider: Alliance 10-18 quest in Loch Modan, Westfall, Darkshore.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+        "https://warcraft.wiki.gg/wiki/Loch_Modan"
+      ]
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "15-25",
+      "zone": "Redridge Mountains",
+      "body": "Icy Veins leveling slider: Alliance 19-23 Redridge and Duskwood.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+      ]
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "18-30",
+      "zone": "Duskwood / Ashenvale",
+      "body": "Icy Veins leveling slider: Alliance 24-30 Ashenvale, Duskwood, Wetlands.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+      ]
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "20-30",
+      "zone": "Wetlands",
+      "body": "Alliance zone north of Loch Modan (Menethil Harbor). Excavation Site: Wetlands dungeon at 27-30 per Icy Veins slider. Call of Water chain goes Loch Modan -> Wetlands.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+        "https://warcraft.wiki.gg/wiki/Wetlands",
+        "https://www.warcrafttavern.com/forever/guides/dwarf-shaman-totem-quests/"
+      ]
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "25-35",
+      "zone": "Thousand Needles (contested)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "30-40",
+      "zone": "Arathi Highlands / Alterac Mountains / Desolace (contested)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "30-45",
+      "zone": "Stranglethorn Vale (contested)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "35-45",
+      "zone": "Badlands / Swamp of Sorrows / Riverglades (new) / Dustwallow Marsh (contested)",
+      "body": "Riverglades is new in Forever, between Redridge and Burning Steppes.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/zones-and-maps"
+      ],
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "40-50",
+      "zone": "The Hinterlands / Feralas / Tanaris (contested)",
+      "body": "Aerie Peak (Hinterlands) has an Alliance Shaman trainer.",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "45-55",
+      "zone": "Searing Gorge (45-50) / Blasted Lands / Azshara (contested)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "48-55",
+      "zone": "Felwood / Un'Goro Crater (contested)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "50-60",
+      "zone": "Burning Steppes (50-58) / Western Plaguelands (51-58) / Eastern Plaguelands (53-60) / Deadwind Pass (50-60) / Silithus, Winterspring (55-60)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/",
+      "checked": "2026-11-25",
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    },
+    {
+      "races": "Dwarf",
+      "faction": "Alliance",
+      "levels": "60",
+      "zone": "Mount Hyjal (new endgame zone, via Winterspring)",
+      "body": "",
+      "source_url": "https://www.icy-veins.com/wow-forever/zones-and-maps",
+      "checked": "2026-11-25",
+      "also_sources": [
+        "https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/"
+      ],
+      "unconfirmed": true,
+      "flag": "Icy Veins gives zone level ranges past 30, not a recommended route (its leveling guides stop at 30)."
+    }
+  ],
+  "pvp": {
+    "summary": "World PvP for a Shaman: no hard crowd control, so you win with interrupts (Earth Shock), slows (Frost Shock, Earthbind Totem), Purge and the right totem. On a PvP ruleset you're flagged in contested and enemy zones (any zone above level 15 is contested, Icy Veins).",
+    "source_url": "https://www.icy-veins.com/wow-forever/pvp-overview",
+    "checked": "2026-11-25",
+    "also_sources": [
+      "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/"
+    ],
+    "realm_detection": {
+      "text": "No source documents an in-game API that returns the Forever ruleset (Normal/PvP/RP/Hardcore). C_GameRules.GetActiveGameMode exists in the Forever client but returns Enum.GameMode (Standard/Plunderstorm/WoWHack), not the ruleset. A code search of Ketho/wow-ui-source-forever for Ruleset/GetRuleSet/IsPvPRealm/GetServerPVPType found only chat-channel, spell-diminish and login-screen (waitingForRuleSets, superDistrict) uses; nothing an addon can query in-world. Icy Veins: rulesets replace realm types; PvP ruleset auto-flags you in Contested/Enemy zones (any zone above level 15 is contested), others need /pvp. Practical options: parse GetRealmName() (observed ids like ...Realm6PvP) or infer from UnitIsPVP('player') while in a contested zone without having typed /pvp; both are undocumented heuristics.",
+      "addon_rule": "GetRealmName() ending in 'PvP' counts as the PvP ruleset (suggest PvP mode once); ending in 'PvE' counts as Normal; anything else: manual switch. Observed ids: CAMWOWUS2Realm1PvE (Normal ruleset, Tazu's realm) and CAMWOWUS2Realm6PvP (a PvP-ruleset realm), from StoryTracker's GetRealmName() keys on TUF, 2026-11-25.",
+      "unconfirmed": true,
+      "flag": "No documented ruleset API; the realm-id suffix is an observed, undocumented pattern.",
+      "source_url": "https://warcraft.wiki.gg/wiki/API_C_GameRules.GetActiveGameMode",
+      "checked": "2026-11-25"
+    },
+    "totem_picks": [
+      {
+        "name": "Grounding Totem",
+        "element": "Air",
+        "level": 30,
+        "what": "5 hp totem; redirects one harmful spell cast on a nearby party member to itself every 10 s. Not AoE spells. Lasts 45 s, 15 s cooldown, 6% base mana.",
+        "pvp_use": "Vs casters: eats one harmful spell. Save it for the one that matters.",
+        "source_url": "https://db.icy-veins.com/wow-forever/spells/8177",
+        "checked": "2026-11-25",
+        "also_sources": [
+          "https://www.wowhead.com/forever/spell=8177",
+          "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+          "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/"
+        ],
+        "vs": "casters",
+        "vs_classes": [
+          "MAGE",
+          "WARLOCK",
+          "PRIEST"
+        ]
+      },
+      {
+        "name": "Tremor Totem",
+        "element": "Earth",
+        "level": 18,
+        "what": "5 hp totem; removes Fear, Charm and Sleep from party members within 30 yd. Lasts 5 min, no cooldown, 60 mana.",
+        "pvp_use": "Vs fear: frees you and your party from Fear, Charm and Sleep.",
+        "source_url": "https://db.icy-veins.com/wow-forever/spells/8143",
+        "checked": "2026-11-25",
+        "also_sources": [
+          "https://www.wowhead.com/forever/spell=8143",
+          "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/"
+        ],
+        "vs": "fear",
+        "vs_classes": [
+          "WARLOCK"
+        ],
+        "flag": "Pulse interval not in Forever tooltip; Icy Veins Elemental/Resto leveling say every 2 s, Enhancement leveling says every 5 s."
+      },
+      {
+        "name": "Earthbind Totem",
+        "element": "Earth",
+        "level": 6,
+        "what": "5 hp totem for 45 s; Earthbind slows enemies within 10 yd by 50% (5 s debuff, refreshed). 15 s cooldown, 6% base mana. Elemental talent Earthbound (Icy Veins: level 25 pick) makes it root for 5 s.",
+        "pvp_use": "For kiting: slows melee 50% so you can get away (roots with Earthbound).",
+        "source_url": "https://db.icy-veins.com/wow-forever/spells/2484",
+        "checked": "2026-11-25",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/3600",
+          "https://www.wowhead.com/forever/spell=2484",
+          "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling"
+        ],
+        "vs": "kiting",
+        "vs_classes": [
+          "WARRIOR",
+          "ROGUE",
+          "PALADIN"
+        ]
+      }
+    ],
+    "vs_classes_note": "Which enemy classes each pick answers is an addon grouping: Tremor vs Warlocks (Skill Capped: Fear is the Warlock's CC); Grounding vs Mages, Warlocks and Priests (Icy Veins: 'vs spellcasters'); Earthbind vs Warriors, Rogues and Paladins (melee you kite).",
+    "totem_set": {
+      "Earth": [
+        "Earthbind Totem"
+      ],
+      "Air": [
+        "Grounding Totem"
+      ],
+      "note": "PvP set guide picks: Earthbind (kiting) and Grounding (vs casters), per Icy Veins and Skill Capped; Fire and Water follow your Solo picks. Edit the set in Settings > Shaman bar.",
+      "source_url": "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+      "checked": "2026-11-25"
+    },
+    "tips": [
+      {
+        "title": "Earth Shock to interrupt",
+        "body": "Earth Shock interrupts a cast and locks that spell school for 2 s. Save it for heals or big casts. All Shocks share a 6 s cooldown, so each Shock has an opportunity cost.",
+        "source_url": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/8042",
+          "https://www.icy-veins.com/wow-classic/classic-shaman-pvp-guide"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Frost Shock to kite",
+        "body": "Frost Shock slows the target 50% for 8 s. Use it to kite melee or stop a runner.",
+        "source_url": "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/8056",
+          "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Grounding vs casters",
+        "body": "Grounding Totem (30) redirects one harmful spell aimed at you or your party (every 10 s, not AoE). Icy Veins: great vs spellcasters.",
+        "source_url": "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/8177",
+          "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Tremor vs fear",
+        "body": "Tremor Totem (18) removes Fear, Charm and Sleep from party within 30 yd. Skill Capped: use it to get your healer out of Fear.",
+        "source_url": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/8143"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Earthbind to escape",
+        "body": "Earthbind Totem slows enemies within 10 yd by 50%; with the Earthbound talent it roots for 5 s. Good for escaping melee.",
+        "source_url": "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+        "also_sources": [
+          "https://db.icy-veins.com/wow-forever/spells/2484"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Purge their buffs",
+        "body": "Purge removes a magic buff (rank 1: one effect). Strip shields (Mage, Priest) and heal-over-time effects.",
+        "source_url": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+        "also_sources": [
+          "https://www.icy-veins.com/wow-classic/classic-shaman-pvp-guide",
+          "https://www.icy-veins.com/wow-forever/restoration-shaman-leveling"
+        ],
+        "checked": "2026-11-25"
+      },
+      {
+        "title": "Ghost Wolf to run",
+        "body": "Ghost Wolf (20) gives +40% run speed with no cooldown. Improved Ghost Wolf makes it instant.",
+        "source_url": "https://www.icy-veins.com/wow-forever/elemental-shaman-leveling",
+        "also_sources": [
+          "https://www.icy-veins.com/wow-forever/enhancement-shaman-leveling"
+        ],
+        "flag": "Icy Veins frames it as travel/mobility, not explicitly a PvP escape.",
+        "checked": "2026-11-25",
+        "unconfirmed": true
+      },
+      {
+        "title": "Stoneform vs melee and DoTs",
+        "body": "Stoneform removes and blocks Poison, Bleed and Disease and cuts Physical damage 10% for 8 s. Icy Veins: nice vs melee; the cleanse helps in 1v1.",
+        "source_url": "https://www.icy-veins.com/wow-forever/racial-tier-list",
+        "also_sources": [
+          "https://www.wowhead.com/forever/spell=20594"
+        ],
+        "checked": "2026-11-25",
+        "races": "Dwarf"
+      },
+      {
+        "title": "Lesser Healing Wave for fast heals",
+        "body": "In PvP, heal with Lesser Healing Wave (1.5 s cast) rather than slow Healing Wave; use Nature's Swiftness for an instant big heal.",
+        "source_url": "https://www.icy-veins.com/wow-classic/classic-shaman-pvp-guide",
+        "flag": "Classic (not Forever) Icy Veins PvP guide.",
+        "checked": "2026-11-25",
+        "unconfirmed": true
+      },
+      {
+        "title": "No real CC: lean on utility",
+        "body": "Shaman lacks a Polymorph/Sap/Fear equivalent; win with slows, interrupts, Purge and totems.",
+        "source_url": "https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/",
+        "unconfirmed": true,
+        "flag": "Skill Capped is a third-party site, not on the preferred list.",
+        "checked": "2026-11-25"
+      }
+    ]
+  }
 }

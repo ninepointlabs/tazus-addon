@@ -69,7 +69,7 @@ local function renderTotems(L, c)
     local shText = sh == nil and nil or (sh and (sh.name .. (sh.charges and (" · " .. sh.charges .. " orbs") or "")) or false)
     L:Row({ icon = ns.Rotation.Icon(st.recShield or "Lightning Shield"), title = "Shield: " .. stateText(shText),
         sub = st.recShield and ("Suggested: " .. st.recShield .. (st.shieldWhy and (" (" .. st.shieldWhy .. ")") or "")) or "You don't know a shield yet." })
-    L:Label("Totems for " .. (ns.Rotation.CONTEXT_LABELS[st.context] or "Solo"))
+    L:Label((st.pvp and "Your PvP totem set" or "Your PvE totem set") .. " · " .. (ns.Rotation.CONTEXT_LABELS[st.context] or "Solo"))
     local anyRec = false
     for _, e in ipairs(ns.Shaman.ELEMENTS) do
         local want = st.totems[e]
@@ -166,17 +166,24 @@ UI.RegisterPanel({
         if key == "totems & imbues" or key == "totems" then view = "totems"
         elseif key == "cooldowns" then view = "cooldowns"
         elseif key == "mana" then view = "mana"
-        elseif key and ns.Rotation.CONTEXT_LABELS[key] then ns.DB.Profile().rotationContext = key view = nil end
+        elseif key == "world pvp" or key == "pvp" then ns.DB.SetPvP(true) view = nil
+        elseif key and ns.Rotation.CONTEXT_LABELS[key] then ns.DB.Profile().rotationContext = key ns.DB.SetPvP(false) view = nil end
     end,
     render = function(L, c)
         L:Title("Rotation", c.spec and (c.spec .. " · only spells you can use at level " .. c.level) or nil)
         if not c.spec then L:Text("Pick a spec first (spec pill at the top).") return end
         local p = c.profile
-        local current = p.rotationContext or "solo"
+        -- World PvP is PvP mode: picking it turns PvP mode on, picking a PvE tab turns it off.
+        local current = ns.DB.Context()
         local tabs = {}
         for _, key in ipairs(ns.Rotation.CONTEXTS) do
             table.insert(tabs, { label = ns.Rotation.CONTEXT_LABELS[key], active = view == nil and key == current, onClick = function()
-                p.rotationContext = key
+                if key == "pvp" then
+                    ns.DB.SetPvP(true)
+                else
+                    p.rotationContext = key
+                    ns.DB.SetPvP(false)
+                end
                 view = nil
                 ns.Fire("ROTATION_CONTEXT", key)
                 UI.Refresh()
@@ -199,6 +206,9 @@ UI.RegisterPanel({
         for _, s in ipairs(ctxData.sources or {}) do L:Source({ source_url = s }) end
 
         L:Columns({ 0.6, 0.4 })
+        if current == "pvp" then
+            L:Text(UI.Hex(UI.C.warn) .. "PvP mode is on for profile " .. ns.DB.ActiveId() .. ":|r the helper, the Totems hint (your PvP set) and Learn's PvP tips follow it. Pick Solo, Dungeon or Raid to switch it off.", { size = 12 })
+        end
         L:Text(UI.Hex(UI.C.dim) .. "Top of the list wins. The on-screen helper lights up the next one. Advice only: you press the buttons.|r", { size = 12 })
         local n, hidden = 0, 0
         for _, step in ipairs(ctxData.priority or {}) do
@@ -235,6 +245,16 @@ UI.RegisterPanel({
         if ctxData.tips and #ctxData.tips > 0 then
             L:Label("Tips")
             for _, t in ipairs(ctxData.tips) do L:Text("- " .. t, { size = 12 }) end
+        end
+        if current == "pvp" then
+            L:Label("PvP totem picks")
+            local picks = ns.PvP.TotemPicks()
+            for _, t in ipairs(picks) do
+                L:Row({ icon = ns.Rotation.Icon(t.name), title = t.name, sub = t.pvp_use, accent = ns.TotemAccent })
+            end
+            if #picks == 0 then L:Text(UI.Hex(UI.C.dim) .. "None known yet: Earthbind Totem, Tremor Totem and Grounding Totem come from your trainer.|r", { size = 12 }) end
+            L:Buttons({ { label = "PvP tips", onClick = function() UI.Select("learn", "PvP") end },
+                { label = "Totem sets", onClick = function() UI.Select("settings", "Shaman bar") end } })
         end
         L:Label("Last fight")
         local last = ns.Summary.last

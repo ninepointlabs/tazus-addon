@@ -39,6 +39,26 @@ local function pathSteps(c)
     return out
 end
 
+-- Your race's own path (research leveling_paths: Orc/Troll from the Valley of
+-- Trials, Dwarf from Coldridge Valley...), for your level. nil = use the zone table.
+function S.RacePath(c)
+    local out = {}
+    for _, p in ipairs(ns.Data.LevelingPaths or {}) do
+        local raceOk = p.races == nil or ns.Progress.RaceMatches(p.races, c.race)
+        local facOk = not p.faction or not c.faction or p.faction == c.faction
+        if raceOk and facOk then table.insert(out, p) end
+    end
+    return out
+end
+
+function S.PathStep(c)
+    for _, p in ipairs(S.RacePath(c)) do
+        local lo, hi = bracketRange(p.levels)
+        if lo and c.level >= lo and c.level <= hi then return p end
+    end
+    return nil
+end
+
 function S.Path(L, c)
     L:Columns({ 0.55, 0.45 })
     L:Label("Your path")
@@ -56,9 +76,10 @@ function S.Path(L, c)
         local lo, hi = bracketRange(z.levels)
         if lo and c.level >= lo and c.level <= hi then zoneCard = z end
     end
-    if c.level < 6 and (c.race == "Troll" or c.race == "Orc") then
-        L:Card({ label = "Where to quest (1-5)", title = "Valley of Trials, Durotar",
-            body = "The Orc and Troll start, then the rest of Durotar (Razor Hill, Sen'jin Village); the Barrens next (Icy Veins' Horde path). Call of Earth starts here at level 4.",
+    local step = S.PathStep(c)
+    if step then
+        L:Card({ label = "Where to quest (" .. step.levels .. ")", title = step.zone,
+            body = (step.body or "") .. (step.unconfirmed and ("\n" .. UI.FLAG_ICON .. " " .. UI.Hex(UI.C.warn) .. (step.flag or "unconfirmed") .. "|r") or ""),
             button = { label = "Zones & dungeons", onClick = function() tab = "Zones & dungeons" UI.Refresh() end } })
     elseif zoneCard then
         L:Card({ label = "Where to quest (" .. zoneCard.levels .. ")", title = horde and zoneCard.horde or zoneCard.alliance,
@@ -80,6 +101,18 @@ end
 
 S["Zones & dungeons"] = function(L, c)
     local horde = c.faction == "Horde"
+    local mine = S.RacePath(c)
+    if #mine > 0 then
+        L:Label((c.race or "Your") .. " path")
+        for _, p in ipairs(mine) do
+            local lo, hi = bracketRange(p.levels)
+            local here = lo and c.level >= lo and c.level <= hi
+            L:Row({ chip = { text = p.levels, kind = here and "good" or "neutral" }, title = p.zone,
+                sub = (p.body or "") .. (p.unconfirmed and (" " .. UI.FLAG_ICON .. " " .. UI.Hex(UI.C.warn) .. (p.flag or "unconfirmed") .. "|r") or ""),
+                tint = here and UI.Accent() or nil })
+            L:Source(p)
+        end
+    end
     L:Label((c.faction or "?") .. " zones by level")
     for _, z in ipairs(ns.Data.Zones) do
         local lo, hi = bracketRange(z.levels)
@@ -88,7 +121,11 @@ S["Zones & dungeons"] = function(L, c)
             sub = "Dungeons: " .. z.dungeons, tint = here and UI.Accent() or nil })
     end
     L:Source(ns.Data.Zones[1])
-    L:Note("Zones for levels 30-60 aren't in the research yet (Wowhead zone pages were blocked).")
+    if #mine > 0 and c.faction == "Alliance" then
+        L:Note("Past 30 your path above lists Icy Veins' zone level ranges, not a set route: their leveling guides stop at 30.")
+    else
+        L:Note("Zones for levels 30-60 aren't in the research yet (Wowhead zone pages were blocked).")
+    end
     L:Label("Dungeons near your level")
     local any = false
     for _, d in ipairs(ns.Data.Dungeons) do

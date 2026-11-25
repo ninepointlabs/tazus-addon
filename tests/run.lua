@@ -50,8 +50,8 @@ local SUBS = {
     leveling = { "Path", "Zones & dungeons", "Trainer", "Class quests", "Riding & gold" },
     gear = { "For my level", "Best overall", "By bracket", "Consumables", "Weights" },
     settings = { "General", "Shaman bar", "Tooltips & bags", "Reminders", "About the data", "About" },
-    learn = { "Lessons", "Spells", "Talents", "How the class works", "Totems & imbues", "In a group", "Leveling", "Common mistakes" },
-    rotation = { "Solo", "Dungeon", "Raid", "Totems & imbues", "Cooldowns", "Mana" },
+    learn = { "Lessons", "Spells", "Talents", "How the class works", "Totems & imbues", "In a group", "PvP", "Leveling", "Common mistakes" },
+    rotation = { "Solo", "Dungeon", "Raid", "World PvP", "Totems & imbues", "Cooldowns", "Mana" },
 }
 local function renderSubs(label)
     for key, list in pairs(SUBS) do
@@ -117,7 +117,9 @@ test("generated data present", function()
     truthy(#ns.Data.Totems >= 8, "totems")
     truthy(#ns.Data.ImbueAdvice >= 2, "imbue advice")
     truthy(ns.Data.TotemAdvice.Enhancement, "totem advice")
-    eq(ns.Data.PvP, nil, "no PvP data")
+    truthy(ns.Data.PvP and #ns.Data.PvP.totem_picks >= 3, "PvP totem picks (v0.2)")
+    truthy(#ns.Data.PvP.tips >= 5, "PvP tips")
+    for _, spec in ipairs(ns.SPEC_ORDER) do truthy(ns.Data.Learn.rotation[spec].pvp, "World PvP rotation " .. spec) end
     -- removed spells and group Bloodlust never appear as spells or totems
     local function clean(list, field)
         for _, s in ipairs(list) do
@@ -652,10 +654,12 @@ test("learn: lessons unlock by level, Call of Earth at 4, totem articles, hints 
     local unlocked, upcoming = ns.Learn.Lessons(24, "Enhancement")
     truthy(#unlocked > 0 and #upcoming > 0)
     local four = false
-    for _, l in ipairs(ns.Data.Learn.lessons) do
+    for _, l in ipairs(unlocked) do
         if l.level == 4 and (l.title or ""):find("Call of Earth", 1, true) then four = true end
         truthy(l.faction ~= "Alliance", "no Alliance lesson for Tazu: " .. l.title)
+        truthy(not l.races or ns.Progress.RaceMatches(l.races, "Troll"), "no other-race lesson for Tazu: " .. l.title)
     end
+    for _, l in ipairs(upcoming) do truthy(l.faction ~= "Alliance", "no upcoming Alliance lesson for Tazu: " .. l.title) end
     truthy(four, "a level-4 Call of Earth lesson")
     truthy(#(ns.Data.Learn.totems or {}) >= 4, "totem/imbue/shield articles")
     forget()
@@ -940,6 +944,264 @@ test("map pin helpers", function()
     M.waypoints = {}
     truthy(ns.Map.SetWaypoint(e.mapID, e.x, e.y, "WC"))
     eq(M.waypoints[1].mapID, 10); eq(M.superTracked, true)
+end)
+
+-- ---------------------------------------------------------------------------
+-- v0.2: Smart Shock, Smart Heal, PvP mode, totem sets, Stoneform, Dwarf/Alliance.
+
+local function noMacros() for _, m in ipairs(M.macros) do error("no macros may be created: " .. m.name) end end
+
+test("Smart Shock: secure /cast with [mod:] conditionals, Frost Shock once known, modifier configurable, unbound", function()
+    forget()
+    ns.Shock.Refresh()
+    eq(ns.ShamanBar.Shown().shock, nil, "hidden until a Shock is known")
+    eq(ns.Smart.ShockText(function() return false end), nil)
+    know("Earth Shock")
+    ns.Shock.Refresh()
+    local b = _G.TazusShockButton
+    eq(b:GetAttribute("type"), "macro")
+    eq(b:GetAttribute("macrotext"), "/cast Earth Shock", "Earth Shock only, rank-less (highest rank)")
+    truthy(ns.ShamanBar.Shown().shock, "on the Shaman bar")
+    eq(ns.db.char.shock.key, nil, "unbound by default")
+    know("Frost Shock")
+    ns.Shock.Refresh()
+    eq(b:GetAttribute("macrotext"), "/cast [mod:shift] Frost Shock; Earth Shock", "Shift for Frost Shock by default")
+    ns.Shock.SetMod("ctrl")
+    eq(b:GetAttribute("macrotext"), "/cast [mod:ctrl] Frost Shock; Earth Shock", "modifier configurable")
+    SlashCmdList.TAZUSADDON("shock alt")
+    eq(b:GetAttribute("macrotext"), "/cast [mod:alt] Frost Shock; Earth Shock", "/tazu shock alt")
+    ns.Shock.SetMod("bogus")
+    eq(ns.db.char.shock.mod, "alt", "unknown modifier ignored")
+    -- frozen in combat
+    S.combat = true
+    ns.Shock.SetMod("shift")
+    eq(b:GetAttribute("macrotext"), "/cast [mod:alt] Frost Shock; Earth Shock", "no change in combat")
+    S.combat = false
+    ns.Shock.SetMod("shift")
+    ns.Shock.SetKey("ALT-Q")
+    eq(M.overrides["ALT-Q"], "TazusShockButton:LeftButton", "override click binding")
+    ns.Shock.SetKey(nil)
+    noMacros()
+    forget()
+    ns.Shock.Refresh()
+end)
+
+test("Smart Heal: friendly target else you, Alt for Lesser Healing Wave once known, no ranks", function()
+    forget()
+    ns.Heal.Refresh()
+    eq(ns.ShamanBar.Shown().heal, nil, "hidden until Healing Wave is known")
+    know("Healing Wave")
+    ns.Heal.Refresh()
+    local b = _G.TazusHealButton
+    eq(b:GetAttribute("type"), "macro")
+    eq(b:GetAttribute("macrotext"), "/cast [@target,help,nodead][@player] Healing Wave")
+    know("Lesser Healing Wave")
+    ns.Heal.Refresh()
+    eq(b:GetAttribute("macrotext"), "/cast [mod:alt,@target,help,nodead][mod:alt,@player] Lesser Healing Wave; [@target,help,nodead][@player] Healing Wave")
+    truthy(not b:GetAttribute("macrotext"):find("Rank", 1, true), "never downranks")
+    eq(ns.db.char.heal.key, nil, "unbound by default")
+    S.units.target = { friend = true }
+    ns.Heal.Update()
+    truthy(b.status:GetText():find("target", 1, true), "friendly target")
+    S.units.target = nil
+    ns.Heal.Update()
+    truthy(b.status:GetText():find("you", 1, true), "enemy target -> you")
+    ns.Heal.SetKey("SHIFT-E")
+    eq(M.overrides["SHIFT-E"], "TazusHealButton:LeftButton")
+    ns.Heal.SetKey(nil)
+    SlashCmdList.TAZUSADDON("heal")
+    eq(ns.db.char.heal.enabled, false, "/tazu heal hides it")
+    SlashCmdList.TAZUSADDON("heal")
+    noMacros()
+    forget()
+    ns.Heal.Refresh()
+end)
+
+test("PvP mode: per profile, realm-id detection only suggests (once), World PvP context everywhere", function()
+    eq(ns.PvP.RulesetFromRealm("CAMWOWUS2Realm6PvP"), "pvp")
+    eq(ns.PvP.RulesetFromRealm("CAMWOWUS2Realm1PvE"), "pve")
+    eq(ns.PvP.RulesetFromRealm("Ganj"), nil, "can't tell -> manual")
+    eq(ns.PvP.RulesetFromRealm(nil), nil)
+    ns.DB.SwitchProfile("A")
+    ns.DB.SetSpec("Enhancement")
+    ns.DB.SetPvP(false)
+    ns.db.char.pvpSuggested = nil
+    S.realm = "CAMWOWUS2Realm1PvE"
+    eq(ns.PvP.MaybeSuggest(), false, "Normal realm: no suggestion")
+    S.realm = "CAMWOWUS2Realm6PvP"
+    eq(ns.PvP.MaybeSuggest(), true, "PvP realm: suggest")
+    eq(ns.DB.PvP(), false, "suggesting never turns it on")
+    eq(ns.PvP.MaybeSuggest(), false, "only once per realm")
+    S.realm = nil
+    eq(ns.DB.Context(), ns.DB.Profile().rotationContext or "solo")
+    SlashCmdList.TAZUSADDON("pvp")
+    eq(ns.DB.PvP(), true, "/tazu pvp toggles on")
+    eq(ns.DB.Context(), "pvp")
+    eq(ns.DB.PvP("B"), false, "per profile: B unchanged")
+    eq(ns.Shaman.State().context, "pvp")
+    ns.Hud.Refresh()
+    M.texts = {}
+    ns.UI.Open("rotation", "World PvP")
+    truthy(textHas("PvP mode is on"), "Rotation shows World PvP")
+    truthy(textHas("PVP TOTEM PICKS"), "PvP totem picks listed")
+    M.texts = {}
+    ns.UI.Open("learn", "PvP")
+    truthy(textHas("Grounding Totem") and textHas("Tremor Totem") and textHas("Earthbind Totem"), "Learn > PvP")
+    truthy(not textHas("Stoneform vs melee"), "Dwarf-only tip hidden for a Troll")
+    ns.UI.Open("rotation", "Solo")
+    eq(ns.DB.PvP(), false, "picking a PvE tab turns PvP mode off")
+    ns.UI.Open("rotation", "World PvP")
+    eq(ns.DB.PvP(), true, "World PvP tab turns it on")
+    SlashCmdList.TAZUSADDON("pvp off")
+    eq(ns.DB.PvP(), false)
+end)
+
+test("totem sets: PvE guide picks, PvP set (Earthbind/Grounding), saved picks win, hint follows PvP mode", function()
+    forget()
+    for _, n in ipairs({ "Stoneskin Totem", "Strength of Earth Totem", "Earthbind Totem", "Tremor Totem", "Searing Totem",
+        "Healing Stream Totem", "Mana Spring Totem", "Windfury Totem", "Grounding Totem" }) do know(n) end
+    S.level = 32
+    ns.DB.SetSpec("Enhancement")
+    ns.DB.Profile().rotationContext = "solo"
+    ns.DB.Profile().totemSets = { pve = {}, pvp = {} }
+    local pve, key = ns.Shaman.ActiveTotemSet("Enhancement", "solo")
+    eq(key, "pve")
+    eq(pve.Earth, "Strength of Earth Totem", "guide pick")
+    eq(pve.Air, "Windfury Totem")
+    local pvp, key2 = ns.Shaman.ActiveTotemSet("Enhancement", "pvp")
+    eq(key2, "pvp")
+    eq(pvp.Earth, "Earthbind Totem", "PvP set: Earthbind")
+    eq(pvp.Air, "Grounding Totem", "PvP set: Grounding")
+    eq(pvp.Fire, pve.Fire, "PvP set falls back to the Solo pick")
+    ns.Shaman.SetTotemPick("pvp", "Earth", "Tremor Totem")
+    eq(ns.Shaman.ActiveTotemSet("Enhancement", "pvp").Earth, "Tremor Totem", "saved pick wins")
+    eq(ns.Shaman.ActiveTotemSet("Enhancement", "solo").Earth, "Strength of Earth Totem", "PvE set untouched")
+    ns.Shaman.SetTotemPick("pve", "Water", "Magma Totem")
+    eq(ns.Shaman.ActiveTotemSet("Enhancement", "solo").Water, "Mana Spring Totem", "unknown saved pick ignored")
+    ns.DB.SetPvP(true)
+    local st = ns.Shaman.State()
+    eq(st.totems.Earth, "Tremor Totem", "state follows PvP mode")
+    local tv = ns.Hints.TotemView(st, nil, false, st.totems)
+    truthy(tv.lines[1]:find("PvP set", 1, true), "hint names the PvP set")
+    -- vs an enemy Warlock: Tremor
+    local vs = ns.PvP.PicksVs("WARLOCK")
+    local names = {}
+    for _, t in ipairs(vs) do names[t.name] = true end
+    truthy(names["Tremor Totem"] and names["Grounding Totem"], "Warlock: Tremor + Grounding")
+    eq(#ns.PvP.PicksVs(nil), 0, "unreadable class -> no pick")
+    tv = ns.Hints.TotemView(st, nil, false, st.totems, ns.PvP.PicksVs("ROGUE"))
+    truthy(tv.status:find("Earthbind", 1, true), "vs a Rogue: Earthbind")
+    S.targetIsPlayer, S.units.target = true, { class = "MAGE", player = true }
+    eq(ns.PvP.EnemyPlayerClass(), "MAGE")
+    S.targetIsPlayer, S.units.target = nil, nil
+    M.texts = {}
+    ns.UI.Open("settings", "Shaman bar")
+    truthy(textHas("Totem sets") or textHas("TOTEM SETS (PROFILE A)"), "totem set editor")
+    ns.DB.SetPvP(false)
+    ns.DB.Profile().totemSets = { pve = {}, pvp = {} }
+    forget()
+    S.level = 24
+end)
+
+test("Stoneform hint: Dwarves only, from readable debuffs only, silent otherwise", function()
+    forget()
+    know("Stoneform")
+    eq(ns.Shaman.StoneformNudge("Troll"), false, "not a Dwarf")
+    S.debuffs = {}
+    eq(ns.Shaman.StoneformNudge("Dwarf"), false, "nothing on you")
+    S.debuffs = { { name = "Curse of X", dispelName = "Curse" }, { name = "Deadly Poison", dispelName = "Poison" } }
+    local need, types = ns.Shaman.StoneformNudge("Dwarf")
+    eq(need, true)
+    eq(types[1], "Poison")
+    S.debuffs = { { name = "Rend", dispelName = "Bleed" } }
+    eq((ns.Shaman.StoneformNudge("Dwarf")), true, "a debuff the client labels Bleed")
+    S.debuffs = { { name = "Rend" } }
+    eq((ns.Shaman.StoneformNudge("Dwarf")), false, "no guessing from names")
+    S.debuffs = { { name = "Deadly Poison", dispelName = "Poison" } }
+    M.InstallSecrets()
+    S.secretMode, S.secretOwnAuras = true, true
+    eq(ns.Shaman.StoneformNudge("Dwarf"), nil, "secret debuffs -> can't tell")
+    local v = ns.Hints.StoneformView(nil)
+    eq(v.active, false)
+    eq(v.status, "", "says nothing")
+    S.secretOwnAuras = false
+    M.RemoveSecrets()
+    v = ns.Hints.StoneformView(true, { "Poison" }, 0)
+    eq(v.active, true)
+    truthy(v.status:find("press it", 1, true))
+    v = ns.Hints.StoneformView(true, { "Poison" }, 90)
+    eq(v.active, false, "on cooldown: dim")
+    -- the cell exists only for Dwarves
+    ns.Hints.Refresh()
+    eq(ns.ShamanBar.Shown().stoneform, nil, "no Stoneform cell for a Troll")
+    S.debuffs = nil
+    forget()
+end)
+
+test("Bramm: Dwarf Shaman of the Alliance sees the Dwarf path, trainers, quests and lessons", function()
+    local race, faction = S.race, S.faction
+    S.race, S.faction = "Dwarf", "Alliance"
+    forget()
+    know("Stoneform")
+    S.level = 3
+    ns.DB.SetSpec("Enhancement")
+    local list = ns.Progress.ClassQuests("Dwarf", "Alliance")
+    local byName = {}
+    for _, q in ipairs(list) do
+        byName[q.name] = q
+        eq(q.faction, "Alliance", "only Alliance quests: " .. q.name)
+        eq(q.races, "Dwarf", "only Dwarf versions: " .. q.name)
+    end
+    for _, n in ipairs({ "Call of Earth", "Call of Fire", "Call of Water", "Call of Air", "The Tempest's Weapons" }) do truthy(byName[n], n) end
+    eq(byName["Call of Earth"].level, 4)
+    -- the quest-id conflict: any of the ids counts
+    eq(ns.Progress.ClassQuestDone(byName["Call of Earth"]), false)
+    S.questsDone[94375] = true
+    eq(ns.Progress.ClassQuestDone(byName["Call of Earth"]), true, "alt quest id counts as done")
+    S.questsDone[94375] = nil
+    M.texts = {}
+    ns.UI.Open("leveling", "Path")
+    truthy(textHas("Coldridge Valley"), "Coldridge Valley path card at level 3")
+    truthy(not textHas("Valley of Trials"), "no Troll start zone")
+    M.texts = {}
+    ns.UI.Open("leveling", "Class quests")
+    truthy(textHas("Teo Hammerstorm"), "Alliance trainers / Dwarf quest giver")
+    truthy(textHas("Eldrun Stormbreaker"), "Ironforge trainer")
+    truthy(not textHas("Searn Firewarder"), "no Horde trainer")
+    truthy(not textHas("Canaga"), "no Troll quest text")
+    S.level = 12
+    M.texts = {}
+    ns.UI.Open("leveling", "Path")
+    truthy(textHas("Loch Modan"), "Loch Modan at 12")
+    local unlocked = ns.Learn.Lessons(30, "Enhancement")
+    local ids = {}
+    for _, l in ipairs(unlocked) do ids[l.id] = true end
+    truthy(ids["call-of-earth-dwarf"] and ids["dwarf"] and ids["loch-modan"], "Dwarf lessons")
+    truthy(not ids["call-of-earth"] and not ids["troll"] and not ids["barrens"], "no Troll/Horde lessons")
+    local q = ns.Progress.NextClassQuest("Dwarf", "Alliance", 4)
+    eq(q and q.quest_id, 96243, "next quest: Dwarf Call of Earth")
+    ns.Hints.Refresh()
+    truthy(ns.ShamanBar.Shown().stoneform, "Stoneform cell for a Dwarf who knows it")
+    S.debuffs = { { name = "Deadly Poison", dispelName = "Poison" } }
+    local _, _, fv = ns.Hints.Update()
+    truthy(fv and fv.active, "Stoneform lit with a poison on you")
+    S.debuffs = nil
+    M.texts = {}
+    ns.UI.Open("learn", "PvP")
+    truthy(textHas("Stoneform vs melee"), "Dwarf PvP tip shown")
+    for _, lvl in ipairs({ 1, 24, 60 }) do
+        S.level = lvl
+        renderAll("dwarf@" .. lvl)
+        renderSubs("dwarf@" .. lvl)
+    end
+    -- the window never shows the Troll path to Bramm
+    M.texts = {}
+    ns.UI.Open("learn", "Leveling")
+    truthy(textHas("Alliance Dwarf path") and not textHas("Horde Troll path"), "Learn > Leveling path by race")
+    S.race, S.faction = race, faction
+    S.level = 24
+    forget()
+    ns.Hints.Refresh()
 end)
 
 

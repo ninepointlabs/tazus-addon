@@ -4,7 +4,7 @@ local UI = ns.UI
 local section = "lessons"
 local SECTIONS = {
     { "lessons", "Lessons" }, { "spells", "Spells" }, { "talents", "Talents" }, { "mechanics", "How the class works" },
-    { "totems", "Totems & imbues" }, { "roles", "In a group" }, { "leveling", "Leveling" }, { "mistakes", "Common mistakes" },
+    { "totems", "Totems & imbues" }, { "roles", "In a group" }, { "pvp", "PvP" }, { "leveling", "Leveling" }, { "mistakes", "Common mistakes" },
 }
 
 local function flagText(e)
@@ -104,7 +104,7 @@ end
 local function articles(key)
     return function(L, c, content)
         for _, e in ipairs(content[key] or {}) do
-            if ns.Learn.SpecOk(e.spec, c.spec) and not (e.faction and c.faction and e.faction ~= c.faction) then article(L, e) end
+            if ns.Learn.SpecOk(e.spec, c.spec) and ns.Learn.ForPlayer(e, c.race, c.faction) then article(L, e) end
         end
     end
 end
@@ -115,12 +115,42 @@ render.mistakes = articles("mistakes")
 -- Totems, weapon imbues, shields and Maelstrom Weapon in Forever.
 render.totems = articles("totems")
 
+-- World PvP: the totem picks and tips (research "pvp"), plus the PvP mode switch.
+function render.pvp(L, c, content)
+    L:Check("PvP mode for profile " .. ns.DB.ActiveId(), ns.DB.PvP(), function(v) ns.PvP.Set(v) UI.Refresh() end,
+        "World PvP rotation, your PvP totem set and these tips. /tazu pvp toggles it.")
+    local data = ns.PvP.Data()
+    if data.summary then L:Text(data.summary, { size = 12 }) L:Source(data) end
+    L:Label("Totems that win fights")
+    local any = false
+    for _, t in ipairs(data.totem_picks or {}) do
+        any = true
+        local lvl = ns.Rotation.SpellRecord(t.name)
+        local first = lvl and lvl.rank_learn_levels and lvl.rank_learn_levels[1]
+        L:Spell(ns.Rotation.SpellId(t.name), t.name, (t.pvp_use or "") .. (t.what and ("\n" .. UI.Hex(UI.C.dim) .. t.what .. "|r") or "") .. flagText(t),
+            ns.Progress.Knows(t.name) and (UI.Hex(UI.C.good) .. "known|r") or (first and ("at level " .. first) or nil))
+        L:Source(t)
+    end
+    if not any then L:Text(UI.Hex(UI.C.dim) .. "No PvP totem picks in the research yet.|r", { size = 12 }) end
+    L:Label("World PvP tips")
+    local tips = ns.PvP.Tips(c.race, c.faction)
+    for _, t in ipairs(tips) do
+        L:Text(UI.Hex(UI.Accent()) .. (t.title or "") .. "|r\n" .. (t.body or "") .. flagText(t), { size = 12 })
+        L:Source(t)
+        L:Space(4)
+    end
+    if #tips == 0 then L:Text(UI.Hex(UI.C.dim) .. "No PvP tips in the research yet.|r", { size = 12 }) end
+    L:Text("The World PvP priority list is under Rotation > World PvP.", { color = UI.C.dim, size = 11 })
+end
+
 function render.leveling(L, c, content)
     for _, spec in ipairs(ns.SPEC_ORDER) do
         local list = content.leveling and content.leveling[spec]
         if list and (spec == c.spec or not c.spec) then
             L:Label("Leveling as " .. spec)
-            for _, e in ipairs(list) do article(L, e) end
+            for _, e in ipairs(list) do
+                if ns.Learn.ForPlayer(e, c.race, c.faction) then article(L, e) end
+            end
         end
     end
     L:Label("Other specs")
