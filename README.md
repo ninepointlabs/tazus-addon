@@ -9,7 +9,7 @@ It's the fourth sibling of [Andric's Addon](https://andricsaddon.myazerothlife.c
 [Parzelle's Addon](https://parzelles-addon.myazerothlife.com) (Mage) and
 [Tristan's Addon](https://tristans-addon.myazerothlife.com) (Paladin), from the makers of [My Azeroth Life](https://myazerothlife.com).
 
-> **Status:** [v0.1.1](https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.1) is out. Screenshots come once Tazu has logged a few hours.
+> **Status:** [v0.2.0](https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.2.0) is out (Dwarf/Alliance support, PvP mode, Smart Shock and Smart Heal, Stoneform hint, totem sets). Screenshots come once Tazu has logged a few hours.
 
 - Website: https://tazus-addon.myazerothlife.com (files in `docs/`; the domain isn't live yet)
 - WoW Forever only (`WOW_PROJECT_ID 18`), Interface `16001`. No Ace3; Blizzard API only. MIT.
