@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: Tazu's Addon
-## Notes: The do-everything Shaman companion for WoW Forever: spec-aware rotation help, a Shaman bar (weapon imbue button, shield hint, totem advice, Fire Nova), talents, gear tips, Horde leveling, totem class quests, reminders and Learn the Shaman.
+## Notes: The do-everything Shaman companion for WoW Forever: spec-aware rotation help, a Shaman bar (weapon imbue, Smart Shock, Smart Heal and Fire Nova buttons, shield, totem-set and Stoneform hints), PvP mode, talents, gear tips, Horde and Alliance (Dwarf) leveling, totem class quests, reminders and Learn the Shaman.
 ## Author: Nine Point Labs
 ## Version: @project-version@
 ## X-Website: https://github.com/ninepointlabs/tazus-addon
@@ -19,6 +19,7 @@ Data\Gear.lua
 Data\World.lua
 Data\Notes.lua
 Data\Shaman.lua
+Data\PvP.lua
 Data\Talents.lua
 Data\ItemSources.lua
 Data\Learn.lua
@@ -31,6 +32,7 @@ Modules\Stats.lua
 Modules\Training.lua
 Modules\Progress.lua
 Modules\Shaman.lua
+Modules\PvP.lua
 Modules\Cooldowns.lua
 Modules\Reminders.lua
 Modules\Rotation.lua
@@ -58,6 +60,7 @@ UI\Hud.lua
 UI\Bags.lua
 UI\ShamanBar.lua
 UI\ImbueButton.lua
+UI\SmartButtons.lua
 UI\FireNovaButton.lua
 UI\Hints.lua
 UI\Minimap.lua

@@ -33,6 +33,20 @@ function Progress.IsQuestDone(id)
     return nil
 end
 
+-- A class quest is done when its id, or any alternative id a source gave for it
+-- (e.g. a chain's later steps, or a conflicting id), is flagged completed.
+-- true / false / nil (can't tell).
+function Progress.ClassQuestDone(q)
+    local done = Progress.IsQuestDone(q.quest_id)
+    if done then return true end
+    for _, id in ipairs(q.alt_quest_ids or {}) do
+        local d = Progress.IsQuestDone(id)
+        if d then return true end
+        if done == nil then done = d end
+    end
+    return done
+end
+
 -- Class quests for a race + faction (nil = show all). Quests without a
 -- researched ID are kept and flagged (`missing`), never given an invented ID.
 function Progress.ClassQuests(race, faction)
@@ -55,7 +69,7 @@ end
 -- The next class quest at or above level-ish that isn't completed.
 function Progress.NextClassQuest(race, faction, level)
     for _, q in ipairs(Progress.ClassQuests(race, faction)) do
-        if q.missing or not Progress.IsQuestDone(q.quest_id) then
+        if q.missing or not Progress.ClassQuestDone(q) then
             if q.level >= (level or 1) - 10 then return q end
         end
     end

@@ -33,6 +33,10 @@ UI.SettingsSections["About the data"] = function(L, c)
     L:Row({ title = "Imbue detection reads your main-hand tooltip for the imbue's name (Windfury, Flametongue, Rockbiter, Frostbrand); otherwise it only knows 'some temporary enchant'." })
     L:Row({ title = "Totem slots use Blizzard's numbering (Fire 1, Earth 2, Water 3, Air 4) via GetTotemInfo; not yet checked on Forever." })
     L:Row({ title = "Tooltip stat parsing reads English item text." })
+    L:Row({ title = "PvP ruleset: no documented API, so a realm id (GetRealmName) ending in \"PvP\" counts as the PvP ruleset and only triggers a one-time suggestion; otherwise PvP mode is a manual switch." })
+    L:Row({ title = "PvP totem picks vs a class are an addon grouping: Tremor vs Warlocks, Grounding vs Mages, Warlocks and Priests, Earthbind vs the plate and leather melee classes you kite (the list is in the research, pvp.totem_picks). The PvP set's Fire and Water follow your Solo picks." })
+    L:Row({ title = "Stoneform hint: counts a debuff only when the client labels it Poison, Disease or Bleed; nothing is guessed from names, and unreadable debuffs mean no hint." })
+    L:Row({ title = "Smart Heal heals a friendly living target, else you ([@target,help,nodead][@player]); spells are named without a rank, so the game picks your highest." })
 
     L:Label("Sources")
     local keys = {}

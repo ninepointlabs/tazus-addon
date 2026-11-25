@@ -5,11 +5,11 @@ local UI = ns.UI
 UI.LevelingSections = UI.LevelingSections or {}
 
 UI.LevelingSections["Class quests"] = function(L, c)
-    L:Text(UI.Hex(UI.C.dim) .. "The totem quests for " .. (c.race or "your race") .. " Shamans: Call of Earth at 4, Call of Fire at 10, Call of Water at 20 (no rush), Call of Air at 30, then The Tempest's Weapons (with a group, or later). Other races' and the other faction's versions stay hidden.|r", { size = 12 })
+    L:Text(UI.Hex(UI.C.dim) .. "The totem quests for " .. (c.race or "your race") .. " Shamans: Call of Earth at 4, Call of Fire at 10, Call of Water at 20 (no rush), Call of Air at 30, then The Tempest's Weapons (with a group, or later). Your race and faction decide which version you see; the others stay hidden.|r", { size = 12 })
     local list = ns.Progress.ClassQuests(c.race, c.faction)
     if #list == 0 then L:Text("No class quests in the research for you yet.") end
     for _, q in ipairs(list) do
-        local done = ns.Progress.IsQuestDone(q.quest_id)
+        local done = ns.Progress.ClassQuestDone(q)
         local chip
         if done then chip = { text = "Done", kind = "good" }
         elseif q.missing and c.level >= (q.level or 0) then chip = { text = "Ready · ID unknown", kind = "warn" }
@@ -43,9 +43,22 @@ UI.LevelingSections["Class quests"] = function(L, c)
     for _, g in ipairs(ns.Data.Gaps or {}) do if (g.gap or ""):find("post%-30") or (g.gap or ""):find("after 30") then gap = true end end
     if gap then L:Note("Class quests after 30 (other than The Tempest's Weapons) aren't listed by Icy Veins yet.") end
     local t = ns.Data.ClassTrainers
-    if t and t.trainers then
-        L:Label("Shaman trainers")
-        L:Text(table.concat(t.trainers, " · "), { size = 12 })
-        L:Source(t)
+    if t then
+        local alliance = c.faction == "Alliance"
+        local list, maybe
+        if alliance then list, maybe = t.alliance_trainers, t.alliance_unconfirmed_trainers
+        else list, maybe = t.trainers, t.unconfirmed_trainers end
+        L:Label((alliance and "Alliance" or "Horde") .. " Shaman trainers")
+        if list and #list > 0 then L:Text(table.concat(list, " · "), { size = 12 }) end
+        if maybe and #maybe > 0 then
+            L:Text(UI.FLAG_ICON .. " " .. UI.Hex(UI.C.warn) .. "One fan site only:|r " .. table.concat(maybe, " · "), { size = 12 })
+        end
+        if not (list and #list > 0) and not (maybe and #maybe > 0) then
+            L:Text(UI.Hex(UI.C.dim) .. "No trainer names in the research for your faction yet.|r", { size = 12 })
+        end
+        local flag
+        if alliance then flag = t.alliance_flag else flag = t.flag end
+        if flag then L:Note(flag) end
+        L:Source(alliance and t.alliance_source_url and { source_url = t.alliance_source_url, checked = t.alliance_checked } or t)
     end
 end

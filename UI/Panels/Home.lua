@@ -136,7 +136,7 @@ UI.RegisterPanel({
         if not any then L:Row({ chip = { text = "All good", kind = "good" }, title = "Nothing needs your attention" }) end
 
         L:NextColumn()
-        local context = c.profile and c.profile.rotationContext or "solo"
+        local context = ns.DB.Context()
         L:Label("Your rotation · " .. (ns.Rotation.CONTEXT_LABELS[context] or context):lower())
         local ctxData = c.spec and ns.Rotation.Context(c.spec, context)
         if ctxData then

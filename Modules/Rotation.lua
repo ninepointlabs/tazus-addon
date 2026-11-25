@@ -6,8 +6,8 @@ local _, ns = ...
 local Rotation = {}
 ns.Rotation = Rotation
 
-Rotation.CONTEXTS = { "solo", "dungeon", "raid" }
-Rotation.CONTEXT_LABELS = { solo = "Solo leveling", dungeon = "Dungeon", raid = "Raid" }
+Rotation.CONTEXTS = { "solo", "dungeon", "raid", "pvp" }
+Rotation.CONTEXT_LABELS = { solo = "Solo leveling", dungeon = "Dungeon", raid = "Raid", pvp = "World PvP" }
 -- Conditions content/learn.json may use (tests/run.lua checks every step).
 Rotation.CONDITIONS = { "always", "manual", "buff_missing", "debuff_missing", "ready", "out_of_combat", "in_combat",
     "usable", "in_melee", "imbue_missing", "shield_missing", "fire_totem_out", "no_fire_totem" }

@@ -32,7 +32,10 @@ function DB.NewProfile()
         spec = nil,               -- "Elemental" | "Enhancement" | "Restoration"; nil until picked
         levelingWeights = nil,    -- nil = spec default (see Modules/Stats.lua)
         weights = {},             -- per-stat overrides of the derived weights
-        rotationContext = "solo", -- "solo" | "dungeon" | "raid"
+        rotationContext = "solo", -- "solo" | "dungeon" | "raid" (the PvE situation)
+        pvp = false,              -- PvP mode: world-PvP rotation, PvP totem set, PvP tips
+        -- Saved totem sets, one per mode. Per element: a totem name, or nil = the guide pick.
+        totemSets = { pve = {}, pvp = {} },
     }
 end
 
@@ -62,7 +65,13 @@ DB.charDefaults = {
     -- shield and totem hints (plain frames, never cast). Keys default to none.
     imbue = { enabled = true, key = nil, override = nil },   -- override: imbue spell name pinned by the player
     fireNova = { enabled = true, key = nil },
+    -- Smart Shock (Earth Shock; Frost Shock with the modifier) and Smart Heal
+    -- (friendly target, else you; Alt for Lesser Healing Wave): secure, unbound by default.
+    shock = { enabled = true, key = nil, mod = "shift" },   -- mod: "shift" | "ctrl" | "alt"
+    heal = { enabled = true, key = nil },
     shieldHint = { enabled = true },
+    stoneformHint = { enabled = true },                      -- Dwarves only
+    pvpSuggested = nil,                                      -- realm id we already suggested PvP mode on
     totemHint = { enabled = true },
     shamanBar = { point = nil },
     window = { tab = "overview" },
@@ -117,4 +126,27 @@ end
 
 function DB.OtherProfileId()
     return DB.char.active == "A" and "B" or "A"
+end
+
+-- PvP mode is per profile (so A can be your PvE spec and B your PvP one).
+function DB.PvP(id)
+    local p = DB.Profile(id)
+    return p and p.pvp == true or false
+end
+
+function DB.SetPvP(on, id)
+    local p = DB.Profile(id)
+    on = on and true or false
+    if p.pvp == on then return false end
+    p.pvp = on
+    if id == nil or id == DB.char.active then ns.Fire("PVP_MODE_CHANGED", on) end
+    return true
+end
+
+-- The situation everything follows: "pvp" in PvP mode, else Solo/Dungeon/Raid.
+function DB.Context(id)
+    local p = DB.Profile(id)
+    if not p then return "solo" end
+    if p.pvp then return "pvp" end
+    return p.rotationContext or "solo"
 end

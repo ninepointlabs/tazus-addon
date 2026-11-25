@@ -162,6 +162,19 @@ G.C_UnitAuras = {
         return v and { name = name } or nil
     end,
 }
+-- Own debuffs by index (Stoneform hint): S.debuffs = { { name, dispelName }, ... }.
+G.C_UnitAuras.GetAuraDataByIndex = function(unit, i, filter)
+    if S.secretMode and S.secretOwnAuras then return M.SECRET end
+    if unit ~= "player" or not (filter or ""):find("HARMFUL", 1, true) then return nil end
+    local d = S.debuffs and S.debuffs[i]
+    if not d then return nil end
+    local out = {}
+    for k, v in pairs(d) do out[k] = v end
+    return out
+end
+-- Realm: Forever returns the realm's internal id (e.g. CAMWOWUS2Realm1PvE).
+G.GetRealmName = function() return S.realm or "CAMWOWUS2Realm1PvE" end
+G.UnitIsPlayer = function(u) local x = u and S.units[u] if x then return x.player == true end return u == "player" or (u == "target" and S.targetIsPlayer == true) end
 G.C_QuestLog = { IsQuestFlaggedCompleted = function(id) return S.questsDone[id] == true end }
 G.C_TooltipInfo = {
     -- Main-hand tooltip (slot 16): S.mainHandLines, for the imbue read.

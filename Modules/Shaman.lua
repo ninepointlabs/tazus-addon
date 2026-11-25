@@ -112,12 +112,58 @@ function Shaman.RecommendedTotems(spec, context, known)
     return out, set.note or adv.notes
 end
 
+-- Your active totem set: PvE (the guide's pick for spec + Solo/Dungeon/Raid) or,
+-- in PvP mode, the PvP set (the research's PvP picks). Your saved choices per
+-- element (Settings > Shaman bar > Totem sets) win when you know that totem.
+-- Returns { Earth = name|nil, ... }, setKey ("pve"|"pvp"), saved (element -> true).
+function Shaman.ActiveTotemSet(spec, context, known, profile)
+    known = known or knows
+    profile = profile or ns.DB.Profile()
+    local setKey = context == "pvp" and "pvp" or "pve"
+    local base
+    if setKey == "pvp" then
+        -- PvP guide picks (Earthbind, Grounding) over your Solo picks for the rest.
+        base = Shaman.RecommendedTotems(spec, "solo", known)
+        local def = ns.PvP.DefaultSet()
+        for _, e in ipairs(Shaman.ELEMENTS) do
+            local want = def[e]
+            if type(want) == "table" then
+                for _, n in ipairs(want) do if known(n) then base[e] = n break end end
+            elseif type(want) == "string" and known(want) then
+                base[e] = want
+            end
+        end
+    else
+        base = Shaman.RecommendedTotems(spec, context, known)
+    end
+    local saved = profile and profile.totemSets and profile.totemSets[setKey] or {}
+    local out, mine = {}, {}
+    for _, e in ipairs(Shaman.ELEMENTS) do
+        local pick = saved[e]
+        if pick and known(pick) then
+            out[e], mine[e] = pick, true
+        else
+            out[e] = base[e]
+        end
+    end
+    return out, setKey, mine
+end
+
+-- Save one element of a totem set (nil = back to the guide pick).
+function Shaman.SetTotemPick(setKey, element, name, profile)
+    profile = profile or ns.DB.Profile()
+    profile.totemSets = profile.totemSets or { pve = {}, pvp = {} }
+    profile.totemSets[setKey] = profile.totemSets[setKey] or {}
+    profile.totemSets[setKey][element] = name
+    ns.Fire("TOTEM_SET_CHANGED", setKey)
+end
+
 -- Totem nudges: elements with a recommended totem that's not down, or has
 -- under `soon` seconds left. Only in combat or with a target, since dropping
 -- totems with nothing to fight wastes mana (addon choice).
 -- Returns list of { element, want, have, why } and whether anything was unreadable.
 function Shaman.TotemNudges(spec, context, known, now, soon)
-    local rec = Shaman.RecommendedTotems(spec, context, known)
+    local rec = Shaman.ActiveTotemSet(spec, context, known)
     local out, hidden = {}, false
     for _, e in ipairs(Shaman.ELEMENTS) do
         local want = rec[e]
@@ -285,21 +331,62 @@ function Shaman.MaelstromStacks()
     return math.max(1, c)
 end
 
+-- ---------------------------------------------------------------------------
+-- Stoneform (Dwarf racial): immune to Poisons, Bleeds and Diseases (research:
+-- Icy Veins race guide). Nudge only from a positive read of your own debuffs.
+
+Shaman.STONEFORM = "Stoneform"
+Shaman.STONEFORM_TYPES = { Poison = true, Disease = true, Bleed = true }
+
+-- Debuff types on you that Stoneform answers. Returns a list of type names
+-- ({} = none), or nil when your debuffs can't be read (secret, no API): then
+-- the addon says nothing. Bleeds count only when the client labels a debuff
+-- "Bleed"; nothing is inferred from names or icons.
+function Shaman.StoneformTypes()
+    if not (C_UnitAuras and C_UnitAuras.GetAuraDataByIndex) then return nil end
+    local found, seen = {}, {}
+    for i = 1, 40 do
+        local ok, data = pcall(C_UnitAuras.GetAuraDataByIndex, "player", i, "HARMFUL")
+        if not ok or secret(data) then return nil end
+        if not data then break end
+        local kind = data.dispelName
+        if secret(kind) then return nil end
+        if kind and Shaman.STONEFORM_TYPES[kind] and not seen[kind] then
+            seen[kind] = true
+            table.insert(found, kind)
+        end
+    end
+    return found
+end
+
+-- Should a Dwarf press Stoneform now? true + types | false | nil (can't tell / not a Dwarf).
+function Shaman.StoneformNudge(race, known)
+    known = known or knows
+    if race ~= "Dwarf" or not known(Shaman.STONEFORM) then return false end
+    local types = Shaman.StoneformTypes()
+    if types == nil then return nil end
+    if #types == 0 then return false end
+    return true, types
+end
+
 -- Everything the bar, Home and reminders want to know, in one table.
 function Shaman.State()
     local spec = ns.DB.ActiveSpec()
     local profile = ns.DB.Profile()
-    local context = profile and profile.rotationContext or "solo"
+    local context = ns.DB.Context()
     local level = UnitLevel("player") or 1
     local mana = ns.Auras.PowerPct("player")
-    local recImbue, imbueWhy = Shaman.RecommendedImbue({ spec = spec, context = context, level = level })
+    -- World PvP is mostly while questing: imbue advice follows Solo there.
+    local imbueCtx = context == "pvp" and "solo" or context
+    local recImbue, imbueWhy = Shaman.RecommendedImbue({ spec = spec, context = imbueCtx, level = level })
     local recShield, shieldWhy = Shaman.RecommendedShield({ spec = spec, manaPct = mana })
     return {
         spec = spec, context = context, level = level, manaPct = mana,
         inGroup = IsInGroup and IsInGroup() or false,
         imbue = Shaman.Imbue(), recImbue = recImbue, imbueWhy = imbueWhy,
         shield = Shaman.Shield(), recShield = recShield, shieldWhy = shieldWhy,
-        totems = Shaman.RecommendedTotems(spec, context),
+        totems = Shaman.ActiveTotemSet(spec, context),
+        pvp = context == "pvp",
         fireNova = Shaman.FireNovaReady(),
         inMelee = Shaman.InMelee(),
     }

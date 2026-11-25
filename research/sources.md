@@ -32,3 +32,13 @@
 
 ## Change detection feeds
 - Same as priest/mage/paladin: Blizzard blue tracker RSS, Forever dev-notes thread, Wowhead Forever news RSS, Gethe/wow-ui-source forever.atom
+
+## v0.2 (checked 2026-11-25): Dwarf/Alliance, PvP, Stoneform
+Findings with per-fact sources: `research/v0.2_findings.json` (merged into `parts/core.json`: `leveling_paths`, `pvp`, `class_trainers.alliance_*`, Dwarf quest notes, totem/Stoneform fixes, gaps).
+- Icy Veins: https://www.icy-veins.com/wow-forever/news/not-sure-where-to-level-in-wow-forever-heres-every-zone-from-1-to-60/ (zone levels 1-60), https://www.icy-veins.com/wow-forever/pvp-overview, https://www.icy-veins.com/wow-forever/racial-tier-list, https://www.icy-veins.com/wow-classic/classic-shaman-pvp-guide (Classic, flagged)
+- Icy Veins DB (Forever): spells 20594 (Stoneform), 8177, 8143, 2484, 3600, 5730, 8166, 8170, 8042, 8056, 331, 8004, 370
+- Wowhead Forever (read via WebFetch; curl got 403, summaries in raw/wowhead_forever_webfetch_extracts.md): spell=20594, 8177, 8143, 2484; npc=257446 (Teo Hammerstorm), 258113 (Ingrid Dunwald), 258098 (Eldrun Stormbreaker), 270263 (Farseer Maret Firetend)
+- warcraft.wiki.gg: Coldridge Valley, Dun Morogh, Loch Modan, Wetlands, Stoneform, Grounding/Tremor/Earthbind Totem, API GetRealmName, API C_GameRules.GetActiveGameMode
+- Secondary: https://www.warcrafttavern.com/forever/guides/class-trainers/ and .../dwarf-shaman-totem-quests/ (trainer subzones/coords, Dwarf quest steps), https://www.skill-capped.com/wowarticles/forever/guides/enhancement-shaman-pvp-guide/ (PvP tips; third party)
+- Ruleset: no documented API. GetRealmName() ids observed in StoryTracker SavedVariables on TUF: CAMWOWUS2Realm1PvE (Normal), CAMWOWUS2Realm6PvP (PvP ruleset).
+- Fetch note: Icy Veins and warcraft.wiki.gg now block fetch.py's short "Mozilla/5.0" user agent (Cloudflare); a full Chrome UA string works.

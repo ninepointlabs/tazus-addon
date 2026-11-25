@@ -90,7 +90,7 @@ end
 function Hud.Update()
     if not hud or not hud:IsShown() then return end
     local spec = ns.DB.ActiveSpec()
-    local context = ns.DB.Profile().rotationContext or "solo"
+    local context = ns.DB.Context()
     local suggestions, blocked, ctx = ns.Rotation.Suggest(spec, context, nil, 3)
     hud.title:SetText(UI.Hex(UI.Accent()) .. spec .. "|r · " .. ns.Rotation.CONTEXT_LABELS[context])
     hud:SetBackdropBorderColor(unpack(UI.Accent()))

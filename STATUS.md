@@ -1,4 +1,4 @@
-# STATUS: Tazu's Addon (2026-11-14)
+# STATUS: Tazu's Addon (2026-11-25)
 
 **What it is:** the WoW Forever-only, do-everything Shaman companion for **Tazu** (Troll Shaman, Horde, realm Ganj = `CAMWOWUS2Realm1PvE`, Normal/PvE). It follows the structure, window and website style of Andric's, Parzelle's and Tristan's addons (newest pattern where they differ), without Tristan's PvP section.
 
@@ -10,6 +10,95 @@
 - **Released:** **v0.1.1** on 2026-11-14 at Tim's request: https://github.com/ninepointlabs/tazus-addon/releases/tag/v0.1.1. The annotated tag `v0.1.1` points at `fb89992` on `main`, which is the imbue button fix; the Test run on that commit passed (43632627108). Before tagging, `omaforge clients` again reported Forever 1.60.1.70938 / Interface 16001, matching both TOCs, so no bump was needed. The Release workflow passed (run 43632671616). Assets are `TazusAddon-v0.1.1.zip` (TOC `## Version: v0.1.1`, Interface 16001; checked by downloading it) and `release.json`. It is marked Latest. The packager's commit-list notes were replaced with a short summary in the v0.1.0 style (the fix, `/tazu imbue debug`, install steps). No Linux executables, so no autonomix-cli.
 - **Not done (not authorized):** no CurseForge/Wago, no Pages setting, no DNS, no email or social posts.
 - **v0.1.1** is the latest release. In the repo the TOC says `@project-version@`; the packager fills in the tag's version in the release zip.
+
+## v0.2 (2026-11-25): PR open, not merged, not tagged
+
+**PR:** https://github.com/ninepointlabs/tazus-addon/pull/2, `feature/v0.2-dwarf-pvp` → `main`, one commit `3f3703f`. Built from `~/Projects/designer-briefs/tazus-addon-v0.2.md`. Per the brief there is no tag, release, publish or merge; Tim reviews the PR. The uncommitted edit in `research/NOTES.md` (the Nov 17 recheck log) is kept in the working tree. It is not committed and not discarded.
+
+### What changed
+1. **Alliance/Dwarf support.** Race and faction are detected (`UnitRace` / `UnitFactionGroup`).
+   - **Leveling › Path:** a Coldridge Valley card for Dwarves. The *Zones & dungeons* tab gives the Dwarf path: Coldridge 1-5, Dun Morogh 1-10, Loch Modan 10-20, Redridge 15-25, Duskwood/Ashenvale 18-30, Wetlands 20-30, then Icy Veins' zone ranges up to Hyjal at 60. The ranges past 30 are flagged "ranges, not a route". The Troll Valley of Trials card moved into the same data (`research leveling_paths` → `ns.Data.LevelingPaths`).
+   - **Trainers:** Alliance Shaman trainers are Teo Hammerstorm (Anvilmar), Ingrid Dunwald (Kharanos), Eldrun Stormbreaker (Ironforge) and Farseer Maret Firetend (Aerie Peak). Names and zones are confirmed on Wowhead Forever; the subzones come only from Warcraft Tavern (flagged).
+   - **Class quests:** the Dwarf totem quests now show for Dwarves, with Warcraft Tavern's steps (flagged). Call of Earth counts as done under Icy Veins' 96243 or Warcraft Tavern's 94373/94374/94375.
+   - **Learn:** Dwarf lessons are added (racials, Call of Earth/Fire/Water/Air, Loch Modan), plus a Dwarf racials article, an "Alliance Dwarf path" leveling entry and a Dwarf "Skipping Call of Earth" mistake. Troll/Horde lessons and articles are tagged `races`/`faction` and hidden from Dwarves; the new `Learn.ForPlayer` filter handles this.
+   - **Milestone:** the level-4 milestone is now race-neutral.
+2. **PvP mode** (per profile; `/tazu pvp [on|off]`, Settings › General, Learn › PvP, Rotation › World PvP).
+   - **World PvP** priority lists for all three specs. They are flagged, because neither Wowhead nor Icy Veins has a Forever Shaman PvP guide; they're built from Skill Capped (third party), Icy Veins leveling pages, Icy Veins DB and the Icy Veins Classic PvP guide.
+   - **PvP totem picks:** Grounding vs casters, Tremor vs fear, Earthbind to kite.
+   - **Learn › PvP:** 10 tips. The Stoneform tip shows for Dwarves only.
+   - **Auto-suggest:** there is no documented ruleset API. When `GetRealmName()` ends in `PvP` (seen on TUF: `CAMWOWUS2Realm6PvP` is a PvP ruleset, `CAMWOWUS2Realm1PvE` is Normal), the addon suggests PvP mode once per realm in chat and a toast. It never switches it on itself. Anything else means a manual switch.
+3. **Smart Shock** (`UI/SmartButtons.lua`, secure): `/cast [mod:shift] Frost Shock; Earth Shock`.
+   - The modifier is Shift by default; Ctrl or Alt can be picked in Settings › Shaman bar or with `/tazu shock ctrl`.
+   - Frost Shock is added only once known.
+   - Spells have no rank in the macro, so it casts your highest rank. The hotkey text shows the shock cooldown.
+4. **Smart Heal** (secure): `/cast [mod:alt,@target,help,nodead][mod:alt,@player] Lesser Healing Wave; [@target,help,nodead][@player] Healing Wave`.
+   - The Alt part is added only once Lesser Healing Wave is known.
+   - Always the highest rank; no downranking.
+5. **Stoneform hint** (Dwarves who know it).
+   - A plain cell that lights up when your own debuffs (`C_UnitAuras.GetAuraDataByIndex`, HARMFUL) include `dispelName` Poison, Disease or Bleed.
+   - If they're secret or unreadable it shows nothing. Names are never used to guess.
+   - Stoneform facts (Icy Veins DB and Wowhead Forever): removes and blocks Poison, Bleed and Disease, -10% Physical damage, 8 s, 3 min cooldown.
+6. **Totem sets.** `profile.totemSets.pve` / `.pvp` hold, per element, either the guide pick or a pinned known totem. They are edited in Settings › Shaman bar › Totem sets.
+   - **PvE set:** the existing guide advice for your spec and Solo/Dungeon/Raid.
+   - **PvP set:** Earthbind (Earth) and Grounding (Air), with Fire and Water following Solo.
+   - The Totems hint, Rotation › Totems & imbues, the nudges and the reminders follow the active set, which switches with PvP mode.
+   - In PvP mode, targeting an enemy player whose class is readable names the situational pick, e.g. "Tremor?" vs a Warlock.
+- **Shaman bar order:** imbue, Shock, Heal, Fire Nova, Shield, Totems, Stoneform. All new buttons are **unbound by default**, follow the same key rules (override click, out of combat, no Super/Meta), and are changed out of combat only. Still no `/click`, no player macros and no `Bindings.xml`.
+- **Also updated:** README (features, Shaman bar, slash commands), Settings › About the data (four new assumptions) and `research/sources.md`.
+- **Not updated:** the website (`docs/`).
+
+### Research (2026-11-25)
+- **Where it lives:** a research subagent wrote `research/v0.2_findings.json`. It was merged into `research/parts/core.json`: `leveling_paths`, `pvp`, `class_trainers.alliance_*`, the Dwarf quest notes and alternative ids, corrected totem text, the Stoneform racial, 9 new gaps and 1 new conflict. `research/sources.md` lists every page.
+- **How pages were fetched:** pages are archived in `research/raw/`, which is gitignored. Wowhead returned 403 to curl, so its pages were read through WebFetch; the summaries are in `raw/wowhead_forever_webfetch_extracts.md`. Icy Veins and warcraft.wiki.gg now block `fetch.py`'s short UA string, and a full Chrome UA works. `fetch.py` itself is not changed.
+- **Confirmed:** learn levels for Earth Shock 4, Frost Shock 20, Healing Wave 1, Lesser Healing Wave 20, Earthbind 6, Stoneclaw 8, Tremor 18, Poison Cleansing 22, Grounding 30 and Disease Cleansing 38 (Icy Veins DB). The four Alliance trainer names, which Wowhead Forever tags "Shaman Trainer".
+- **Fixed:** the Earthbind totem text. The root comes from the Earthbound talent; the baseline totem only slows.
+- **Single-source or flagged:**
+  - Trainer subzones and coordinates (Warcraft Tavern).
+  - Dwarf quest steps (Warcraft Tavern).
+  - Coldridge's own 1-5 range (classic wiki).
+  - The PvP tips: Skill Capped is third party, and one Classic-guide tip.
+  - The Tremor pulse interval (2 s vs 5 s).
+  - Purge rank 1 removing 1 vs "up to two" effects (new conflict).
+- **New gap:** no source lists a Stormwind, Thelsamar or Menethil Shaman trainer, but none rules one out.
+- **Re-check:** the subagent found that `zones_by_level` (from v0.1) cites the Icy Veins zones-and-maps page, which has no level table, so those 10-30 rows need their source re-checked. Recorded as a gap; the rows are not changed.
+
+### Checks (2026-11-25, headless)
+| Check | Result |
+|---|---|
+| `lua5.1 tests/run.lua` | **46/46** (6 new: Smart Shock, Smart Heal, PvP mode, totem sets, Stoneform, a Dwarf/Alliance character rendering every screen at 1/24/60) |
+| `python3 tools/build_data.py --check` | up to date |
+| `luac5.1 -p` on every `.lua` | pass |
+| `python3 tools/shaman-changes-poller/tests/test_poller.py` | pass |
+| `python3 tools/ivcalc.py` | 9 builds, 0 need attention |
+| CI on PR #2 | **pass** on `3f3703f` (run 45632448519) |
+
+Tests that encoded v0.1's "no PvP" decision were changed: `ns.Data.PvP` now must exist, and the Learn lesson test filters by race. The "no Paladin/Tristan text in code" checks still apply and pass.
+
+### How to test in game (TUF)
+```sh
+cd ~/Projects/tazus-addon && git fetch && git checkout feature/v0.2-dwarf-pvp
+tools/install-dev.sh            # copies into …/_forever_/Interface/AddOns/TazusAddon
+```
+Then `/reload` and `/console scriptErrors 1`. I haven't installed it into the live AddOns folder.
+
+**On Bramm (Dwarf, Alliance):**
+1. `/tazu leveling`: the Path card shows Coldridge Valley; Class quests lists the Dwarf versions with the Alliance trainers. Do the Horde trainers and the Valley of Trials text stay hidden?
+2. Call of Earth from Teo Hammerstorm at 4. Afterwards, check whether it shows **Done**. That tells which quest id is right (96243 vs 94373-94375).
+3. **Stoneform hint:** get poisoned or diseased (or bled), then check whether the bar's Stoneform cell lights up out of combat and in combat. If it never lights, run `/dump C_UnitAuras.GetAuraDataByIndex("player",1,"HARMFUL")` with a debuff on you and check what `dispelName` reads. Is it "Bleed" for bleeds?
+4. **Realm suggestion:** on login, check whether the chat says "You're on a PvP-ruleset realm…". If not, check `/run print(GetRealmName())`.
+
+**On either character:**
+5. **Smart Shock:** Earth Shock by default, Frost Shock with Shift once Frost Shock is known (20). Change the modifier in Settings › Shaman bar.
+6. **Smart Heal:**
+   - With nothing (or an enemy) targeted, it heals you; with a friendly player targeted, it heals them.
+   - Alt casts Lesser Healing Wave once it's known (20).
+   - Check that the highest rank is used: compare the tooltip's heal amount with your highest rank.
+7. **PvP mode:** `/tazu pvp`.
+   - Rotation shows World PvP, and the HUD title says "World PvP".
+   - The Totems hint says "PvP set" (Earthbind/Grounding once known).
+   - With an enemy player targeted, it names the situational totem. Is the enemy's class readable (`UnitClass`), and in combat too?
+8. **Totem sets:** pin a totem per element in Settings › Shaman bar › Totem sets. Does the Totems hint follow it, and does toggling PvP mode swap sets?
+9. **Bar layout:** seven cells max. Does it still clear Blizzard's totem tracker and the Call of the Elements bar?
 
 ## Decisions (brief defaults, all still Tim's to change)
 
